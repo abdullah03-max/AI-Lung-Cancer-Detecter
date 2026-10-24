@@ -1,0 +1,45 @@
+{
+  "dataset_root": "D:\\Ai Cancer detection\\chest_xray_lung",
+  "total_images_scanned": 5856,
+  "classes": [
+    "Cancer",
+    "NORMAL"
+  ],
+  "num_classes": 2,
+  "class_distribution": {
+    "Cancer": 4273,
+    "NORMAL": 1583
+  },
+  "split_distribution": {
+    "test": {
+      "Cancer": 390,
+      "NORMAL": 234
+    },
+    "train": {
+      "Cancer": 3875,
+      "NORMAL": 1341
+    },
+    "val": {
+      "Cancer": 8,
+      "NORMAL": 8
+    }
+  },
+  "corrupted_images_count": 0,
+  "corrupted_images": [],
+  "exact_duplicates_count": 32,
+  "cross_split_leakage_groups": 0,
+  "cross_split_leakage_sample": [],
+  "image_color_modes": {
+    "L": 5573,
+    "RGB": 283
+  },
+  "average_dimensions": {
+    "width": 1327.9,
+    "height": 970.7
+  },
+  "target_model_input_size": [
+    224,
+    224,
+    3
+  ]
+}

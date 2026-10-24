@@ -1,0 +1,28 @@
+{
+  "model_architecture": "MobileNetV2",
+  "input_shape": [
+    224,
+    224,
+    3
+  ],
+  "num_classes": 2,
+  "classes": [
+    "Cancer",
+    "NORMAL"
+  ],
+  "class_to_idx": {
+    "Cancer": 0,
+    "NORMAL": 1
+  },
+  "total_dataset_size": 5824,
+  "train_samples": 4076,
+  "val_samples": 874,
+  "test_samples": 874,
+  "total_epochs_trained": 6,
+  "best_val_accuracy": 0.9405034184455872,
+  "lowest_val_loss": 0.16178111732006073,
+  "training_device": "CPU",
+  "training_duration_seconds": 1385.06,
+  "model_version": "1.0.0",
+  "timestamp": "2026-10-24 10:12:40Z"
+}

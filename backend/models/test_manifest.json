@@ -1,0 +1,4372 @@
+[
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1347-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "c1bea118acb5068ce4f74a0e6ef13504"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1401-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "d7f1ea897a758d6fce1058d731c87248"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1724.jpeg",
+    "class_name": "Cancer",
+    "hash": "a796078f7dadd5e063e2c77710f8f32b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0873-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "c006e0b4060f475e07a91ac44a8fc0a3"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3872.jpeg",
+    "class_name": "Cancer",
+    "hash": "147e1efef8055d1a9ecf53dfd403ba12"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1881.jpeg",
+    "class_name": "Cancer",
+    "hash": "30e6a829d58da65bc114cc4e1f0d8b14"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0277-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "ceb4e381b5cb98d67cb76e6783286090"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer29.jpeg",
+    "class_name": "Cancer",
+    "hash": "f04f8fb45fcf24adf9dd0b1c443472bd"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer995.jpeg",
+    "class_name": "Cancer",
+    "hash": "49159134b10c9c4c64456fea27ca0aca"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2260.jpeg",
+    "class_name": "Cancer",
+    "hash": "46609fd768f8f57c2e3d8872c35468e0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer321.jpeg",
+    "class_name": "Cancer",
+    "hash": "2b64cce74f4c3d3767ba683d0a35990b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer228.jpeg",
+    "class_name": "Cancer",
+    "hash": "5d106e2593c3cf90fe802fc76c0e0059"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2033.jpeg",
+    "class_name": "Cancer",
+    "hash": "d53ebcae83c17c712e4e9b46f754a426"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1526.jpeg",
+    "class_name": "Cancer",
+    "hash": "f5be7a91368341fa98cd3f4c904bc3ad"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0219-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "b2e97f415318e079004188b6e76a2160"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer661.jpeg",
+    "class_name": "Cancer",
+    "hash": "e3925f2e75ee67203c7c58c40792c453"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer862.jpeg",
+    "class_name": "Cancer",
+    "hash": "367ffed4c980bac1db0c38e716327777"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer553.jpeg",
+    "class_name": "Cancer",
+    "hash": "b6293aab51adf4f2ed914551512e5706"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2126.jpeg",
+    "class_name": "Cancer",
+    "hash": "719d1eda2d5fcadb7f00248053bdcde3"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3313.jpeg",
+    "class_name": "Cancer",
+    "hash": "1a39a2da9035b204ba1a2eb56ba97de6"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer463.jpeg",
+    "class_name": "Cancer",
+    "hash": "961c269898da9fa33f6cc5d4e43dd76e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3123.jpeg",
+    "class_name": "Cancer",
+    "hash": "dcb0268460fcbe428765c2365f5b8825"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3690.jpeg",
+    "class_name": "Cancer",
+    "hash": "3ecc69f69e9c68f24414d134d24975de"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0966-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "2f2388b994ccaeb5e377ddf6e36059a6"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer526.jpeg",
+    "class_name": "Cancer",
+    "hash": "1be8b826d53731351e106d6c83feafd7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1315-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "4e0a378f57ff9f0dc3169fe6cd2946eb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0752-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "9a4ef01147e9c9f885e686a8aae78099"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1866.jpeg",
+    "class_name": "Cancer",
+    "hash": "2586e9e3409d48f9da35f2fc787a26ec"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\IM-0069-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "57c4e20ee7f74d21f90e9c51675509a3"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1267-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "2d7016582103fc29ec336111d7eb8edf"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer952.jpeg",
+    "class_name": "Cancer",
+    "hash": "5de140e00dc102c0694fe202b6926f27"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer404.jpeg",
+    "class_name": "Cancer",
+    "hash": "d1fa3f332a34e98025750ccca9aa20ee"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer723.jpeg",
+    "class_name": "Cancer",
+    "hash": "ceb7a6eeeedfc8bf3557486508b8631c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0900-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "4b0963ecfb8fc3c71fb21cb21a852203"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0689-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "fd63d8f2defbdb9bc584fc35d62bf447"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1440.jpeg",
+    "class_name": "Cancer",
+    "hash": "5546ba8ec52009cb9ee0ffeaedc90f50"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer602.jpeg",
+    "class_name": "Cancer",
+    "hash": "bcbb9d822333bf9b5649a807180fb9bb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2848.jpeg",
+    "class_name": "Cancer",
+    "hash": "507a32edc7392b5ae90df1fdbcf63bec"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0370-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "6b2a7a226f86852d00262a2bc7ad9618"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2064.jpeg",
+    "class_name": "Cancer",
+    "hash": "ca79f24e78a3730dc312618bce851ab5"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3272.jpeg",
+    "class_name": "Cancer",
+    "hash": "0b571cb3884af97c23368f01706f15a9"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3473.jpeg",
+    "class_name": "Cancer",
+    "hash": "1b1354b0d6a4f855a261020a43c046d1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1211.jpeg",
+    "class_name": "Cancer",
+    "hash": "3e8bf779e84585816ea93f5e7d83268d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2491.jpeg",
+    "class_name": "Cancer",
+    "hash": "a7203cad7122d54d56e12632173ea601"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer83.jpeg",
+    "class_name": "Cancer",
+    "hash": "148fd4b6ce8a513c266ac43eb1d7b0d4"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer131.jpeg",
+    "class_name": "Cancer",
+    "hash": "2def76b5cc66cabd5e59bf687323ebf6"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0497-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "0f8b78dd92742df3917c078a176305e7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\IM-0029-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "be7c1673a33888ff28b042f948806731"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0051-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "7d02f9a8866f99b081e8e940e8ec1361"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer20.jpeg",
+    "class_name": "Cancer",
+    "hash": "968930f6fde3f619a6904385564e3d82"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2089.jpeg",
+    "class_name": "Cancer",
+    "hash": "5d6f70d3cc64e52c6c96c293a3dbfbc6"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0303-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "d63456d6f6137290ff7e7d7ebe1db689"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1021.jpeg",
+    "class_name": "Cancer",
+    "hash": "8e504921a2bd9c308274136575148bd5"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3451.jpeg",
+    "class_name": "Cancer",
+    "hash": "d21e6b9eed22a1cb303b5eb46db4c782"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3410.jpeg",
+    "class_name": "Cancer",
+    "hash": "3810768b4d6d4a578cd34005fff80e5c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1241.jpeg",
+    "class_name": "Cancer",
+    "hash": "086482c75e4f487f168d39d6479d1974"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1258-0001-0002.jpeg",
+    "class_name": "NORMAL",
+    "hash": "aec4f6e7bf446264615bb90915c75ea1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0590-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "6c6a2469495177803f8d9b4b78a31265"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0081-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "5059b89d51db46ab203f731fafa3dcb1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer535.jpeg",
+    "class_name": "Cancer",
+    "hash": "96a1e5200a41bfbf373f7da26dbc0b48"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3562.jpeg",
+    "class_name": "Cancer",
+    "hash": "a0aa8e29fce87d5ea5683601dc8c6777"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer157.jpeg",
+    "class_name": "Cancer",
+    "hash": "65705d86d73ff7cde72a28613db74274"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3446.jpeg",
+    "class_name": "Cancer",
+    "hash": "152aab6000aa96ad170dd26afbe9b546"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0648-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "8cc5f9127046057157f674ecbed1ce06"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3686.jpeg",
+    "class_name": "Cancer",
+    "hash": "248fd9f23992d5fc2034868926bb5670"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3688.jpeg",
+    "class_name": "Cancer",
+    "hash": "767fb4748f40cdbfd9f558fb2021e3cd"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3178.jpeg",
+    "class_name": "Cancer",
+    "hash": "e90c0e23aa66287bc65b630e006e761a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer228.jpeg",
+    "class_name": "Cancer",
+    "hash": "c08e356018238bb68552840809ed7fca"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2996.jpeg",
+    "class_name": "Cancer",
+    "hash": "25957f513cd644ab458dabec94e5162c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer765.jpeg",
+    "class_name": "Cancer",
+    "hash": "95bd79320c96a20197f9ead26fddbe33"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0572-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "4e1b1ce208e3e2d11c1d1dcd7acc8716"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1225-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "7735b91bfe662c1d21468b539b954fdd"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer930.jpeg",
+    "class_name": "Cancer",
+    "hash": "47f46ecf9f7ccb34c5b97fba1c76dfdb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1280.jpeg",
+    "class_name": "Cancer",
+    "hash": "b003ba692aee3534241879f123bb3bfe"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2725.jpeg",
+    "class_name": "Cancer",
+    "hash": "3c2fed7b3146f9cc0dc3123fed66b6ba"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1098.jpeg",
+    "class_name": "Cancer",
+    "hash": "6f2fb328c460030f1cfea24a24fc65a9"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3120.jpeg",
+    "class_name": "Cancer",
+    "hash": "bffa30aa032f72f21c53b836ffd32a69"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2363.jpeg",
+    "class_name": "Cancer",
+    "hash": "67744a57f32402248108d1c3d072f765"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer133.jpeg",
+    "class_name": "Cancer",
+    "hash": "a7d9834b734e280d53e0b27bb372b694"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1669.jpeg",
+    "class_name": "Cancer",
+    "hash": "f6ce25d9477becc1dd1d2c0201076c6c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer263.jpeg",
+    "class_name": "Cancer",
+    "hash": "1cc55efd9209d3aab746a8d8e9192c40"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2198.jpeg",
+    "class_name": "Cancer",
+    "hash": "1c5207c13b5a79659748667cac45faeb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3224.jpeg",
+    "class_name": "Cancer",
+    "hash": "44d3dfaf23954fcd35da05fb69cf710c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2865.jpeg",
+    "class_name": "Cancer",
+    "hash": "7b390b05a5fc47f27e282657cd21b100"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3168.jpeg",
+    "class_name": "Cancer",
+    "hash": "efdd50d0e67f9b23a3640557e66c452b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer375.jpeg",
+    "class_name": "Cancer",
+    "hash": "a4a6a7fbb76a3aeae40046768ee3a8fe"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer225.jpeg",
+    "class_name": "Cancer",
+    "hash": "a010ebf3a8ec36a6b95344a0080f5fef"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0952-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "1656e068d0067c15d452a1c66361b5f4"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0105-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "181693a9363b57f00e57a0a754e991d7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer882.jpeg",
+    "class_name": "Cancer",
+    "hash": "524dfff6d77ec4d084218300ae9e4e75"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3319.jpeg",
+    "class_name": "Cancer",
+    "hash": "0098633a6f4e20d7aaeae21d5a6ead79"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3225.jpeg",
+    "class_name": "Cancer",
+    "hash": "d6726bcc12343c0965e94d7ae12549e4"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0195-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "27246ec7e42bcf956a7023848edfcb19"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer956.jpeg",
+    "class_name": "Cancer",
+    "hash": "564fb194571a29e333b3ce8889e2ab6b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2772.jpeg",
+    "class_name": "Cancer",
+    "hash": "d6980a78a67c37539b226d408c188e50"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2213.jpeg",
+    "class_name": "Cancer",
+    "hash": "0d35f114c4cd55f6f4bbbfa84a84d803"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0366-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "f117fbd940f8ea0f16e99e602c86b19a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1847.jpeg",
+    "class_name": "Cancer",
+    "hash": "2b3eb82646f928b78244accd49e5259f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2497.jpeg",
+    "class_name": "Cancer",
+    "hash": "9d116dbc3e1689f148c5f9e5cb1a51d2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0810-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "7cca8c7970e2f9bbaf608ed729bc9d0d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1168.jpeg",
+    "class_name": "Cancer",
+    "hash": "5521bed43b06ca0b3c08fbc5fd093c3c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3858.jpeg",
+    "class_name": "Cancer",
+    "hash": "028fe0075876f86f5d1e242ff37d7771"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1426.jpeg",
+    "class_name": "Cancer",
+    "hash": "90b9af0d0dcf7ac13850ba5de1cb5430"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1423-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "49401007b62dcde4041b449913c28a49"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0166-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "748cbf9c18ad33c5aaaccbdaa2585034"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1656.jpeg",
+    "class_name": "Cancer",
+    "hash": "39b1edfa74ee40d5281442f1a8402552"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2235.jpeg",
+    "class_name": "Cancer",
+    "hash": "afd328865a2a3938c2e6a79328ba0fa8"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer807.jpeg",
+    "class_name": "Cancer",
+    "hash": "21a29a7c6781c2f55ebc72303252f754"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2583.jpeg",
+    "class_name": "Cancer",
+    "hash": "33787f3935cc7a5ce7311a429a6d6c30"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer733.jpeg",
+    "class_name": "Cancer",
+    "hash": "e9bbc6482a6bc4c0b0183302405aba37"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0625-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "659f294d701b2b46863c31ff84df2d32"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0535-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "02e10e3c6ab8edf761d59f77c5600742"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2172.jpeg",
+    "class_name": "Cancer",
+    "hash": "648cfa0930e868c72d7acffc37d292bb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0660-0001-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "408972bf7fdeaa044ad11dc3aea85bab"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer31.jpeg",
+    "class_name": "Cancer",
+    "hash": "2691df7d98f06a29cbb95794cc2c6aef"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2726.jpeg",
+    "class_name": "Cancer",
+    "hash": "d1e140b5c35903912c4e9d0d81e92d9a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3600.jpeg",
+    "class_name": "Cancer",
+    "hash": "8db60ef8967ed3e0a533633432c53161"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3867.jpeg",
+    "class_name": "Cancer",
+    "hash": "5071d15a995b9449cfce172491b7ace9"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer847.jpeg",
+    "class_name": "Cancer",
+    "hash": "b99e2bd10b6198c6f3ed9b7e5e677cca"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0350-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "9b4aa3f704a607a53a79d64a04edb1d4"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2947.jpeg",
+    "class_name": "Cancer",
+    "hash": "0e4e7849cf9d3203431e2c6747d399d5"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1621.jpeg",
+    "class_name": "Cancer",
+    "hash": "4c7fd1b46e8480f3ce9a0a1c94827551"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3342.jpeg",
+    "class_name": "Cancer",
+    "hash": "eb89f1f7fd2f601e3ced6f06cceab37c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer800.jpeg",
+    "class_name": "Cancer",
+    "hash": "94de5b14c5c9cbbbb1c7e9ffc46c0031"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer113.jpeg",
+    "class_name": "Cancer",
+    "hash": "ab354d1de516e05b49c52587dbc2fad5"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1886.jpeg",
+    "class_name": "Cancer",
+    "hash": "2867ca386c3936d8abb83e8db5322a18"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0663-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "ae57daaa7b87f57966130279963997e6"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2067.jpeg",
+    "class_name": "Cancer",
+    "hash": "f69fd85f93daa64a6fbf1ffe6a4a70e1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer339.jpeg",
+    "class_name": "Cancer",
+    "hash": "c1d06bb955d6d54787b305a098f17b09"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1157.jpeg",
+    "class_name": "Cancer",
+    "hash": "d64fa9cd1f5e2d5d6728d2e475e01dbe"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0273-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "830394e0fbcff924b77801fd8df24ce5"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0893-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "da2298a1ebc60b9865ec13676894395a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3052.jpeg",
+    "class_name": "Cancer",
+    "hash": "5f306a60a4728ec910985164469f577a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2137.jpeg",
+    "class_name": "Cancer",
+    "hash": "890d1390598bacc04d81f5b42dd942ec"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0840-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "8e9679e64824614f0c8f16269897ad44"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1376.jpeg",
+    "class_name": "Cancer",
+    "hash": "e46b85e0e8d70fc8f5894cdb9a05c4f3"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3661.jpeg",
+    "class_name": "Cancer",
+    "hash": "e4e65a3bdc5ec404a922cebd9575dd74"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0354-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "d2c8eb2042730c0c2391fbce8cce1a8a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3491.jpeg",
+    "class_name": "Cancer",
+    "hash": "a70c35425305246514a0d1292a535659"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0539-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "c6d7b94ed2472a50a93c495e7372372a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1146.jpeg",
+    "class_name": "Cancer",
+    "hash": "1b009f6eff25bbd22edfabef80dcf64e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0401-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "9a80ebc2ef5f5ea2bd26c95b157b0baa"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\IM-0061-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "be3cd2880c946b8706a679e38fd268d4"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1111.jpeg",
+    "class_name": "Cancer",
+    "hash": "7fe8b5788780ea99b2df41ea3c2106df"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2753.jpeg",
+    "class_name": "Cancer",
+    "hash": "87307a5a76dffd9e6cb7cccabb0d33b1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1058.jpeg",
+    "class_name": "Cancer",
+    "hash": "ac2e9293d9add585c40e0f96c490e08e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1050-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "36c722d4ce11f4ca3e6a52affb796f50"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer129.jpeg",
+    "class_name": "Cancer",
+    "hash": "c7a269a84528269d8f34e6bceeb4d880"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3045.jpeg",
+    "class_name": "Cancer",
+    "hash": "168df2599b9a2938e22d5e570be19d7a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer166.jpeg",
+    "class_name": "Cancer",
+    "hash": "14b49904f8d20ac2c88d4ca3c9fbeade"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3443.jpeg",
+    "class_name": "Cancer",
+    "hash": "8df2b14c2d0a0486f98cf38cb5ab18a4"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3349.jpeg",
+    "class_name": "Cancer",
+    "hash": "6d45ab5a9707c6b2841de9c0094eaddc"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer188.jpeg",
+    "class_name": "Cancer",
+    "hash": "111d80cc7cf06325db760f43729cd4e7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0381-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "9665f48d3626e9d623acc14c8fd48acd"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1070.jpeg",
+    "class_name": "Cancer",
+    "hash": "fd8b39dbe095eab907fa7432d8c2b2f8"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1441.jpeg",
+    "class_name": "Cancer",
+    "hash": "fef29265fd317fda0db39dfb2f6f1cdb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3859.jpeg",
+    "class_name": "Cancer",
+    "hash": "a9d57e5754bbcddc70e3a7224469cec0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2926.jpeg",
+    "class_name": "Cancer",
+    "hash": "2aeac387b84886266d58c5fe9346804a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3400.jpeg",
+    "class_name": "Cancer",
+    "hash": "f35b3f280dbea8905c28bd0b5d63b248"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0549-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "79ddabba23573f67b59e45c4979888b9"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer238.jpeg",
+    "class_name": "Cancer",
+    "hash": "d5246226013e522bc95a97ca51fd889a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2801.jpeg",
+    "class_name": "Cancer",
+    "hash": "b320b9c5d6dbdf40b90d61ccfb36023f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer577.jpeg",
+    "class_name": "Cancer",
+    "hash": "92dd579bc01871fb24243ec04a318af3"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1114.jpeg",
+    "class_name": "Cancer",
+    "hash": "3015e26bd354a8538358b6cc142ac1fb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer142.jpeg",
+    "class_name": "Cancer",
+    "hash": "beeb3606004dadc0fbd5263156857e18"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer523.jpeg",
+    "class_name": "Cancer",
+    "hash": "77f33d343af1043d8ca13c71518f7725"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2269.jpeg",
+    "class_name": "Cancer",
+    "hash": "40fbc24efc19c17cae90af12db44df79"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0255-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "a982b4e5aa01fc65b8731d5aa4899249"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1534.jpeg",
+    "class_name": "Cancer",
+    "hash": "e43c35a0d1772062b7004c8c32393b0c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3186.jpeg",
+    "class_name": "Cancer",
+    "hash": "b1afe2d6dc411d39895b3033847c0daa"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3676.jpeg",
+    "class_name": "Cancer",
+    "hash": "244b38baefcccc85b356969eaa1460d2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0994-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "05e4a273118be4bd5de9133762e33e27"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer365.jpeg",
+    "class_name": "Cancer",
+    "hash": "c400ab854342dde5b6914d8aca0ecd19"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer870.jpeg",
+    "class_name": "Cancer",
+    "hash": "dc455c6ab3175b67f0248a501fcaa7d1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0251-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "9d5acf018439b4b5d8fc39f653c4350b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1240-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "0b839061e5e244ecd4b68ad86af8dd6e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3448.jpeg",
+    "class_name": "Cancer",
+    "hash": "89ad2658e9633b6142e86a1d97ec88f2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1548.jpeg",
+    "class_name": "Cancer",
+    "hash": "d5f58550a1b87685e4cfc7ab8f8fa1b3"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3631.jpeg",
+    "class_name": "Cancer",
+    "hash": "1ba35d6224b1b170737877d9c4a552c2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer272.jpeg",
+    "class_name": "Cancer",
+    "hash": "3b3def03a5a2c22d0dca76e81b81b0f1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2635.jpeg",
+    "class_name": "Cancer",
+    "hash": "4dab4340c3befda1604b28bd5b6cc5c0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3009.jpeg",
+    "class_name": "Cancer",
+    "hash": "0e8e18b0de50c11920580080bdbf3571"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3785.jpeg",
+    "class_name": "Cancer",
+    "hash": "7e8c4a0c461bff3a770215490b5cb17d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1437.jpeg",
+    "class_name": "Cancer",
+    "hash": "388370561397fa3798eb311354adf787"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2517.jpeg",
+    "class_name": "Cancer",
+    "hash": "ba9d584a60bb4a15a1276fd85cdc223d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1757.jpeg",
+    "class_name": "Cancer",
+    "hash": "bab6b6907d83cf9d251ec3fc77a40c52"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2545.jpeg",
+    "class_name": "Cancer",
+    "hash": "48d2e270b7fe09d8d9899475267f4e01"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1420.jpeg",
+    "class_name": "Cancer",
+    "hash": "cf3ec49716b75b40343ef66874a453bc"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1280-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "db5b47faa382fc3b8b2faedb53a86e58"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer271.jpeg",
+    "class_name": "Cancer",
+    "hash": "fdbb4c9a8153ce129a4064d932268591"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1142-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "72a8be5ac6c8d3f8f7972c532bb0a534"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer940.jpeg",
+    "class_name": "Cancer",
+    "hash": "41c69af0765fa3a157440c37ce474acb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1013.jpeg",
+    "class_name": "Cancer",
+    "hash": "55daff5973eeba3f9942ee19d398682c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1288-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "6b722d45135e9c55820073398bcd325c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2787.jpeg",
+    "class_name": "Cancer",
+    "hash": "b4522559d1c8ceb1b69d85d27645bff0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1287-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "c59f324dabf7cd87957144723b33d28c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer778.jpeg",
+    "class_name": "Cancer",
+    "hash": "e75388d663325d3d42f31f3754633194"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0371-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "a85f35d8a6b3acf3633a933d8f9427b0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer395.jpeg",
+    "class_name": "Cancer",
+    "hash": "73be5f3c365d0ec69d2bde3a2e444259"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1348.jpeg",
+    "class_name": "Cancer",
+    "hash": "6ec51abf6d9c2b4c6181fc473de285fb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2670.jpeg",
+    "class_name": "Cancer",
+    "hash": "f952c33c4b1937f590a1fef388faca3f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1244.jpeg",
+    "class_name": "Cancer",
+    "hash": "c023f8fa126b7f1b5f9ca6313ae0ba83"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0219-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "1fa6cb23310414aa3d2e736edb613b21"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0606-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "868c343440272e629e831e2631f076cf"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0747-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "b984108eeecbc07f4aa97f67860ca9f7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2504.jpeg",
+    "class_name": "Cancer",
+    "hash": "51f3648633639a32d47fa01fbb7aace1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0345-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "b2694097b0a989c6a840ed32d8aec765"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3084.jpeg",
+    "class_name": "Cancer",
+    "hash": "d9bf1358b62e87c0c5dd47e429870be6"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0933-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "a9ec55a0a8bc087744fce34e5e1b8f64"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer269.jpeg",
+    "class_name": "Cancer",
+    "hash": "9f218a2319446dca79c668273c73b57d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2171.jpeg",
+    "class_name": "Cancer",
+    "hash": "ef0ff0e253f696b3510cad3c2902c45e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2312.jpeg",
+    "class_name": "Cancer",
+    "hash": "a5bbc9ade79c617d83b85503d13bd482"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer965.jpeg",
+    "class_name": "Cancer",
+    "hash": "595a92fd33937cf6dc6ba087866751b6"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1254-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "f7737c1e0664156b87eb44928f1b9dd3"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3745.jpeg",
+    "class_name": "Cancer",
+    "hash": "af247d8a43ba1de775aca3ddb480b091"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3459.jpeg",
+    "class_name": "Cancer",
+    "hash": "c455509a76023b741c02ed444165f06b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3777.jpeg",
+    "class_name": "Cancer",
+    "hash": "eddfe1300a70e02a84f65b721ef369ec"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1304-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "6f373b0022fd281bc2735cb29dffc751"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2641.jpeg",
+    "class_name": "Cancer",
+    "hash": "24e21b695a3aa9c38fc95d6d96e61904"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1191.jpeg",
+    "class_name": "Cancer",
+    "hash": "fe7a44a4f8836ac3291bd827820e3ffe"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer865.jpeg",
+    "class_name": "Cancer",
+    "hash": "9865e127935c18af18a553527d0bffef"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1563.jpeg",
+    "class_name": "Cancer",
+    "hash": "ad96ea93e6ca54219372275490087e15"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1259.jpeg",
+    "class_name": "Cancer",
+    "hash": "3452b75fcac92f261660c3c7d572e8e2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1113-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "97322c89c4573da1e0a5d8b14e424569"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer558.jpeg",
+    "class_name": "Cancer",
+    "hash": "51d4d685d7a6f8c1786c7787d785b2a8"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer156.jpeg",
+    "class_name": "Cancer",
+    "hash": "46cda9e906aaa1251814791f359fc263"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2090.jpeg",
+    "class_name": "Cancer",
+    "hash": "ef33a401c85d4996b54787fe4b47cb31"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0692-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "5dbecbe1faad5063dd34c6858e331c69"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1219-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "8fb5cb1212d8b3950b6f27a72a564aa9"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2704.jpeg",
+    "class_name": "Cancer",
+    "hash": "2668810f26563250967a0242b90f8dc9"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0830-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "ca636b10aa5ef725da86059a8e6d643d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0481-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "d64c1aa4c77fd4e9c48bdbf61a09f997"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2958.jpeg",
+    "class_name": "Cancer",
+    "hash": "4139b372658fd4a192570b3b210f5918"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer318.jpeg",
+    "class_name": "Cancer",
+    "hash": "536d909ecf314c018242974575aa6c8e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3367.jpeg",
+    "class_name": "Cancer",
+    "hash": "bddec3898627c736e51fc878954f9cd3"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3822.jpeg",
+    "class_name": "Cancer",
+    "hash": "557b59c0c7ab3522b54f5fe7b73d3f18"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1258-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "e5ac0a8f90d176ee9f04c7852d41cf5d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3329.jpeg",
+    "class_name": "Cancer",
+    "hash": "aff7189498b060c2c618bb9e8c28f59c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2357.jpeg",
+    "class_name": "Cancer",
+    "hash": "c2da102b4da64100015c72084e927ba0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer449.jpeg",
+    "class_name": "Cancer",
+    "hash": "5f37ef397963bcc1afc562bc3307c7de"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer643.jpeg",
+    "class_name": "Cancer",
+    "hash": "861fede6633e7f992790fdde2736a45b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2150.jpeg",
+    "class_name": "Cancer",
+    "hash": "c2c20a2f26cc1442d8e7729c0f944ead"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0793-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "17987bca6c16b85d00c5ba1d6d99292c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1567.jpeg",
+    "class_name": "Cancer",
+    "hash": "e9139b11d106498310b358049d924f42"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1291-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "5a31205fbe1d9ef108b13886f9527f3d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0182-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "1f8cda52401c1f5d5f0eca6b96671471"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3809.jpeg",
+    "class_name": "Cancer",
+    "hash": "b41e5103ede95cf2ecbf0681ebcea8bf"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0728-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "746ed8ff8665e9785b20c315cbcd4400"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0930-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "72822b66fbb75e01782549f5c03ead9a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer140.jpeg",
+    "class_name": "Cancer",
+    "hash": "9bc4a9e58ec847b1af4430d00bfe7f46"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1510.jpeg",
+    "class_name": "Cancer",
+    "hash": "c31dda7ea35d2a95e80f048b8ec86b9b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2856.jpeg",
+    "class_name": "Cancer",
+    "hash": "0645266e862c810048496920ff2a8187"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2391.jpeg",
+    "class_name": "Cancer",
+    "hash": "9a8001e3c68fd000d990b57a1d3f8a9e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1102-0001-0002.jpeg",
+    "class_name": "NORMAL",
+    "hash": "d3916cf6674b699e2f71b7d343d939a8"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer4.jpeg",
+    "class_name": "Cancer",
+    "hash": "fdf09c90b69fc41679fcb790c083cd77"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1977.jpeg",
+    "class_name": "Cancer",
+    "hash": "f89a3ada7de1215650a360438120af7b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0477-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "216710c6020c229447a7a6a180e6545d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2626.jpeg",
+    "class_name": "Cancer",
+    "hash": "edbf5c2810fce5b00722716ab730e577"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer18.jpeg",
+    "class_name": "Cancer",
+    "hash": "f9f1501a2cfa7eeae175dbbf14ba6f8d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer188.jpeg",
+    "class_name": "Cancer",
+    "hash": "c7bb3ce1be1f24ef0916f57dcae3adbd"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3547.jpeg",
+    "class_name": "Cancer",
+    "hash": "c8446a4322e9416d32a3bb436c1fb38d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1666.jpeg",
+    "class_name": "Cancer",
+    "hash": "888f580cff1d87f7198f5ab313b64be5"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2489.jpeg",
+    "class_name": "Cancer",
+    "hash": "e1a335afe8db7913583fae42241532bf"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer968.jpeg",
+    "class_name": "Cancer",
+    "hash": "704630a515e591308fb54f9a09741bbf"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3768.jpeg",
+    "class_name": "Cancer",
+    "hash": "ab259a9a690ef551dcdcf2b961ea9941"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3746.jpeg",
+    "class_name": "Cancer",
+    "hash": "3dda4ed66e6554a5d564dfc546f01e65"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3826.jpeg",
+    "class_name": "Cancer",
+    "hash": "634cae9e7e878d6da5b745b368317b68"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1620.jpeg",
+    "class_name": "Cancer",
+    "hash": "0fe927ed6fde4cc7bf8b9b995783d758"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer244.jpeg",
+    "class_name": "Cancer",
+    "hash": "6955df23580babae0f9790749bb6eb4b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0754-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "af899e5fb1e18f168828a85f0f9f063a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0875-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "d8d2adf991190ae4cb483b6285672f80"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3196.jpeg",
+    "class_name": "Cancer",
+    "hash": "9ab906829950e2936b71e776871a2747"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2355.jpeg",
+    "class_name": "Cancer",
+    "hash": "4d7dab6867308dcc06aa5e50317497c1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1746.jpeg",
+    "class_name": "Cancer",
+    "hash": "99a98dc959b6d2b0d0bcde763ddf7370"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2969.jpeg",
+    "class_name": "Cancer",
+    "hash": "f17422b5aeaba1c51e3462bc5f806f74"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1008.jpeg",
+    "class_name": "Cancer",
+    "hash": "f2eb6ad6b1d18e8dc17e1fa183c8b4bb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1232.jpeg",
+    "class_name": "Cancer",
+    "hash": "1a8e48aa89c9acd178ce7cd6e55b37e1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer365.jpeg",
+    "class_name": "Cancer",
+    "hash": "e6fa0e34149313ad4d9c6cbb4eb54350"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer236.jpeg",
+    "class_name": "Cancer",
+    "hash": "dafaf88147b89b40cd922d461f6e1fce"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2669.jpeg",
+    "class_name": "Cancer",
+    "hash": "fc3db9d962f05a74bdb5d942016fd770"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\IM-0086-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "aa091a768371f685db4920ee2e982d69"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1078.jpeg",
+    "class_name": "Cancer",
+    "hash": "15e4bacc75e1086e79a8c868839a5087"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3454.jpeg",
+    "class_name": "Cancer",
+    "hash": "ae71a79fbf310121e50e60116be267a3"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer297.jpeg",
+    "class_name": "Cancer",
+    "hash": "15434552225c2b78e4b85632d83944f9"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer948.jpeg",
+    "class_name": "Cancer",
+    "hash": "dc850588479cc073a6ab4c1089e2ff3c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1566.jpeg",
+    "class_name": "Cancer",
+    "hash": "1d0534056b27fb105523ebb546773349"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0516-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "c06b18734fc71edfa0223458072f9fdf"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1281-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "fdc40f0f98a83a1a81173ecb412f956a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer879.jpeg",
+    "class_name": "Cancer",
+    "hash": "18f090991b0ae2b11503af8219f35fe2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3713.jpeg",
+    "class_name": "Cancer",
+    "hash": "6327584dbe08084cb4558676836d5818"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2392.jpeg",
+    "class_name": "Cancer",
+    "hash": "15144d22d05fa62cf403d3b29e6520a2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3334.jpeg",
+    "class_name": "Cancer",
+    "hash": "5c7525f644e00067cb670acee4f7c6b4"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2840.jpeg",
+    "class_name": "Cancer",
+    "hash": "f8428b511edd5fc656157fa7f53b6e1b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2735.jpeg",
+    "class_name": "Cancer",
+    "hash": "8e22119d7d3ceaffa530453ac571338f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0679-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "cd8147fa8f0006d25c0f9ff42fb23403"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1626.jpeg",
+    "class_name": "Cancer",
+    "hash": "f530406639c9fea4cbe1d112d8b7f01f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer680.jpeg",
+    "class_name": "Cancer",
+    "hash": "8a918bf591d8e2ee91b61a916d1fb0f4"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0206-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "48a4f140c41540528dafb85beb9041f9"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer341.jpeg",
+    "class_name": "Cancer",
+    "hash": "8af0d55c74a34c030d9d5929b0a5929c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer936.jpeg",
+    "class_name": "Cancer",
+    "hash": "23d276ae63296cc651726b3d9cd15dbf"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2151.jpeg",
+    "class_name": "Cancer",
+    "hash": "2798bafbb9719a69cf32c13faac452d0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\IM-0027-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "99054d134eb86fea472335a94f4c6483"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer954.jpeg",
+    "class_name": "Cancer",
+    "hash": "1e3e89e147de2aa8925eea03ca68c73b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer109.jpeg",
+    "class_name": "Cancer",
+    "hash": "a841c543588733380a30e6bee101b15c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1096-0001-0003.jpeg",
+    "class_name": "NORMAL",
+    "hash": "b25d5bff2923d9b5afc9a705ecd3b017"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2552.jpeg",
+    "class_name": "Cancer",
+    "hash": "1715debb9bb27b72772937d435ab7541"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3815.jpeg",
+    "class_name": "Cancer",
+    "hash": "710f2e1780b1eaa74b050c2e6b8db55a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0540-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "115461dc961aae30cc290eb809874ca6"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1220.jpeg",
+    "class_name": "Cancer",
+    "hash": "8e3bc444c1868364c5002450a6cd379a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1198-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "d258d1252407b8ec9ccce8d4a75fffeb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3537.jpeg",
+    "class_name": "Cancer",
+    "hash": "3c3cca2baf114e5872c6ed97915c823e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer128.jpeg",
+    "class_name": "Cancer",
+    "hash": "d0cbf3331532e07ae4f5303fe71b7182"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer71.jpeg",
+    "class_name": "Cancer",
+    "hash": "552823c465fbd2834adcae7010c21caa"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2929.jpeg",
+    "class_name": "Cancer",
+    "hash": "da5bbc2ee1e0deca465c6274c7eda855"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0654-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "e82c712808bdbd7dc1745f5d146eda79"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer109.jpeg",
+    "class_name": "Cancer",
+    "hash": "c34c25a9f088ba165e488eeca64302fe"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer886.jpeg",
+    "class_name": "Cancer",
+    "hash": "c7949f7823772eeb4479642799d4e285"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3501.jpeg",
+    "class_name": "Cancer",
+    "hash": "24f2620dd32fe6e8ed3bef3dfd56e726"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2258.jpeg",
+    "class_name": "Cancer",
+    "hash": "a9db2d2081f7713a636093c2c9492001"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1205-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "bb828c4037e85bf053524b70029029dd"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer366.jpeg",
+    "class_name": "Cancer",
+    "hash": "56e1a55da386378e4654c832e4eb907f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3420.jpeg",
+    "class_name": "Cancer",
+    "hash": "f9b766fe8cd86882260b792f8e455c48"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0905-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "ac348d7570b617a62f4b97b37f136c20"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer497.jpeg",
+    "class_name": "Cancer",
+    "hash": "0576acb59dd136b6c53b4e2d43beae58"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer810.jpeg",
+    "class_name": "Cancer",
+    "hash": "c5b9a84ebb370f8674b21881fc418c55"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer947.jpeg",
+    "class_name": "Cancer",
+    "hash": "c19acb3465c57242bc055f7dac308cf0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3635.jpeg",
+    "class_name": "Cancer",
+    "hash": "7edf0557daf3073abe2d1ffd6d746d1f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0386-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "a4bea7de6add93a00436cfca94967fbb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3471.jpeg",
+    "class_name": "Cancer",
+    "hash": "5558f3c9eb236b050196f316ae0fce50"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3518.jpeg",
+    "class_name": "Cancer",
+    "hash": "541afa29bdc36645e4e25d69309bb2d9"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1691.jpeg",
+    "class_name": "Cancer",
+    "hash": "99375ebbbca39408a7934564e08b2a45"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0612-0001-0002.jpeg",
+    "class_name": "NORMAL",
+    "hash": "0bc1570ca3780bb4a800051e662f74cd"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1749.jpeg",
+    "class_name": "Cancer",
+    "hash": "9696007c7c8a7d171fbd116b34d8eafb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1341.jpeg",
+    "class_name": "Cancer",
+    "hash": "efa1ca26419737228544777c7a013a27"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0540-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "a1066c507b60cfaa1d00cb1308007328"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0364-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "a4196355fe385f309721e687996c2294"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer336.jpeg",
+    "class_name": "Cancer",
+    "hash": "5e31e45d8fc930053c7e7f3025e5d107"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer116.jpeg",
+    "class_name": "Cancer",
+    "hash": "9394e64ec42f606eb431055e7140d952"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer342.jpeg",
+    "class_name": "Cancer",
+    "hash": "ea21313a632c1a0a7fe884a15b668fbf"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0512-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "96b21b0b18eebd881b0f8c81f41a9e34"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3124.jpeg",
+    "class_name": "Cancer",
+    "hash": "f236bbb8e19c04a4b7eff4aa381ca115"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1037-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "14080c68b9b6543cf898f3ff4fe841b4"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer506.jpeg",
+    "class_name": "Cancer",
+    "hash": "0aaa877aeca9ca4398e9de458e5af757"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3189.jpeg",
+    "class_name": "Cancer",
+    "hash": "9fd1a8c5339d7627be3a4ca992fba789"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0698-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "1256d7410d1a175a1759127be4d5d225"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1073.jpeg",
+    "class_name": "Cancer",
+    "hash": "937558d567122129d7f283978493a5dc"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2066.jpeg",
+    "class_name": "Cancer",
+    "hash": "ffb08b36b49d90255417f9856f04a0e8"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2693.jpeg",
+    "class_name": "Cancer",
+    "hash": "9ef730de7cbaf64727ac7d3b4698935e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer58.jpeg",
+    "class_name": "Cancer",
+    "hash": "f0f0b64e125d1cddc7e809b508246491"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2949.jpeg",
+    "class_name": "Cancer",
+    "hash": "7f5587e395707e0c2ab4b20d5171e7a1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3588.jpeg",
+    "class_name": "Cancer",
+    "hash": "bc36d88cddcb4d162b5e02d0cfa1a81e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer273.jpeg",
+    "class_name": "Cancer",
+    "hash": "c003b462a094f12f1edc9b8b645f5e99"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer801.jpeg",
+    "class_name": "Cancer",
+    "hash": "b721e0e28d68fdda1d844fa5044b6f53"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer201.jpeg",
+    "class_name": "Cancer",
+    "hash": "95565191d87fc67399817985f2be757e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1743.jpeg",
+    "class_name": "Cancer",
+    "hash": "cf7453b2914e9d999e377d9e591471b7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1444.jpeg",
+    "class_name": "Cancer",
+    "hash": "8d310edb0bd501f5e1ed935260285b40"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2908.jpeg",
+    "class_name": "Cancer",
+    "hash": "cfb0e91e16b113680956f1a509237211"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer353.jpeg",
+    "class_name": "Cancer",
+    "hash": "811cb37825c10655a014d57ef0aa0872"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3522.jpeg",
+    "class_name": "Cancer",
+    "hash": "48b6e3a2f72ec6073dcc62db2f2ae0c2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0463-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "7406731ac750566c67392477ee62df8e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer216.jpeg",
+    "class_name": "Cancer",
+    "hash": "ac004f8909d801265f6796a0678bc35e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1348-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "fab15b8da385cc280646d8e390f9fcb6"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1417.jpeg",
+    "class_name": "Cancer",
+    "hash": "e769ce4b56532622201100e259fb563b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer272.jpeg",
+    "class_name": "Cancer",
+    "hash": "731ec9a96ccf9e05476993acb240557e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0214-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "34e0fe4d5ecd1f87c190fef08b7942b2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2520.jpeg",
+    "class_name": "Cancer",
+    "hash": "2dd57bcdd4396ac582e28b4654377837"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1614.jpeg",
+    "class_name": "Cancer",
+    "hash": "daa9088584c1309fbd4a894f1e3bdf6d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0339-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "983a0d9c64456924dae52e53ee9b4ffb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer373.jpeg",
+    "class_name": "Cancer",
+    "hash": "9bb6388a776be760e6f5e2ec97da1d55"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer54.jpeg",
+    "class_name": "Cancer",
+    "hash": "a3a299c00b5fd883fc647507d4cca274"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1549.jpeg",
+    "class_name": "Cancer",
+    "hash": "7be467fae83da12c3fab5a1882c345f2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer686.jpeg",
+    "class_name": "Cancer",
+    "hash": "0a76a9f02cf37bce0a32e15e43bdf410"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1512.jpeg",
+    "class_name": "Cancer",
+    "hash": "b3e01ffa8e5310293629f12ccac8e8a6"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1205.jpeg",
+    "class_name": "Cancer",
+    "hash": "c76537828bf5159634bcdb4a799e8ad5"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0771-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "f7b25b0b41e5a1402e381b7a840c10db"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer408.jpeg",
+    "class_name": "Cancer",
+    "hash": "09cfc3daae32279f38260d91393c5868"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1134-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "6e4aca198d8acb3436ba0a5cede41443"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2807.jpeg",
+    "class_name": "Cancer",
+    "hash": "c1b4be92bfd22197d8a120fd24da0d1b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2381.jpeg",
+    "class_name": "Cancer",
+    "hash": "7ccc17a673b96cb8a764b0712e9acd56"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\val\\Cancer\\val_cancer4.jpeg",
+    "class_name": "Cancer",
+    "hash": "7c43647e7883dc382e4fdcf9519eb620"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0700-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "31cf3d43cabd3648ce53ae0a889adc29"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0816-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "ac2871ea7796ae05f57343762687b414"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2002.jpeg",
+    "class_name": "Cancer",
+    "hash": "8f2c77682ebd0031aa260a0bd46d01ca"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1952.jpeg",
+    "class_name": "Cancer",
+    "hash": "9a23807567ef5a206f2d7401c1351374"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1248.jpeg",
+    "class_name": "Cancer",
+    "hash": "d924bd6f5e83a68428b78a2ef41d27a7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1442.jpeg",
+    "class_name": "Cancer",
+    "hash": "b693000a8d31027057a717f92732802d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1949.jpeg",
+    "class_name": "Cancer",
+    "hash": "227fda8680f4743193958e6ddf271c4b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1142.jpeg",
+    "class_name": "Cancer",
+    "hash": "0210866464002dcb01fcdbc30185310e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer900.jpeg",
+    "class_name": "Cancer",
+    "hash": "a666cf2af34e2a9424ddc794d23bbbb9"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1984.jpeg",
+    "class_name": "Cancer",
+    "hash": "0aa21bf385c4ac9dd59ea78f4b091b8a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer101.jpeg",
+    "class_name": "Cancer",
+    "hash": "4dc1a2ba7293e03545791bd23644af0b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1822.jpeg",
+    "class_name": "Cancer",
+    "hash": "8ca27a9f3b820c84f1aaa9c713ddd340"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer208.jpeg",
+    "class_name": "Cancer",
+    "hash": "89fbd8ee1d129f73e9c2b99107fdf69f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3380.jpeg",
+    "class_name": "Cancer",
+    "hash": "289fb28d454984ebfe21a20cfc6fea31"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1401.jpeg",
+    "class_name": "Cancer",
+    "hash": "2bf634461675a8126bc79c0bb8b2faf1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2138.jpeg",
+    "class_name": "Cancer",
+    "hash": "d06107c12e1e96b885e359a736a4fc66"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3675.jpeg",
+    "class_name": "Cancer",
+    "hash": "e62b4957e0d00b3303dc25c64a5db12e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1026.jpeg",
+    "class_name": "Cancer",
+    "hash": "dc821e2bc79c577dd7d4bd04124c0244"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer231.jpeg",
+    "class_name": "Cancer",
+    "hash": "2932baab0e8d8b566ca49367d5b975a6"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1578.jpeg",
+    "class_name": "Cancer",
+    "hash": "3ee9f5326f15ccaf5aa4f6521827d37a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2097.jpeg",
+    "class_name": "Cancer",
+    "hash": "ac97ba6be68535f4bbd5a36335aedb3b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer885.jpeg",
+    "class_name": "Cancer",
+    "hash": "3ed0afc0a34a831a0185f5d353e0f313"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0238-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "d8606f79a8baac269a2dcf07fec6e59a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer565.jpeg",
+    "class_name": "Cancer",
+    "hash": "3b49b9799702bfbc70aa7be02ba1d3c0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2634.jpeg",
+    "class_name": "Cancer",
+    "hash": "9e145b9e9e0e7702039b64ddc7f9604a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1864.jpeg",
+    "class_name": "Cancer",
+    "hash": "03fa002c367c87f64026adfbc0ddfc20"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer701.jpeg",
+    "class_name": "Cancer",
+    "hash": "1df0473f937c33955947404750257b4a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2866.jpeg",
+    "class_name": "Cancer",
+    "hash": "7edd23b588aa2716920edd43fd4ad101"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0522-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "427594a89679d9435488c3791de770d1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer175.jpeg",
+    "class_name": "Cancer",
+    "hash": "787a1c11d3c002f37f35c9ae219f27c6"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1688.jpeg",
+    "class_name": "Cancer",
+    "hash": "8081d3f312923b0d98ca087a22351e40"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1611.jpeg",
+    "class_name": "Cancer",
+    "hash": "67e7fb98b27950a4fb0fd6c5cac4143d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3763.jpeg",
+    "class_name": "Cancer",
+    "hash": "21c479a18dd9c7dcb7ae575fe6b6732d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer498.jpeg",
+    "class_name": "Cancer",
+    "hash": "ad8babcd22a4533fab4f9eba8b989b7c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2782.jpeg",
+    "class_name": "Cancer",
+    "hash": "7fbbc4838fa38554807c0de79ff5d4eb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer695.jpeg",
+    "class_name": "Cancer",
+    "hash": "f5752f39994da7b9064df16247ac9ec9"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3576.jpeg",
+    "class_name": "Cancer",
+    "hash": "11cd32d6d5affd66f7021d729ff57611"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\IM-0025-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "7327b200f7db31bb93d4cb6a83e327ca"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3215.jpeg",
+    "class_name": "Cancer",
+    "hash": "b1b2f586f116b4100db411dde0a0ed14"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0297-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "c1c99066f440d134a88a007cc5a1d9d0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0280-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "15daba69083b975ec0544fd2268c2fdb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1243-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "d9826e3c1e9b88f1a29722cfe35d644b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2321.jpeg",
+    "class_name": "Cancer",
+    "hash": "e94fa94df2905ee64fa875305ca647a8"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2925.jpeg",
+    "class_name": "Cancer",
+    "hash": "dc7001c269b62f49a433b6df30874b69"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer239.jpeg",
+    "class_name": "Cancer",
+    "hash": "9264a60af7b62cf7f5ed9bfc4fae85ff"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0523-0001-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "c185cab1b027cbeba31cfcdb5f8906ff"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer312.jpeg",
+    "class_name": "Cancer",
+    "hash": "326558bcf04f685b000ec7620edab6a8"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3427.jpeg",
+    "class_name": "Cancer",
+    "hash": "a28c5451991bf66cff4bbb39173ec4c6"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2178.jpeg",
+    "class_name": "Cancer",
+    "hash": "0653b913fab42a5a8d2ee8c97502a551"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer137.jpeg",
+    "class_name": "Cancer",
+    "hash": "6c30b41727510e043de21072e9f206de"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1571.jpeg",
+    "class_name": "Cancer",
+    "hash": "aa74bb3b4154f7edc58333d2e83ca514"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3640.jpeg",
+    "class_name": "Cancer",
+    "hash": "cd6bac3acf0563d2699b14b6fc9e3f11"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0859-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "745642698cdae359c8f0cba33c14e300"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3164.jpeg",
+    "class_name": "Cancer",
+    "hash": "031f268ff4d8c889a8b774aa022f08e8"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1531.jpeg",
+    "class_name": "Cancer",
+    "hash": "5ffd15e5dbda2046083738f3bcd78a2d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer287.jpeg",
+    "class_name": "Cancer",
+    "hash": "1b5be2d891952c3c5e15fc9c692a39fb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3497.jpeg",
+    "class_name": "Cancer",
+    "hash": "d25eca57ac6f55b9ae7375dff5ce11bc"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0862-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "063aa75d69a7ef428b1452c2b37221ca"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1266-0001-0002.jpeg",
+    "class_name": "NORMAL",
+    "hash": "2b227d7e5b40a9310da2af4a31b73dd3"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer237.jpeg",
+    "class_name": "Cancer",
+    "hash": "10f8d0da9c3adf168ca8886a070afe69"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0780-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "bb990c65f200dd362fbc7b1d19436482"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer590.jpeg",
+    "class_name": "Cancer",
+    "hash": "3112d912f06a80e1ad0d086e05662a5b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0343-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "ce7026a5d9324677633eb27da2487d37"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer604.jpeg",
+    "class_name": "Cancer",
+    "hash": "3140ec47590e62224232dbdf647bcec0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer264.jpeg",
+    "class_name": "Cancer",
+    "hash": "3a49cb80a8fb9e02894da7893b3e28e0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1006-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "c87535578e00528e016f5a215a761a1f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2236.jpeg",
+    "class_name": "Cancer",
+    "hash": "1bc157668bfbb83f897cf5c79feba8cc"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0600-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "29b97eb2ae44906a9a7f7effcf42ea44"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer245.jpeg",
+    "class_name": "Cancer",
+    "hash": "e1dad3a17fdbefb2a024323bfea3f4be"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3171.jpeg",
+    "class_name": "Cancer",
+    "hash": "7361cd527d4aa1cc57d90b265fb8aba0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2125.jpeg",
+    "class_name": "Cancer",
+    "hash": "b12e00c1020b3028e72843d0212ecea3"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\IM-0033-0001-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "e71a81d017feadd4f3507b9fa10309b1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1429.jpeg",
+    "class_name": "Cancer",
+    "hash": "9764b05812f6896f7af7473432c27680"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3767.jpeg",
+    "class_name": "Cancer",
+    "hash": "4f0354f29a299fea674307b6c40d6f92"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0359-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "69465122d00d14849a635bcbb5d8fdc9"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0388-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "36519c046271a855972cec46c776a7b1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3190.jpeg",
+    "class_name": "Cancer",
+    "hash": "726a62b2816560d1409a63a5fe22435d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0409-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "20b03943b3cf48c5c6759473c4d79444"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2586.jpeg",
+    "class_name": "Cancer",
+    "hash": "0b5bc4a3b925b1ff983dcf0ba171a209"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2367.jpeg",
+    "class_name": "Cancer",
+    "hash": "260c8df425d9dec39ff296b0f32ed075"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3786.jpeg",
+    "class_name": "Cancer",
+    "hash": "1ae88f2c907ebc6e4a7d19f9c74747fe"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0871-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "e3f64d0d27a710642390caf26d73d4c8"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2528.jpeg",
+    "class_name": "Cancer",
+    "hash": "53862c5b00b2a2fae525310cc68ef25f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2599.jpeg",
+    "class_name": "Cancer",
+    "hash": "225e23f0c8c0ffbe1dda7132aca0fff2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer597.jpeg",
+    "class_name": "Cancer",
+    "hash": "498d7a4740b5d91582764f333e108178"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0448-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "a27e8f3561a28c708034cf345d79cb92"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2029.jpeg",
+    "class_name": "Cancer",
+    "hash": "6e727eaab0d6d86ac885479df9d898e9"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1625.jpeg",
+    "class_name": "Cancer",
+    "hash": "66e156e9262525b83d6bd175e0eb5862"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1819.jpeg",
+    "class_name": "Cancer",
+    "hash": "aa57b0d4aee57090d3f17c21f48dfe89"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer640.jpeg",
+    "class_name": "Cancer",
+    "hash": "90a27d9169daba7ab6266e0c41f56285"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0520-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "50d604d64647168704150c792f2880a7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1264.jpeg",
+    "class_name": "Cancer",
+    "hash": "91417b5c381179d2d0657ada5d034085"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1307.jpeg",
+    "class_name": "Cancer",
+    "hash": "79177f945b640c4d87d6f7fcbbb7c92e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0274-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "405c2ee0f74ee3c0e782a7283ba0f3df"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0493-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "e1e2c5a1634cd694c6a913dd9dbe449c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0582-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "a47cbb203dee1632223eab736bb26e55"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0803-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "406188cf146acefb187b575a1855827e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1290-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "b96a3fde9ae24f2d140e0701faf3ad77"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2430.jpeg",
+    "class_name": "Cancer",
+    "hash": "541bd659e06941578026e79928fea979"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2214.jpeg",
+    "class_name": "Cancer",
+    "hash": "92c903b5e77c3b8cd1f0adfc6c95b62c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3418.jpeg",
+    "class_name": "Cancer",
+    "hash": "5e73a4b0f01781ff2e85374d5a0c5baf"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3249.jpeg",
+    "class_name": "Cancer",
+    "hash": "77d6c3cb198c51c275d3e0c6ed2999e9"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1904.jpeg",
+    "class_name": "Cancer",
+    "hash": "44457df2c17cba57c04af50573ae6907"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2705.jpeg",
+    "class_name": "Cancer",
+    "hash": "328c2ace9e097d5706ae31763875b192"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1448.jpeg",
+    "class_name": "Cancer",
+    "hash": "ac66a31866a99774b41a3edd49e9c73c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1403.jpeg",
+    "class_name": "Cancer",
+    "hash": "76fe4e96b29f039da3e3a636457c279f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer13.jpeg",
+    "class_name": "Cancer",
+    "hash": "7d2b7887ee02e7e274c140f78389113a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3680.jpeg",
+    "class_name": "Cancer",
+    "hash": "7f731a301270875de555fb8d617dcc48"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer650.jpeg",
+    "class_name": "Cancer",
+    "hash": "5e4865d5b5e1a55caa9351ab1e2ddd14"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer235.jpeg",
+    "class_name": "Cancer",
+    "hash": "590be512b15b0163d9c69b200051a554"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0385-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "d2ab861933c048ec206d381b1f534069"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1090.jpeg",
+    "class_name": "Cancer",
+    "hash": "41e55d44f03173d41030ad274c438182"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3391.jpeg",
+    "class_name": "Cancer",
+    "hash": "3c26a4e26566659a15a7cfb81c650854"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1605.jpeg",
+    "class_name": "Cancer",
+    "hash": "e944f549ebf4833bd4a47ad4ec00f120"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1793.jpeg",
+    "class_name": "Cancer",
+    "hash": "dfeed1355ad12be86ced5cbee0909b64"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer316.jpeg",
+    "class_name": "Cancer",
+    "hash": "6a98685163e50984bee7b3c8549b90e1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0956-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "84fe2de679c2cd9170c9f3f3dc763a84"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3583.jpeg",
+    "class_name": "Cancer",
+    "hash": "cf2814388a85b1417e3f2e978afac798"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\val\\NORMAL\\NORMAL2-IM-1440-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "893eba9f80c3df961de6e78ae6bbd52e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0509-0001-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "6340e7a8ebf75575d699c02ad02aea5b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3584.jpeg",
+    "class_name": "Cancer",
+    "hash": "af104b48a4fd1d07196f9e87be33ed2e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3606.jpeg",
+    "class_name": "Cancer",
+    "hash": "43b9ec83fee8fb6946dfa7919231e94f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0515-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "1f69496803ff46a2833d4294f9b30595"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3591.jpeg",
+    "class_name": "Cancer",
+    "hash": "445bade67ff71d92f6a0db841a3c14a8"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3156.jpeg",
+    "class_name": "Cancer",
+    "hash": "51799f74136530db2a05f99a8e25eb2a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3295.jpeg",
+    "class_name": "Cancer",
+    "hash": "116c4996dd9d46ec0a1ec591b8d8b788"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3769.jpeg",
+    "class_name": "Cancer",
+    "hash": "1728be9edf21f85b0bf1feaca6de4d1a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3279.jpeg",
+    "class_name": "Cancer",
+    "hash": "cfe5a836a2696c5c076dd0f51b1c21a8"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2262.jpeg",
+    "class_name": "Cancer",
+    "hash": "18c03173b98784ef18631d9768d6fa9c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1386.jpeg",
+    "class_name": "Cancer",
+    "hash": "f073ad6ec8292148321183a36dc7c157"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0314-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "0c887d6bfd140334baf81ca49569567a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1064.jpeg",
+    "class_name": "Cancer",
+    "hash": "d971010ac5727901e4cbeb400e101330"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3868.jpeg",
+    "class_name": "Cancer",
+    "hash": "f41e435f6924bef4848309a5ee1fcc83"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2581.jpeg",
+    "class_name": "Cancer",
+    "hash": "93b0297c42f3f244e82d43053dda71d6"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3275.jpeg",
+    "class_name": "Cancer",
+    "hash": "b397ad2eb13156f5c5757cea11875463"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0641-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "a4871988c6e65ca2e1e762b27d2c0857"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer167.jpeg",
+    "class_name": "Cancer",
+    "hash": "da3d7b54aec061cead363ba595bb358b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3794.jpeg",
+    "class_name": "Cancer",
+    "hash": "ec7bc80d923d5cc3fc2385ab3d91aa9f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0326-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "1de4c4278b3a4dde6db9beff146e6465"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer75.jpeg",
+    "class_name": "Cancer",
+    "hash": "e4f3e472ef20bbc17764856c30bcf839"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0651-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "87fb3d30c5bad483653f2527b1f53ec9"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2257.jpeg",
+    "class_name": "Cancer",
+    "hash": "4ec52701ab783b993a05a99c48f0aecb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1686.jpeg",
+    "class_name": "Cancer",
+    "hash": "085660ed26943b416614ca7239d2613f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1014-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "335b88a3f9a9905e5f930e6c72d7146e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer571.jpeg",
+    "class_name": "Cancer",
+    "hash": "3a5ce8bf30d41247906701593d98e035"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2120.jpeg",
+    "class_name": "Cancer",
+    "hash": "ed69e031e5a64a53592e31ed9ce576ba"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0329-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "2da6d0d461f541085382a1ec6f3ed625"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer679.jpeg",
+    "class_name": "Cancer",
+    "hash": "7eb87526a8d720c991df4cdb7995b782"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3202.jpeg",
+    "class_name": "Cancer",
+    "hash": "cc1386bdc816221f6e254609d8e5c3c2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1358.jpeg",
+    "class_name": "Cancer",
+    "hash": "57449430854f9a0c94ee11ceba876b88"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2170.jpeg",
+    "class_name": "Cancer",
+    "hash": "8837ca906079f6ecfc05164163a3dc0c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer313.jpeg",
+    "class_name": "Cancer",
+    "hash": "5697c64d844781e5d998cdb458ad40ae"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3464.jpeg",
+    "class_name": "Cancer",
+    "hash": "f48c088851f4d66dda001d2f77c6ee3f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1001.jpeg",
+    "class_name": "Cancer",
+    "hash": "9eecd2da6c61ef49a4b7b8d56a963caf"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1685.jpeg",
+    "class_name": "Cancer",
+    "hash": "60acdcfff39aded613aef5283f56689b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1544.jpeg",
+    "class_name": "Cancer",
+    "hash": "3208cd0ae07f39178e191a999914b6bd"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3364.jpeg",
+    "class_name": "Cancer",
+    "hash": "0c4ca24e8ae62c98f1e248bb56e4f64c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0858-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "e1943e9edb9bb585a116319280c23cbc"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer14.jpeg",
+    "class_name": "Cancer",
+    "hash": "d661368c0700420e8682ce018500479f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2633.jpeg",
+    "class_name": "Cancer",
+    "hash": "3e06f8a8b0354ccd7bc47ea2fdaf69fa"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3425.jpeg",
+    "class_name": "Cancer",
+    "hash": "8eb535efd92bc645e07c95d5e014efad"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer209.jpeg",
+    "class_name": "Cancer",
+    "hash": "ad58599302457e2fa0917cbbbd267cd5"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer491.jpeg",
+    "class_name": "Cancer",
+    "hash": "19f9868fba8fe7a6f48b59aa3616c834"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1806.jpeg",
+    "class_name": "Cancer",
+    "hash": "241f688cfd9394fd54b4717696dcec99"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0455-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "681ef2a693e43fa8b6afbc6cafa8911e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3430.jpeg",
+    "class_name": "Cancer",
+    "hash": "31d6cd0538812aeed5420999ccf53176"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0473-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "af7345ae824d4acf8c8083f1e5b7d9d7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2479.jpeg",
+    "class_name": "Cancer",
+    "hash": "d2436ffef83fd0616de8953b5abd7262"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer740.jpeg",
+    "class_name": "Cancer",
+    "hash": "491726ae28cb598c99df8d40d41dabc5"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0460-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "04e831a7ec9d97def6d5e6173b072771"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0424-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "ccc2b63a1dee5a7f4fb0c5e8767f3686"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer329.jpeg",
+    "class_name": "Cancer",
+    "hash": "eb634b84577e805525c7d829ea5f88bf"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\IM-0022-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "7b4400050f977d2c1781cf355844c41e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer153.jpeg",
+    "class_name": "Cancer",
+    "hash": "19d963c6b913dbcf6e3668787d751035"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1102.jpeg",
+    "class_name": "Cancer",
+    "hash": "8cbefe88c7fcb9ba157f640919190f3f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer71.jpeg",
+    "class_name": "Cancer",
+    "hash": "1d1aad100760e174345e41481c66d215"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2168.jpeg",
+    "class_name": "Cancer",
+    "hash": "324d48d7177985379952b0d89a7f4ade"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer357.jpeg",
+    "class_name": "Cancer",
+    "hash": "119c0490f57d1bc038f989f0878e556b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0458-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "e9e85f06875d2a63bb21368e7c6e6af1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer206.jpeg",
+    "class_name": "Cancer",
+    "hash": "62763e50ab7f5f4a40b3ab79a973d03d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0162-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "d4bb8128b1baff5a5b9fb322d1dc4dcc"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0643-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "d61bfeb4a712a651095f9f86367e04cb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer337.jpeg",
+    "class_name": "Cancer",
+    "hash": "474f3f7aace630ed9fd99ab82bb502d7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3121.jpeg",
+    "class_name": "Cancer",
+    "hash": "5f11cdbe6ab606f95d6e854c33b48469"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2512.jpeg",
+    "class_name": "Cancer",
+    "hash": "d92d99fd8eee9bfb4c330c9ed4d6f84e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3779.jpeg",
+    "class_name": "Cancer",
+    "hash": "c5729b7fb682f5e0fa668e3cf8f59e75"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3519.jpeg",
+    "class_name": "Cancer",
+    "hash": "4e392054561c3d5eac6625d2f2a1641d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0954-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "a8b6b1d0bf5c1b5e3d6676c4cee33874"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3721.jpeg",
+    "class_name": "Cancer",
+    "hash": "e1361bb7834be1d231dd2b0d57e20ef5"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2897.jpeg",
+    "class_name": "Cancer",
+    "hash": "4eab23dd8dd06d76f4ee33858c280668"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1267.jpeg",
+    "class_name": "Cancer",
+    "hash": "859a8aca5fb11ff5229b89ec883fbe52"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3216.jpeg",
+    "class_name": "Cancer",
+    "hash": "6383f6f9069156355bc613951bd1b532"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1163.jpeg",
+    "class_name": "Cancer",
+    "hash": "da786f69517df153d0d324bf7d5c4cfc"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0280-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "7e889208c162263835429943a5f1fce3"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3238.jpeg",
+    "class_name": "Cancer",
+    "hash": "adda92139cb53e24e03b5a4f597f0486"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0307-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "11b947d233594e30eb32f20f4da3a9e6"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2452.jpeg",
+    "class_name": "Cancer",
+    "hash": "e48d4ea98908b394a03c555ec20578f4"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0753-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "b3dc5ad70b535a745c80e7ddee0fb969"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer915.jpeg",
+    "class_name": "Cancer",
+    "hash": "6c37b3f9e5dadca84724b7a3ee392676"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2499.jpeg",
+    "class_name": "Cancer",
+    "hash": "0318adff6ce3ca1944ee7c44587d883d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2164.jpeg",
+    "class_name": "Cancer",
+    "hash": "99e4262a2fcd37381d3bc4b6ad1d220e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer283.jpeg",
+    "class_name": "Cancer",
+    "hash": "f4680f3cf7ade85bc20fd0b9a50dbae2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1318.jpeg",
+    "class_name": "Cancer",
+    "hash": "fa20e80c4a71f819b22f445a663b5132"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer275.jpeg",
+    "class_name": "Cancer",
+    "hash": "81a8e182395d1a8376cd06dba6f1b4f0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer195.jpeg",
+    "class_name": "Cancer",
+    "hash": "19406a101eb712bee6b6c0fd10dbee72"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3281.jpeg",
+    "class_name": "Cancer",
+    "hash": "b52423799fa745268404ca06b1bfaad0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3284.jpeg",
+    "class_name": "Cancer",
+    "hash": "49b57786cf9bbbc988c09481a8050853"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0476-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "eb2d691fafa14d1f9bfdfd796b3fb2af"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3118.jpeg",
+    "class_name": "Cancer",
+    "hash": "7410f7a246ee7903115db9275982d6c9"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1695.jpeg",
+    "class_name": "Cancer",
+    "hash": "7943f02b7ac081a04a2e8de1fcf9da3f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2916.jpeg",
+    "class_name": "Cancer",
+    "hash": "32527ff617aab429fd73c7064a853808"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2180.jpeg",
+    "class_name": "Cancer",
+    "hash": "37f5f3b259c2526468233d661ccb4bf7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1197.jpeg",
+    "class_name": "Cancer",
+    "hash": "1fef891e7b3ad6b5c5ea6620554f8d8c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer873.jpeg",
+    "class_name": "Cancer",
+    "hash": "7db0898912259541a05511c6b69a24ef"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer489.jpeg",
+    "class_name": "Cancer",
+    "hash": "a47abea6864df97ec4818bb448d9390f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2165.jpeg",
+    "class_name": "Cancer",
+    "hash": "1456d5de52cdc211253f63f237eedb3b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1227.jpeg",
+    "class_name": "Cancer",
+    "hash": "e7f32f8a3fb4f4e4fcd0ad032da75e0f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer962.jpeg",
+    "class_name": "Cancer",
+    "hash": "90a0d6d853038d81bda063a34a47205c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer37.jpeg",
+    "class_name": "Cancer",
+    "hash": "7b9a6543ec9aa351fbd33dfa5dbf9721"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer596.jpeg",
+    "class_name": "Cancer",
+    "hash": "906a3ed82b88d7a1dd787ffaff7a16b7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1480.jpeg",
+    "class_name": "Cancer",
+    "hash": "b8ab6d82c4712fb8912a29aa851ba86a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer547.jpeg",
+    "class_name": "Cancer",
+    "hash": "b40b67c17f4b68a5871e47ac24d46aeb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1635.jpeg",
+    "class_name": "Cancer",
+    "hash": "dd4a92c95da2c168da8db438c723cf87"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1921.jpeg",
+    "class_name": "Cancer",
+    "hash": "55681b402db700575e3b44d688b13c10"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0201-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "92071db8185da0ed5f89443690e01a8f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0536-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "4aa89ff6912968557465700955c59210"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1007.jpeg",
+    "class_name": "Cancer",
+    "hash": "9c78313ad4ea4fc0dfe3f64fa580e750"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0414-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "41f0d14b6f202b1ba2ec0203e8686398"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1341-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "b80dfb1d800d2c6712f14132027077e6"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3506.jpeg",
+    "class_name": "Cancer",
+    "hash": "79767b4a80c6142df77aa0dfdc730846"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0499-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "675e7dd4212109fd01e4dc8e4af38c42"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer798.jpeg",
+    "class_name": "Cancer",
+    "hash": "7f008439a1fbeaac8158397c06776708"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer403.jpeg",
+    "class_name": "Cancer",
+    "hash": "422d51898d5e2d2266ea19d943924ed0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1593.jpeg",
+    "class_name": "Cancer",
+    "hash": "49e92d1bfe684331334f471f1078819a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3327.jpeg",
+    "class_name": "Cancer",
+    "hash": "28097255957009db8551f177223994c4"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1199.jpeg",
+    "class_name": "Cancer",
+    "hash": "2df0031ace86229b73484dd1f4839495"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1718.jpeg",
+    "class_name": "Cancer",
+    "hash": "79974e9c982ae08bcc0232a5c012ae88"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2017.jpeg",
+    "class_name": "Cancer",
+    "hash": "c80f5f2546ec7f98cddb805c94759129"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2293.jpeg",
+    "class_name": "Cancer",
+    "hash": "c79ae39b13fa99378c4904dd96d54408"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3268.jpeg",
+    "class_name": "Cancer",
+    "hash": "872ef6d9954784ff234836186aef3403"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1662.jpeg",
+    "class_name": "Cancer",
+    "hash": "b01b4c5d6fbf39795e4b2025739cb1a2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1717.jpeg",
+    "class_name": "Cancer",
+    "hash": "0120f83666ac13bda4698a1f62613255"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer376.jpeg",
+    "class_name": "Cancer",
+    "hash": "1479110ba48a80dbd047005150f6fe19"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer192.jpeg",
+    "class_name": "Cancer",
+    "hash": "31d15e6153038d6f8e97eee449e67ffd"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0019-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "5ee89f5a79039fe655a166a4d4f93bf1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2893.jpeg",
+    "class_name": "Cancer",
+    "hash": "9ffadf33ce1167ad5ff432367c2f3324"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0696-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "bfc25590bce262cdb3d9c5d6533bd8bd"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer853.jpeg",
+    "class_name": "Cancer",
+    "hash": "bf64ca64357c82e231859ffe56603e45"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1158.jpeg",
+    "class_name": "Cancer",
+    "hash": "3fae486343c1f51ad91912264d922cdd"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer888.jpeg",
+    "class_name": "Cancer",
+    "hash": "aac98ce70f33b9f63280eff3749fff42"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer466.jpeg",
+    "class_name": "Cancer",
+    "hash": "fe062683bd7b5abc2f4fca174cb03741"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3086.jpeg",
+    "class_name": "Cancer",
+    "hash": "514309ce029a78510460438525b6c8b6"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0311-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "104f11c6cb22e252f0f507bc44fd5e20"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0337-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "d20fd7c746c23be2eafb11952b209b7a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2283.jpeg",
+    "class_name": "Cancer",
+    "hash": "d494a95eb09a7a5f181c98c12e901fe0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2888.jpeg",
+    "class_name": "Cancer",
+    "hash": "f061722ccf94ced15291db09349e66de"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer618.jpeg",
+    "class_name": "Cancer",
+    "hash": "3495e846e3e24cda568696d5bf279c97"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0648-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "a342d8de213774cb1f86a3ba7458b1f7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3724.jpeg",
+    "class_name": "Cancer",
+    "hash": "68befb54f344068e4496216769c819d1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0684-0001-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "83729eafac63902f990e9453ff20d4df"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3260.jpeg",
+    "class_name": "Cancer",
+    "hash": "9ddbfb42952651f8bdfd25b5678d009e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\IM-0099-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "72b7ae0919539b7f99ea74a6e64b7d32"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2685.jpeg",
+    "class_name": "Cancer",
+    "hash": "fe05ee2ab6a3ab84a77c6a5022f1db4d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2509.jpeg",
+    "class_name": "Cancer",
+    "hash": "6ef02a946e59775cf193842f6d5cc3aa"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2438.jpeg",
+    "class_name": "Cancer",
+    "hash": "29a45c58e18d84a69684da6e2f87e596"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\val\\Cancer\\val_cancer3.jpeg",
+    "class_name": "Cancer",
+    "hash": "298b6b335c4c4bc67eb5803a9d2b6e6e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1243.jpeg",
+    "class_name": "Cancer",
+    "hash": "49b209e303afd8f9b90ccf59a4d4d3db"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer291.jpeg",
+    "class_name": "Cancer",
+    "hash": "a1fe9e8bdd209ab0281dc5b3db3b06de"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1515.jpeg",
+    "class_name": "Cancer",
+    "hash": "d9057cf7a70f56507cb817db5dd1b2fe"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0416-0001-0002.jpeg",
+    "class_name": "NORMAL",
+    "hash": "66c524868989d609fad4b06ee583652a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2028.jpeg",
+    "class_name": "Cancer",
+    "hash": "8aa25841d8bb902535c123b0f69038c1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1124-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "44b79e30c25a6035e25983242d770090"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0380-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "ec73e854ab16a27ff684aa8a15151d3c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0557-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "cd3614368a86f88c3ee318665a4c75ab"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer743.jpeg",
+    "class_name": "Cancer",
+    "hash": "7e88dbc255c7b15b7f1c94bec24d4c31"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3373.jpeg",
+    "class_name": "Cancer",
+    "hash": "bdcc60fd682d619eb448163c195ae667"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0231-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "6326f5dc666c424e1dd2da01bd7febf4"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0309-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "0aeb096a8574c109b3a7a6c20e12c585"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1154.jpeg",
+    "class_name": "Cancer",
+    "hash": "22b3c6fb7fde754bfb8714023b982e5a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3214.jpeg",
+    "class_name": "Cancer",
+    "hash": "a401389d3efe94269d2e2542c98798cd"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer144.jpeg",
+    "class_name": "Cancer",
+    "hash": "8666553a123ca14bcf3c86022e024a4c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1396-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "c5733667b321843e2aeaa9ce6290d84b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0533-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "e7b42b31f13923676887b89ca16399ad"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0345-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "94dd57707a82c0e959dd175f0a508ff7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3244.jpeg",
+    "class_name": "Cancer",
+    "hash": "87f208b57b3c0d3cbea3153628fa3de4"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1179.jpeg",
+    "class_name": "Cancer",
+    "hash": "d13236f3c1566e835bbb8de5d0d433df"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1114-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "c849e759ff00a10a005dca82ace6b739"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3093.jpeg",
+    "class_name": "Cancer",
+    "hash": "8840551627a52d2eba47eff73590acf3"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1435.jpeg",
+    "class_name": "Cancer",
+    "hash": "9f4f583f397b4e3a882ff71afa470691"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3595.jpeg",
+    "class_name": "Cancer",
+    "hash": "9b9c3daba4e10488fe6c5aacb4e9e309"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer904.jpeg",
+    "class_name": "Cancer",
+    "hash": "d80ce2bbe7ce2cf80b908410078da08e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1297.jpeg",
+    "class_name": "Cancer",
+    "hash": "551b1c6cc5b8543d82e272560ec1b4e7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer279.jpeg",
+    "class_name": "Cancer",
+    "hash": "1897bc64365908e125263ca1df5b5e56"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer715.jpeg",
+    "class_name": "Cancer",
+    "hash": "0c1d0b8a4fb3ada8659b1ae932fb63a4"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2657.jpeg",
+    "class_name": "Cancer",
+    "hash": "cf73a7efb19e4611458be14776968800"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1196-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "d199632177f3fd9e189f9604582bc664"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3157.jpeg",
+    "class_name": "Cancer",
+    "hash": "6107dbaaa78ff4f61a326d88ca84c99f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3305.jpeg",
+    "class_name": "Cancer",
+    "hash": "ef021606e4072d7d48ba337b4252b99d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2426.jpeg",
+    "class_name": "Cancer",
+    "hash": "e2a893600fe543863132c40bcde93dd7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0229-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "a7d588a1b5bb399938357b81214bdeea"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2027.jpeg",
+    "class_name": "Cancer",
+    "hash": "7b4cfe430ae87b596ac9c0f7f5137563"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3477.jpeg",
+    "class_name": "Cancer",
+    "hash": "dc8bef0bb781380cec5490dda63ced64"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1458.jpeg",
+    "class_name": "Cancer",
+    "hash": "bf4d8d3438c80667b09942599c10a200"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1997.jpeg",
+    "class_name": "Cancer",
+    "hash": "7b5cbfbda8590e7a1a8ee18c17de818c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0843-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "ce7839c3869b5ddac67a6d805978e5ba"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2046.jpeg",
+    "class_name": "Cancer",
+    "hash": "6b5dd5881e36c0794e2c1f431bfeb069"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0066-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "71bed952453aab9b68c37b12a7dfa231"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0360-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "c9eab4944708fed955f3cd91133b374d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer377.jpeg",
+    "class_name": "Cancer",
+    "hash": "b8e3072e8adab92d49b73d6bc0f90fc7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1122.jpeg",
+    "class_name": "Cancer",
+    "hash": "625e1c9880659dbfa286108627315461"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2846.jpeg",
+    "class_name": "Cancer",
+    "hash": "d5d69d1008bda447346bd79a39b654ae"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1833.jpeg",
+    "class_name": "Cancer",
+    "hash": "7a94d6ddc062929ca0020def2aebe5b6"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer961.jpeg",
+    "class_name": "Cancer",
+    "hash": "f3d592f13d7a50d38dddc848a6b3f4f0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0199-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "385d5c2e38741300fe30e0c75d445c41"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1513.jpeg",
+    "class_name": "Cancer",
+    "hash": "de7416f6b6c4f09a54e3984604553a0d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1222.jpeg",
+    "class_name": "Cancer",
+    "hash": "2a63d1b113bc329b456728d2e8479198"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0868-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "0c51c03bca74a0f5c9bc6ec3efed6c8c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0589-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "99a2913db6da7f435814422d87c2dc1e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1093-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "54e0cd564a6580b9a8f88c079c1bec95"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2809.jpeg",
+    "class_name": "Cancer",
+    "hash": "b07a21f80343b851d554cdfcd178515a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1127-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "d3645461655852482424e26934d8941f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0511-0001-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "cfbb89fc000aa794e5f23db1065c1653"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0651-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "43475922265756bd5009be953456710a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0487-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "bae3397dd7eae3104cfa107ee908e5e7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer296.jpeg",
+    "class_name": "Cancer",
+    "hash": "c18f84e1832782dc5a73e2fdb0d39de5"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2190.jpeg",
+    "class_name": "Cancer",
+    "hash": "9e2e024cd2caa9cf7e122e59401b7a1e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3739.jpeg",
+    "class_name": "Cancer",
+    "hash": "ce58df4ec5d76dfaf72f87aefcdcaaaf"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0577-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "ca07aaa2c3b03cd33df245d94b7b8349"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1927.jpeg",
+    "class_name": "Cancer",
+    "hash": "1aab4e8eb0f86fc6178686fd2d611572"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1184-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "3879052f4172833847568ef0164a3495"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0226-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "9eacdba887ada5ddde6673f2dc04e0f0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0225-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "3f98189ec5bc7817824cf187d077309a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\val\\NORMAL\\NORMAL2-IM-1438-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "78ec23207f3f763ce2e2a02d4d14ea45"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1214-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "f96465d6f8c5c125aac0aef85e13b374"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2289.jpeg",
+    "class_name": "Cancer",
+    "hash": "4666b43d8ef384b7076e59cef1a2eda8"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3426.jpeg",
+    "class_name": "Cancer",
+    "hash": "598a34ee519cf627b1c38e1586dcd93a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2189.jpeg",
+    "class_name": "Cancer",
+    "hash": "b7375c5dcc63d292808f576bb5dd013c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3012.jpeg",
+    "class_name": "Cancer",
+    "hash": "252c95bffc00510062153f480f419bcd"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer213.jpeg",
+    "class_name": "Cancer",
+    "hash": "5258d05273f99f746672ddd7e80a0a47"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1459.jpeg",
+    "class_name": "Cancer",
+    "hash": "103036d2707894f89ddaff08da371e7b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0718-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "34a9fd0b57389bf7123122b103d7f486"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2959.jpeg",
+    "class_name": "Cancer",
+    "hash": "8ca64bcd7177cee6383fcf1c43c5d2df"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\IM-0102-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "9c104d4db62ec1ea40c31a0ce27accc9"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0449-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "14798237e906f8d5b88fcae3dd1389d0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1678.jpeg",
+    "class_name": "Cancer",
+    "hash": "b1e46381aed3fe13928d661613dc18fd"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer647.jpeg",
+    "class_name": "Cancer",
+    "hash": "54381a12f2be50e27e08c59d3e9c37a7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0676-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "f93bfc7be3993c5130533fa01b33284f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer891.jpeg",
+    "class_name": "Cancer",
+    "hash": "5f5bbce638e23bc22637003ca0d11fc6"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer281.jpeg",
+    "class_name": "Cancer",
+    "hash": "f181dd3f008d7225f1a5642bc0baff37"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0814-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "d4b0d73844f7a5bf271a03c43400cb55"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer445.jpeg",
+    "class_name": "Cancer",
+    "hash": "530bfe22009b1dca8f0b4ed93e0159b0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2923.jpeg",
+    "class_name": "Cancer",
+    "hash": "e7e487f034e164a45c2e05e40e11828b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2245.jpeg",
+    "class_name": "Cancer",
+    "hash": "1bedc08ecf777560a36b4ea8183a247e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3132.jpeg",
+    "class_name": "Cancer",
+    "hash": "188316f40fedfa02e5012aea9ff46685"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0316-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "5d5a39545163f07524fe4bcf0702e2d3"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer584.jpeg",
+    "class_name": "Cancer",
+    "hash": "0481fabf8e3a05487a9ee9c9f2333234"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1215.jpeg",
+    "class_name": "Cancer",
+    "hash": "7ede1e083f34f51ef9b099d9b5fd5a37"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2966.jpeg",
+    "class_name": "Cancer",
+    "hash": "0f37d70f48beef3a873a2276cbf78943"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer180.jpeg",
+    "class_name": "Cancer",
+    "hash": "ca03e19084b3ae83813bff775034f866"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0486-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "bd258ec9815cc2e2fbe94c49e6367574"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0907-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "366e391375b129b84a783c77e1ca05b3"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3565.jpeg",
+    "class_name": "Cancer",
+    "hash": "a607d732e451f7e1aacd00e45f60e183"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0666-0001-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "5896aac8cdc98fb895c59814abd4defc"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0535-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "5cea7c36e757081ab75b94b95441ec11"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1284.jpeg",
+    "class_name": "Cancer",
+    "hash": "a0ffd7115fa95c151a43496ffdbfb9a8"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer402.jpeg",
+    "class_name": "Cancer",
+    "hash": "94ef43211ec80d765fe419713c1de56c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1128-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "07d7d79d7ec6a8f94f14752beb935b91"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer52.jpeg",
+    "class_name": "Cancer",
+    "hash": "8db146263f7440cd706f678f0e08b979"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3008.jpeg",
+    "class_name": "Cancer",
+    "hash": "88d9b038dd2e98ab15496489e5db3eb7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3498.jpeg",
+    "class_name": "Cancer",
+    "hash": "3dbf9399d4d14b9d60d9ffccb01b746d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2124.jpeg",
+    "class_name": "Cancer",
+    "hash": "d46304ca0c5c2477d58be9e6c59e20c2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer89.jpeg",
+    "class_name": "Cancer",
+    "hash": "73b9cfb93eb07c41e0677dbce7941b41"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2121.jpeg",
+    "class_name": "Cancer",
+    "hash": "60fbcba04cad4ae7652fde8b0dd1d7c0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0796-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "6d3b36f17ad854ceb74f21e2a1c899fb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2310.jpeg",
+    "class_name": "Cancer",
+    "hash": "ca55dc3dec992dcc44f54b7c9dca7e89"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3081.jpeg",
+    "class_name": "Cancer",
+    "hash": "639bfd82be3214c340ccb316d31400e2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2116.jpeg",
+    "class_name": "Cancer",
+    "hash": "001a3594668f00099e61a491ea0655dc"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2295.jpeg",
+    "class_name": "Cancer",
+    "hash": "0f27e116f9223ef6461a52060b21d103"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer251.jpeg",
+    "class_name": "Cancer",
+    "hash": "a49d207a5991ee1104cf8b7f9d24c1af"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0620-0001-0002.jpeg",
+    "class_name": "NORMAL",
+    "hash": "26e23309d30e775f88c5134f785f2cc0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0478-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "3bdf969e3561461e38a2ca320664fb34"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0317-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "eb72dfe7d92d2f5fc0231a09ed846c7c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer302.jpeg",
+    "class_name": "Cancer",
+    "hash": "476706cf545d007cdfe1b627387ff693"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer840.jpeg",
+    "class_name": "Cancer",
+    "hash": "5c2750bec93079b73d6dad642d5f3b04"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1418.jpeg",
+    "class_name": "Cancer",
+    "hash": "40f5c99f88acc0156d4ecf906d0db953"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2632.jpeg",
+    "class_name": "Cancer",
+    "hash": "c29448163446574dcd4b68474576e672"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0690-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "2bf0806b71ef51cf98bc9f03694df11d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2530.jpeg",
+    "class_name": "Cancer",
+    "hash": "db4728ea252e5a2bf9d9d63b495ba6a5"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3188.jpeg",
+    "class_name": "Cancer",
+    "hash": "fe879b1f5c42ae5dfe2716ff552cb463"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer485.jpeg",
+    "class_name": "Cancer",
+    "hash": "01c3854260924b25b21c4960a0c4cca4"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer92.jpeg",
+    "class_name": "Cancer",
+    "hash": "80971ead18df8b0abbbed306b4c1fca2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer102.jpeg",
+    "class_name": "Cancer",
+    "hash": "3b278c99b45f1313008293b422f567a3"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2899.jpeg",
+    "class_name": "Cancer",
+    "hash": "1ac70cb81f2a622ba968677ed2f11377"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer777.jpeg",
+    "class_name": "Cancer",
+    "hash": "6cd4f3e4624ef6fe1aaeb2fda8a8545f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0176-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "d692dde8a93d54425f3542224a174963"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2188.jpeg",
+    "class_name": "Cancer",
+    "hash": "1556357d64570bb3d8fd7289470c3422"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer91.jpeg",
+    "class_name": "Cancer",
+    "hash": "3ce7aec4f06c53416d3457748256fb2a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer644.jpeg",
+    "class_name": "Cancer",
+    "hash": "d332f3e94bbc65b3e3f0af6b9ada07d4"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1105-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "923fa5dfd7d2ac3058ae092e8347381c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2273.jpeg",
+    "class_name": "Cancer",
+    "hash": "277a3b82efca76393220c95f98a146ee"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0932-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "93e6c291158feab8f1a39621c56cd1b7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1771.jpeg",
+    "class_name": "Cancer",
+    "hash": "1da783213ca8290e54a439d397bdfda0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer522.jpeg",
+    "class_name": "Cancer",
+    "hash": "290c0979a53f41c494f89a79c71743c1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\IM-0073-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "5b35a337185279c4f7dff09e390619fb"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer46.jpeg",
+    "class_name": "Cancer",
+    "hash": "1820bd0ca00e753b879a86c6cced4a76"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1006.jpeg",
+    "class_name": "Cancer",
+    "hash": "b2ef433af6eab1d6074ba160d4992e44"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer734.jpeg",
+    "class_name": "Cancer",
+    "hash": "64abb9cfac5675c51fbced9b9bbdedcd"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1010.jpeg",
+    "class_name": "Cancer",
+    "hash": "83489541479c51a07b10a617d077f51c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1278-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "45fb1f38b6900e1593d134141cc979e0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1226.jpeg",
+    "class_name": "Cancer",
+    "hash": "96f14dbe1dcdff783c0411bb9f9662d6"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2276.jpeg",
+    "class_name": "Cancer",
+    "hash": "03a8a8b8543b6e8772465f74b2b50508"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2441.jpeg",
+    "class_name": "Cancer",
+    "hash": "4cdc7f930b0d650aa6c39bcc4608fc69"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\IM-0081-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "c62f006303dff92e90c35f8f60b0b966"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0395-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "f16a22a7545e95c2429de30c3ad17dc5"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1545.jpeg",
+    "class_name": "Cancer",
+    "hash": "28b4d27054d893bede689d2e1d1c5c06"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3066.jpeg",
+    "class_name": "Cancer",
+    "hash": "c3f364f1e62045289e99be1ae3c6f6b2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2780.jpeg",
+    "class_name": "Cancer",
+    "hash": "ad7ab71ab104ff2aa546d81a54ccceb9"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer130.jpeg",
+    "class_name": "Cancer",
+    "hash": "b7d17c8223bd905767f1027b87cd8817"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1187.jpeg",
+    "class_name": "Cancer",
+    "hash": "766060f20ed7b39db820b1ab86bebe22"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer901.jpeg",
+    "class_name": "Cancer",
+    "hash": "7bb104a3cdb53e8b2844e6312c6caf8e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3243.jpeg",
+    "class_name": "Cancer",
+    "hash": "50c7982c3f780643922952bbcfab6261"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1102-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "53e131d3eb3e679f8a1818a60b5796a8"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2203.jpeg",
+    "class_name": "Cancer",
+    "hash": "2bcdbb55ba541a231209714d0875858d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3091.jpeg",
+    "class_name": "Cancer",
+    "hash": "83d0c68afecf6c95ace119311113d2f1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1954.jpeg",
+    "class_name": "Cancer",
+    "hash": "0114f13efe81e9e093bc1339e6865a3f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3659.jpeg",
+    "class_name": "Cancer",
+    "hash": "77a2cd478f9a52ecf4d4354cb7481f15"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer246.jpeg",
+    "class_name": "Cancer",
+    "hash": "322bb256ec155d2c2bdd46c1e4435afd"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer860.jpeg",
+    "class_name": "Cancer",
+    "hash": "e74bc507f273369387a4299a617d43b5"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0620-0001-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "3f5fbba62ceb419e472d7ffe6f94cf11"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0635-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "bf924447eb57f4eca2988fccf6961fb2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3639.jpeg",
+    "class_name": "Cancer",
+    "hash": "1fd0f205c950579551cecd2e7f099460"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2749.jpeg",
+    "class_name": "Cancer",
+    "hash": "2f487601337692ac5b052c7501194aba"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer337.jpeg",
+    "class_name": "Cancer",
+    "hash": "1c80d93f03c29cc8dd99bec645fd78e5"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0626-0001-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "32e9dd8518caf157703ac879f8b6857e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2940.jpeg",
+    "class_name": "Cancer",
+    "hash": "204562a21bfb718ba0ba78c959cd5d97"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1405.jpeg",
+    "class_name": "Cancer",
+    "hash": "ffa7784540ad9f3ee3badb2ca4217827"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\IM-0111-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "44d638da4ed5190b276896f805e5ff71"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2437.jpeg",
+    "class_name": "Cancer",
+    "hash": "3439cd473237cfdaf1ea038e26c0293a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2804.jpeg",
+    "class_name": "Cancer",
+    "hash": "2f67ec2570b0ae378d8e7e2d523f47a0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2694.jpeg",
+    "class_name": "Cancer",
+    "hash": "98b069a28366fb41e8505e8e838ae243"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0545-0001-0002.jpeg",
+    "class_name": "NORMAL",
+    "hash": "0cfde6e76a82bd23548a5810ec432d0a"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0261-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "56c707d536d381b0eb221de83eaa513b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3782.jpeg",
+    "class_name": "Cancer",
+    "hash": "d09c28d3d687cc8606baa3f91ea50c67"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer771.jpeg",
+    "class_name": "Cancer",
+    "hash": "f9efc935e7e668eed9bb4ffc60337e93"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3610.jpeg",
+    "class_name": "Cancer",
+    "hash": "78ff1c623db8352507e4530f7eb86e11"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0723-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "2f8c35e6747fe405dad2e2b6545abc45"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1814.jpeg",
+    "class_name": "Cancer",
+    "hash": "790c0109d2a6c01d3699b936605efb0d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0421-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "cab0a9078847dc55d4b79547bd73a0ab"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0425-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "18a8a2904f47a541b5153ceaebb817e5"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1828.jpeg",
+    "class_name": "Cancer",
+    "hash": "6c79ce0a5fea8d4bcc5797df0e604b34"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2.jpeg",
+    "class_name": "Cancer",
+    "hash": "304a450bbd3319643627e15743f863e1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0358-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "837db0c047a90de68c366308a11015e2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer802.jpeg",
+    "class_name": "Cancer",
+    "hash": "fe20ae62b7d920b3eaf8bffa7da4a1fd"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer199.jpeg",
+    "class_name": "Cancer",
+    "hash": "fbf9875aa43e2d01edbec0d0a9ed6f6d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer806.jpeg",
+    "class_name": "Cancer",
+    "hash": "32dad9fc0f9166bdd37723e2967ad0c1"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0343-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "d7cff6eda53a7fea670af5cd958325b5"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3702.jpeg",
+    "class_name": "Cancer",
+    "hash": "812b5004f4f745c16e91a7ed21fe6778"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3341.jpeg",
+    "class_name": "Cancer",
+    "hash": "3b1189d7d116130900c5671a914e469b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\NORMAL\\NORMAL2-IM-0110-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "df187306231ca8c72611135c56d44fed"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\val\\Cancer\\val_cancer2.jpeg",
+    "class_name": "Cancer",
+    "hash": "1f42a336b0048e8a4b39adeb452e1a1b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer510.jpeg",
+    "class_name": "Cancer",
+    "hash": "5b9a30fe3b812cf896320ec8ae3b216e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1094.jpeg",
+    "class_name": "Cancer",
+    "hash": "f0b4e6521ad1a8dd26699a3bfdc644ad"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1213.jpeg",
+    "class_name": "Cancer",
+    "hash": "e2bdde860895a03543731d37351c6486"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1948.jpeg",
+    "class_name": "Cancer",
+    "hash": "8cbeac5b866dd9bba204db1eac13c99b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3116.jpeg",
+    "class_name": "Cancer",
+    "hash": "54fa5b757ee844d26bc58fa26ff5bf50"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1154-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "294afeb25d4938d4ea68580d26633a16"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer779.jpeg",
+    "class_name": "Cancer",
+    "hash": "d2ee76e48d9e42f0490cee4ce00323cf"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer203.jpeg",
+    "class_name": "Cancer",
+    "hash": "6f810e6429f73a9bbbfaed0181360e51"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0533-0001-0002.jpeg",
+    "class_name": "NORMAL",
+    "hash": "485f2d53aa5c9cc1e610afd68930ccce"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3289.jpeg",
+    "class_name": "Cancer",
+    "hash": "2f0816eb0c7607388e27ce059ef5ed6e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1134.jpeg",
+    "class_name": "Cancer",
+    "hash": "0ffbea2fc26e9ccd6960eb09c69b40d7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2861.jpeg",
+    "class_name": "Cancer",
+    "hash": "6e04a71343416b2e18f12bf04a0b843b"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0428-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "779196b4a92cff46ff2faf7203f78043"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3419.jpeg",
+    "class_name": "Cancer",
+    "hash": "c0bef04ff179395526f465ea415e3dc7"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer135.jpeg",
+    "class_name": "Cancer",
+    "hash": "de63fd5bb7969e8861730eb3d6c9480c"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1344.jpeg",
+    "class_name": "Cancer",
+    "hash": "d1283ae905410aab27637bbb96fc05a8"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2006.jpeg",
+    "class_name": "Cancer",
+    "hash": "9331791cafe6c475936ea32d210bb401"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1395.jpeg",
+    "class_name": "Cancer",
+    "hash": "f73918b5facb2ce7d4050ab3d9285f60"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2291.jpeg",
+    "class_name": "Cancer",
+    "hash": "083a2793d85b796d8ba879091ff98c81"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2417.jpeg",
+    "class_name": "Cancer",
+    "hash": "4ec8aafc072257f0bfedc1450d8fee40"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\test\\Cancer\\test_cancer303.jpeg",
+    "class_name": "Cancer",
+    "hash": "4da63cd0c0699b7ede2509db9802abb4"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer318.jpeg",
+    "class_name": "Cancer",
+    "hash": "7c2a3fb9a12bdc44dbb758c0f7265930"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer168.jpeg",
+    "class_name": "Cancer",
+    "hash": "ca13e6e98e9049bd8816a8e71a105e1e"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1606.jpeg",
+    "class_name": "Cancer",
+    "hash": "16f16f885cc4f71722ccc2f127905332"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3644.jpeg",
+    "class_name": "Cancer",
+    "hash": "bc24dd41c4890925e4f4a43da36983d9"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer3462.jpeg",
+    "class_name": "Cancer",
+    "hash": "48b86cc6e1c112c951eeb95e5c62dd1d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-1067-0001-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "f378c9872ffbba376f21b588c2d62ba0"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer33.jpeg",
+    "class_name": "Cancer",
+    "hash": "9505945bca9b0a021e893a34d6beea89"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2960.jpeg",
+    "class_name": "Cancer",
+    "hash": "954a0c7146ebf3353e3b76efa88de0a2"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\IM-0553-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "1ffbf6ecd668ab7bf582181423504f7d"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1173.jpeg",
+    "class_name": "Cancer",
+    "hash": "e144826a7a90d313eb5a68b47340dc0f"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\NORMAL\\NORMAL2-IM-0439-0001.jpeg",
+    "class_name": "NORMAL",
+    "hash": "bd5fe197403e0c377972e7e9a59d55d3"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer2413.jpeg",
+    "class_name": "Cancer",
+    "hash": "6eb8ed9cb2acc6167c1d2c5aaa95a9cd"
+  },
+  {
+    "path": "D:\\Ai Cancer detection\\chest_xray_lung\\train\\Cancer\\cancer1701.jpeg",
+    "class_name": "Cancer",
+    "hash": "93f94ca8c05a424ecd54e07d6fa079e7"
+  }
+]

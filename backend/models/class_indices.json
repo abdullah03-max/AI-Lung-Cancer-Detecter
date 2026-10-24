@@ -1,0 +1,14 @@
+{
+  "classes": [
+    "Cancer",
+    "NORMAL"
+  ],
+  "class_to_idx": {
+    "Cancer": 0,
+    "NORMAL": 1
+  },
+  "idx_to_class": {
+    "0": "Cancer",
+    "1": "NORMAL"
+  }
+}

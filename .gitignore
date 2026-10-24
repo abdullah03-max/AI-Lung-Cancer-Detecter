@@ -25,7 +25,7 @@ wheels/
 .pytest_cache/
 
 # Large Model Weights and Dataset
-backend/models/*.keras
+# Note: best_lung_cancer_model.keras is ~23.8MB, allowed in git (<100MB) for cloud deployments
 backend/models/*.h5
 backend/models/*.jpg
 backend/models/*.png

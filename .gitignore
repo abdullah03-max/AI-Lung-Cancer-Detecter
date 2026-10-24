@@ -13,8 +13,10 @@ dist/
 downloads/
 eggs/
 .eggs/
+# Virtual environment libraries
 lib/
 lib64/
+!frontend/src/lib/
 parts/
 sdist/
 var/

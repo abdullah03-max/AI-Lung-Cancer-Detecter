@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
+import type { Session, AuthChangeEvent } from '@supabase/supabase-js';
 import { supabase, isSupabaseConfigured } from '../lib/supabase';
 import type { UserProfile } from '../types';
 
@@ -23,7 +24,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   useEffect(() => {
     if (isSupabaseConfigured) {
       // Initialize with Supabase session
-      supabase.auth.getSession().then(({ data: { session } }) => {
+      supabase.auth.getSession().then(({ data: { session } }: { data: { session: Session | null } }) => {
         if (session?.user) {
           setUser({
             id: session.user.id,
@@ -37,7 +38,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       });
 
       // Listen for auth state changes
-      const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      const { data: { subscription } } = supabase.auth.onAuthStateChange((_event: AuthChangeEvent, session: Session | null) => {
         if (session?.user) {
           setUser({
             id: session.user.id,

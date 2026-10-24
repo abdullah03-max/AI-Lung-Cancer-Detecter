@@ -96,9 +96,9 @@ export const PredictPage: React.FC = () => {
     setPreCheckWarning(null);
 
     // Validate type
-    const validExtensions = ['image/jpeg', 'image/png', 'image/webp', 'image/bmp'];
-    if (!validExtensions.includes(file.type) && !file.name.match(/\.(jpe?g|png|webp|bmp)$/i)) {
-      setError('Unsupported file type. Please upload a chest X-ray in JPEG, PNG, or WEBP format.');
+    const validExtensions = ['image/jpeg', 'image/png', 'image/webp', 'image/bmp', 'image/jfif'];
+    if (!validExtensions.includes(file.type) && !file.name.match(/\.(jpe?g|png|webp|bmp|jfif)$/i)) {
+      setError('Unsupported file type. Please upload a chest X-ray in JPEG, JFIF, PNG, or WEBP format.');
       return;
     }
 
@@ -239,7 +239,7 @@ export const PredictPage: React.FC = () => {
               <input
                 ref={fileInputRef}
                 type="file"
-                accept="image/jpeg,image/png,image/webp,image/bmp"
+                accept="image/jpeg,image/png,image/webp,image/bmp,.jfif"
                 onChange={(e) => e.target.files?.[0] && handleFileSelect(e.target.files[0])}
                 className="hidden"
               />

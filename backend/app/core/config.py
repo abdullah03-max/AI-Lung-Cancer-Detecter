@@ -36,6 +36,6 @@ class Settings(BaseModel):
 
     # Image upload constraints
     MAX_IMAGE_SIZE_BYTES: int = 15 * 1024 * 1024  # 15 MB
-    ALLOWED_IMAGE_EXTENSIONS: set[str] = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
+    ALLOWED_IMAGE_EXTENSIONS: set[str] = {".jpg", ".jpeg", ".png", ".bmp", ".webp", ".jfif"}
 
 settings = Settings()

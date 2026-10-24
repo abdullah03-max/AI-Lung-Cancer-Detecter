@@ -14,7 +14,7 @@ from collections import Counter
 from PIL import Image
 
 # Supported image extensions
-VALID_EXTENSIONS = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
+VALID_EXTENSIONS = {".jpg", ".jpeg", ".png", ".bmp", ".webp", ".jfif"}
 
 def compute_file_hash(filepath: Path, block_size: int = 65536) -> str:
     """Compute MD5 hash of a file to detect duplicates."""

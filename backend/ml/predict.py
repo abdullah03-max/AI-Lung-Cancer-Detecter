@@ -15,9 +15,19 @@ from typing import Dict, Any, Optional, Tuple, Union
 import numpy as np
 from PIL import Image
 
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
-import tensorflow as tf
-from tensorflow import keras
+try:
+    import onnxruntime as ort
+    HAS_ONNX = True
+except ImportError:
+    HAS_ONNX = False
+
+try:
+    os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
+    import tensorflow as tf
+    from tensorflow import keras
+    HAS_TF = True
+except ImportError:
+    HAS_TF = False
 
 try:
     from backend.ml.xray_validator import ChestXRayValidator
@@ -45,8 +55,11 @@ class LungCancerPredictor:
         self.model_path = Path(model_path)
         self.class_indices_path = Path(class_indices_path)
         self.metadata_path = Path(metadata_path)
-        self.model: Optional[keras.Model] = None
-        self.feature_extractor: Optional[keras.Model] = None
+        self.model = None
+        self.ort_session = None
+        self.input_name = None
+        self.output_name = None
+        self.feature_extractor = None
         self.classes: list = []
         self.class_to_idx: dict = {}
         self.idx_to_class: dict = {}
@@ -56,11 +69,6 @@ class LungCancerPredictor:
 
     def _load_artifacts(self):
         """Loads model weights, class indices, and metadata."""
-        if not self.model_path.exists():
-            raise FileNotFoundError(
-                f"Trained model not found at '{self.model_path}'. "
-                "Please train the model first by running `backend/ml/train.py`."
-            )
         if not self.class_indices_path.exists():
             raise FileNotFoundError(
                 f"Class indices not found at '{self.class_indices_path}'."
@@ -76,17 +84,35 @@ class LungCancerPredictor:
             with open(self.metadata_path, "r") as f:
                 self.metadata = json.load(f)
 
-        print(f"[*] Loading trained model: {self.model_path}")
-        self.model = keras.models.load_model(str(self.model_path))
+        onnx_candidate = (
+            self.model_path.with_suffix(".onnx")
+            if self.model_path.suffix != ".onnx"
+            else self.model_path
+        )
 
-        # Build submodel for feature extraction
-        try:
-            pool_layer = self.model.get_layer("global_avg_pool")
-            self.feature_extractor = keras.Model(inputs=self.model.input, outputs=pool_layer.output)
-        except Exception:
-            self.feature_extractor = None
-
-        print(f"[+] Model loaded successfully. Classes: {self.classes}")
+        # 1. Prefer ONNX runtime if available (blazing fast, lightweight for Vercel/production)
+        if HAS_ONNX and (onnx_candidate.exists() or self.model_path.suffix == ".onnx"):
+            load_target = onnx_candidate if onnx_candidate.exists() else self.model_path
+            print(f"[*] Loading ONNX model runtime: {load_target}")
+            self.ort_session = ort.InferenceSession(str(load_target))
+            self.input_name = self.ort_session.get_inputs()[0].name
+            self.output_name = self.ort_session.get_outputs()[0].name
+            self.model = self.ort_session
+            print(f"[+] ONNX Model loaded successfully. Classes: {self.classes}")
+        elif HAS_TF and self.model_path.exists():
+            print(f"[*] Loading trained Keras model: {self.model_path}")
+            self.model = keras.models.load_model(str(self.model_path))
+            try:
+                pool_layer = self.model.get_layer("global_avg_pool")
+                self.feature_extractor = keras.Model(inputs=self.model.input, outputs=pool_layer.output)
+            except Exception:
+                self.feature_extractor = None
+            print(f"[+] Keras Model loaded successfully. Classes: {self.classes}")
+        else:
+            raise FileNotFoundError(
+                f"Trained model not found at '{self.model_path}' or '{onnx_candidate}'. "
+                "Please train or export the model first."
+            )
 
     def load_pil_image(self, image_input: Union[str, Path, Image.Image, bytes]) -> Image.Image:
         """Loads and returns a verified PIL Image object."""
@@ -155,7 +181,11 @@ class LungCancerPredictor:
         if not is_valid:
             raise ValueError(rejection_msg)
 
-        raw_probs = self.model.predict(preprocessed_img, verbose=0)[0]
+        if self.ort_session is not None:
+            ort_outputs = self.ort_session.run([self.output_name], {self.input_name: preprocessed_img})
+            raw_probs = ort_outputs[0][0]
+        else:
+            raw_probs = self.model.predict(preprocessed_img, verbose=0)[0]
 
         # Map probabilities to class names
         probabilities = {}

@@ -28,6 +28,7 @@ class Settings(BaseModel):
     # Model and Storage Paths
     BASE_DIR: Path = Path(__file__).resolve().parent.parent.parent
     MODEL_PATH: Path = BASE_DIR / "models" / "best_lung_cancer_model.keras"
+    ONNX_MODEL_PATH: Path = BASE_DIR / "models" / "best_lung_cancer_model.onnx"
     CLASS_INDICES_PATH: Path = BASE_DIR / "models" / "class_indices.json"
     MODEL_METADATA_PATH: Path = BASE_DIR / "models" / "model_metadata.json"
     EVALUATION_METRICS_PATH: Path = BASE_DIR / "models" / "evaluation_metrics.json"

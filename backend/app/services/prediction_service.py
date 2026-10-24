@@ -24,10 +24,11 @@ class PredictionService:
         self._load_predictor()
 
     def _load_predictor(self):
-        if settings.MODEL_PATH.exists() and settings.CLASS_INDICES_PATH.exists():
+        target_model = settings.ONNX_MODEL_PATH if settings.ONNX_MODEL_PATH.exists() else settings.MODEL_PATH
+        if (target_model.exists() or settings.MODEL_PATH.exists()) and settings.CLASS_INDICES_PATH.exists():
             try:
                 self._predictor = LungCancerPredictor(
-                    model_path=str(settings.MODEL_PATH),
+                    model_path=str(target_model),
                     class_indices_path=str(settings.CLASS_INDICES_PATH),
                     metadata_path=str(settings.MODEL_METADATA_PATH)
                 )

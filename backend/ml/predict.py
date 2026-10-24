@@ -163,16 +163,25 @@ class LungCancerPredictor:
 
         preprocessed_img, pil_img = self.preprocess_image(image_input)
 
-        # Extract deep manifold feature embedding if available
+        raw_probs = None
         feat_embedding = None
-        if self.feature_extractor is not None:
-            try:
-                raw_feat = self.feature_extractor.predict(preprocessed_img, verbose=0)[0]
-                feat_embedding = raw_feat
-            except Exception:
-                pass
 
-        # Execute Multi-Tier Chest X-Ray Validation
+        if self.ort_session is not None:
+            # High-speed ONNX Runtime prediction (produces both prediction and manifold features)
+            ort_outputs = self.ort_session.run(None, {self.input_name: preprocessed_img})
+            raw_probs = ort_outputs[0][0]
+            if len(ort_outputs) > 1:
+                feat_embedding = ort_outputs[1][0]
+        else:
+            if self.feature_extractor is not None:
+                try:
+                    raw_feat = self.feature_extractor.predict(preprocessed_img, verbose=0)[0]
+                    feat_embedding = raw_feat
+                except Exception:
+                    pass
+            raw_probs = self.model.predict(preprocessed_img, verbose=0)[0]
+
+        # Execute Multi-Tier Chest X-Ray Validation (Color, White-Background Graphics, Manifold Match)
         is_valid, rejection_msg, metrics = self.validator.validate_image(
             pil_img,
             feature_embedding=feat_embedding
@@ -180,12 +189,6 @@ class LungCancerPredictor:
 
         if not is_valid:
             raise ValueError(rejection_msg)
-
-        if self.ort_session is not None:
-            ort_outputs = self.ort_session.run([self.output_name], {self.input_name: preprocessed_img})
-            raw_probs = ort_outputs[0][0]
-        else:
-            raw_probs = self.model.predict(preprocessed_img, verbose=0)[0]
 
         # Map probabilities to class names
         probabilities = {}

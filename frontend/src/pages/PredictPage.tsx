@@ -45,17 +45,39 @@ export const PredictPage: React.FC = () => {
         ctx.drawImage(img, 0, 0, w, h);
         const data = ctx.getImageData(0, 0, w, h).data;
         let totalDiff = 0;
+        let whitePixels = 0;
+        let borderLuminance = 0;
+        let borderPixelCount = 0;
         const sampleCount = data.length / 4;
 
-        for (let i = 0; i < data.length; i += 4) {
-          const r = data[i];
-          const g = data[i + 1];
-          const b = data[i + 2];
-          totalDiff += (Math.abs(r - g) + Math.abs(g - b) + Math.abs(r - b)) / 3;
+        for (let y = 0; y < h; y++) {
+          for (let x = 0; x < w; x++) {
+            const idx = (y * w + x) * 4;
+            const r = data[idx];
+            const g = data[idx + 1];
+            const b = data[idx + 2];
+            const lum = 0.299 * r + 0.587 * g + 0.114 * b;
+
+            totalDiff += (Math.abs(r - g) + Math.abs(g - b) + Math.abs(r - b)) / 3;
+            if (lum > 235) whitePixels++;
+
+            // Check outer 4-pixel perimeter border
+            if (x < 4 || x >= w - 4 || y < 4 || y >= h - 4) {
+              borderLuminance += lum;
+              borderPixelCount++;
+            }
+          }
         }
 
         const avgDiff = totalDiff / sampleCount;
-        if (avgDiff > 10) {
+        const whiteRatio = whitePixels / sampleCount;
+        const avgBorder = borderPixelCount > 0 ? borderLuminance / borderPixelCount : 0;
+
+        if (avgBorder > 170 || whiteRatio > 0.18) {
+          setPreCheckWarning(
+            'White background or digital graphic detected. Diagnostic chest X-rays have dark background exposure. Non-medical logos, slides, or documents will be rejected.'
+          );
+        } else if (avgDiff > 9) {
           setPreCheckWarning(
             'High color saturation detected. Medical chest X-rays are monochromatic radiographs. Unrelated photos or wallpapers will be rejected by the validation guardrail.'
           );

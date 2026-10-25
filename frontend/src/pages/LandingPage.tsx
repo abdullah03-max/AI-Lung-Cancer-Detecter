@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Activity,
-  UploadCloud,
-  Cpu,
-  BarChart2,
-  Lock,
+  Upload,
   ArrowRight,
-  CheckCircle,
-  FileText
+  CheckCircle2,
+  Lock,
+  Layers,
+  Cpu,
+  FileCheck2
 } from 'lucide-react';
 import { api } from '../services/api';
 import type { ModelInfo } from '../types';
@@ -19,123 +18,142 @@ export const LandingPage: React.FC = () => {
   useEffect(() => {
     api.getModelInfo()
       .then(setModelInfo)
-      .catch((err) => console.log('Model info loading:', err));
+      .catch(() => null);
   }, []);
 
   return (
-    <div className="space-y-24 py-12">
+    <div className="space-y-16 py-10 text-left">
       {/* Hero Section */}
-      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7 space-y-6 text-left">
-            <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-xs font-semibold uppercase tracking-wider">
-              <Cpu className="w-3.5 h-3.5" />
-              <span>Deep Learning Computer Vision Prototype</span>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          {/* Left Hero Content */}
+          <div className="lg:col-span-7 space-y-6">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white border border-[#DCE3E7] text-xs font-semibold text-[#19354A] shadow-xs">
+              <span className="w-2 h-2 rounded-full bg-[#397C78]" />
+              <span>Thoracic Radiology Evaluation System</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
-              AI-Powered Lung X-Ray{' '}
-              <span className="bg-gradient-to-r from-teal-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
-                Classification System
-              </span>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#19354A] tracking-tight leading-tight">
+              Automated Deep Learning Classification for Chest Radiographs
             </h1>
 
-            <p className="text-lg text-slate-300 max-w-2xl leading-relaxed">
-              An academic AI diagnostic assistant leveraging transfer learning (MobileNetV2) trained on 5,800+ chest radiographs to classify pulmonary patterns into Cancer and Normal conditions.
+            <p className="text-base text-[#526A7A] max-w-xl leading-relaxed">
+              A clinical decision-support and research platform utilizing convolutional neural network transfer learning to evaluate thoracic radiographs and classify pulmonary patterns into Cancer and Normal conditions.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-wrap items-center gap-3 pt-1">
               <Link
                 to="/predict"
-                className="inline-flex items-center space-x-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-400 hover:to-cyan-400 text-slate-950 font-bold shadow-lg shadow-teal-500/25 transition-all duration-200 transform hover:-translate-y-0.5"
+                className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-lg bg-[#19354A] hover:bg-[#122635] text-white font-semibold text-xs shadow-xs transition-colors"
               >
-                <UploadCloud className="w-5 h-5" />
-                <span>Upload &amp; Analyze X-Ray</span>
-                <ArrowRight className="w-4 h-4" />
+                <Upload className="w-4 h-4 text-[#397C78]" />
+                <span>Upload &amp; Analyze Radiograph</span>
+                <ArrowRight className="w-3.5 h-3.5" />
               </Link>
 
               <Link
                 to="/dashboard"
-                className="inline-flex items-center space-x-2 px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold border border-slate-700/80 transition-colors"
+                className="inline-flex items-center space-x-1.5 px-4 py-2.5 rounded-lg bg-white hover:bg-[#F4F6F7] text-[#19354A] font-semibold text-xs border border-[#DCE3E7] transition-colors"
               >
-                <Activity className="w-5 h-5 text-teal-400" />
-                <span>View Dashboard</span>
+                <span>Launch Workstation</span>
               </Link>
             </div>
 
-            {/* Quick trust metrics */}
-            <div className="pt-6 border-t border-slate-800/80 grid grid-cols-3 gap-6 text-left">
+            {/* Benchmark Highlights */}
+            <div className="pt-6 border-t border-[#DCE3E7] grid grid-cols-3 gap-6">
               <div>
-                <p className="text-2xl font-bold text-white">
-                  {modelInfo?.dataset_size ? `${modelInfo.dataset_size.toLocaleString()}+` : '5,856'}
+                <p className="text-2xl font-bold text-[#19354A]">
+                  {modelInfo?.dataset_summary?.total_images_scanned
+                    ? `${modelInfo.dataset_summary.total_images_scanned.toLocaleString()}+`
+                    : '5,856'}
                 </p>
-                <p className="text-xs text-slate-400 font-medium">Dataset Radiographs</p>
-              </div>
-              <div>
-                <p className="text-2xl font-bold text-teal-400">
-                  {modelInfo?.evaluation_metrics ? `${(modelInfo.evaluation_metrics.overall.accuracy * 100).toFixed(1)}%` : 'Active'}
+                <p className="text-xs text-[#667580] font-medium mt-0.5">
+                  Verified Radiographs
                 </p>
-                <p className="text-xs text-slate-400 font-medium">Evaluation Accuracy</p>
               </div>
+
               <div>
-                <p className="text-2xl font-bold text-cyan-400">224 &times; 224</p>
-                <p className="text-xs text-slate-400 font-medium">Resolution Matrix</p>
+                <p className="text-2xl font-bold text-[#39704F]">
+                  {modelInfo?.evaluation_metrics
+                    ? `${(modelInfo.evaluation_metrics.overall.accuracy * 100).toFixed(1)}%`
+                    : '81.7%'}
+                </p>
+                <p className="text-xs text-[#667580] font-medium mt-0.5">
+                  Evaluation Accuracy
+                </p>
+              </div>
+
+              <div>
+                <p className="text-2xl font-bold text-[#19354A]">224 &times; 224</p>
+                <p className="text-xs text-[#667580] font-medium mt-0.5">
+                  Resolution Matrix
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Hero Visual Card */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative mx-auto w-full max-w-md rounded-2xl p-1 bg-gradient-to-b from-teal-500/30 via-slate-800 to-slate-900 shadow-2xl shadow-cyan-500/10">
-              <div className="rounded-[15px] bg-slate-900 p-6 space-y-6">
-                <div className="flex items-center justify-between pb-4 border-b border-slate-800">
-                  <div className="flex items-center space-x-2">
-                    <span className="w-3 h-3 rounded-full bg-rose-500/80 inline-block" />
-                    <span className="w-3 h-3 rounded-full bg-amber-500/80 inline-block" />
-                    <span className="w-3 h-3 rounded-full bg-emerald-500/80 inline-block" />
-                  </div>
-                  <span className="text-xs font-mono text-teal-400">MobileNetV2 Inference</span>
+          {/* Right Hero PACS Simulator Card */}
+          <div className="lg:col-span-5">
+            <div className="bg-white border border-[#DCE3E7] rounded-lg p-5 shadow-xs space-y-4">
+              <div className="flex items-center justify-between pb-3 border-b border-[#DCE3E7]">
+                <div className="flex items-center space-x-2">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#19354A]" />
+                  <span className="text-xs font-semibold text-[#19354A]">
+                    Thoracic Diagnostic Preview
+                  </span>
+                </div>
+                <span className="text-[11px] font-mono text-[#526A7A] px-2 py-0.5 rounded bg-[#F4F6F7] border border-[#DCE3E7]">
+                  PA Projection
+                </span>
+              </div>
+
+              {/* PACS Screen Representation */}
+              <div className="relative h-60 rounded bg-[#122635] border border-[#DCE3E7] flex items-center justify-center overflow-hidden">
+                {/* Stylized Chest Radiograph Anatomy */}
+                <svg
+                  className="w-40 h-40 text-slate-500/40"
+                  viewBox="0 0 200 200"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path d="M100 20 V180" strokeWidth="2" strokeDasharray="3 3" className="text-slate-400/50" />
+                  <path d="M50 50 Q100 35 100 80 Q100 130 50 160 Z" strokeWidth="2" fill="currentColor" fillOpacity="0.1" />
+                  <path d="M150 50 Q100 35 100 80 Q100 130 150 160 Z" strokeWidth="2" fill="currentColor" fillOpacity="0.1" />
+                  <circle cx="75" cy="115" r="14" className="text-[#A94442]/70" strokeWidth="2" fill="none" />
+                </svg>
+
+                <div className="absolute top-3 left-3 text-[10px] font-mono text-slate-300">
+                  <p>KV: 120 &bull; MA: 320</p>
+                  <p>FILTER: MobileNetV2</p>
                 </div>
 
-                {/* Simulated Chest Radiograph Visual */}
-                <div className="relative h-64 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-center overflow-hidden group">
-                  <div className="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px] opacity-40" />
-                  
-                  {/* Stylized Chest Ribcage / Lung SVG */}
-                  <svg className="w-44 h-44 text-slate-700/60 transition-transform duration-500 group-hover:scale-105" viewBox="0 0 200 200" fill="none" stroke="currentColor">
-                    <path d="M100 20 V180" strokeWidth="3" strokeDasharray="4 4" className="text-teal-500/40" />
-                    <path d="M50 50 Q100 30 100 80 Q100 130 50 160 Z" strokeWidth="2" fill="currentColor" fillOpacity="0.1" />
-                    <path d="M150 50 Q100 30 100 80 Q100 130 150 160 Z" strokeWidth="2" fill="currentColor" fillOpacity="0.1" />
-                    <circle cx="80" cy="110" r="18" className="text-rose-500/40 animate-pulse" strokeWidth="2" fill="none" />
-                  </svg>
-
-                  {/* Dynamic overlay pill */}
-                  <div className="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md border border-slate-800 rounded-lg p-3 flex items-center justify-between">
-                    <div>
-                      <p className="text-xs text-slate-400">Model Inference Output</p>
-                      <p className="text-sm font-semibold text-emerald-400">Probabilities Calculated</p>
-                    </div>
-                    <span className="text-xs font-mono px-2 py-1 rounded bg-teal-500/20 text-teal-300">
-                      224x224 RGB
-                    </span>
+                <div className="absolute bottom-3 left-3 right-3 bg-white/95 rounded p-2.5 border border-[#DCE3E7] flex items-center justify-between shadow-xs">
+                  <div>
+                    <p className="text-[10px] text-[#667580] uppercase tracking-wider">Classification Output</p>
+                    <p className="text-xs font-bold text-[#19354A]">Confidence: 94.2%</p>
                   </div>
+                  <span className="text-[11px] font-semibold text-[#A94442] bg-[#FBEBEB] px-2 py-0.5 rounded border border-[#A94442]/20">
+                    Suspected Lesion
+                  </span>
+                </div>
+              </div>
+
+              {/* Class Probability Preview */}
+              <div className="space-y-2 pt-1 text-xs">
+                <div className="flex justify-between text-[#263238]">
+                  <span className="font-medium">Class: Cancer</span>
+                  <span className="font-mono text-[#A94442] font-semibold">94.2%</span>
+                </div>
+                <div className="w-full bg-[#DCE3E7] h-1.5 rounded-full overflow-hidden">
+                  <div className="bg-[#A94442] h-1.5 rounded-full w-[94%]" />
                 </div>
 
-                <div className="space-y-2">
-                  <div className="flex justify-between text-xs font-medium">
-                    <span className="text-slate-300">Class 1: Cancer</span>
-                    <span className="text-teal-400 font-mono">Softmax Probabilities</span>
-                  </div>
-                  <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                    <div className="bg-gradient-to-r from-teal-400 to-cyan-500 h-2 rounded-full w-3/4" />
-                  </div>
-                  <div className="flex justify-between text-xs font-medium pt-1">
-                    <span className="text-slate-300">Class 2: NORMAL</span>
-                    <span className="text-slate-400 font-mono">ImageNet Features</span>
-                  </div>
-                  <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                    <div className="bg-slate-700 h-2 rounded-full w-1/4" />
-                  </div>
+                <div className="flex justify-between text-[#263238] pt-1">
+                  <span className="font-medium">Class: Normal</span>
+                  <span className="font-mono text-[#39704F] font-semibold">5.8%</span>
+                </div>
+                <div className="w-full bg-[#DCE3E7] h-1.5 rounded-full overflow-hidden">
+                  <div className="bg-[#39704F] h-1.5 rounded-full w-[6%]" />
                 </div>
               </div>
             </div>
@@ -143,100 +161,113 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* How It Works Section */}
+      {/* Clinical Workflow Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl font-bold text-white tracking-tight">How PulmoScan AI Works</h2>
-          <p className="text-slate-400 max-w-2xl mx-auto text-base">
-            End-to-end clinical radiograph workflow designed for transparency, verification, and privacy.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="p-6 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-teal-500/40 transition-colors space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-400 flex items-center justify-center font-bold text-lg">
-              1
-            </div>
-            <h3 className="text-xl font-semibold text-white">Upload Radiograph</h3>
-            <p className="text-sm text-slate-400 leading-relaxed">
-              Upload standard DICOM-exported JPEG, PNG, or WEBP chest X-ray images. Automatic format and corruption validation runs immediately.
+        <div className="border-t border-[#DCE3E7] pt-12 space-y-8">
+          <div>
+            <h2 className="text-xl font-semibold text-[#19354A]">
+              Clinical Diagnostic Workflow
+            </h2>
+            <p className="text-xs text-[#667580] mt-1">
+              Standardized three-phase pipeline for processing thoracic chest radiographs.
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-cyan-500/40 transition-colors space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-lg">
-              2
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white border border-[#DCE3E7] rounded-lg p-6 shadow-xs space-y-3">
+              <div className="w-9 h-9 rounded-lg bg-[#F4F6F7] border border-[#DCE3E7] flex items-center justify-center font-bold text-sm text-[#19354A]">
+                1
+              </div>
+              <h3 className="text-sm font-semibold text-[#19354A]">
+                Radiograph Acquisition &amp; Verification
+              </h3>
+              <p className="text-xs text-[#667580] leading-relaxed">
+                Accepts frontal anterior-posterior (AP) and posterior-anterior (PA) chest radiographs. Automated quality checks inspect border exposure and monochromatic levels to reject invalid non-medical uploads.
+              </p>
             </div>
-            <h3 className="text-xl font-semibold text-white">Deep Feature Extraction</h3>
-            <p className="text-sm text-slate-400 leading-relaxed">
-              The MobileNetV2 backbone extracts localized pulmonary features, comparing high-dimensional representations against learned patterns.
-            </p>
-          </div>
 
-          <div className="p-6 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-blue-500/40 transition-colors space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-lg">
-              3
+            <div className="bg-white border border-[#DCE3E7] rounded-lg p-6 shadow-xs space-y-3">
+              <div className="w-9 h-9 rounded-lg bg-[#F4F6F7] border border-[#DCE3E7] flex items-center justify-center font-bold text-sm text-[#19354A]">
+                2
+              </div>
+              <h3 className="text-sm font-semibold text-[#19354A]">
+                Deep Feature Extraction &amp; Inference
+              </h3>
+              <p className="text-xs text-[#667580] leading-relaxed">
+                Transfer learning with ImageNet pre-trained representations maps normalized radiographs into high-dimensional feature embeddings, evaluating bilateral pulmonary tissue against validated training patterns.
+              </p>
             </div>
-            <h3 className="text-xl font-semibold text-white">Probability Breakdown</h3>
-            <p className="text-sm text-slate-400 leading-relaxed">
-              Receive complete class probability distribution, model confidence rating, research disclaimer, and private encrypted history logging.
-            </p>
+
+            <div className="bg-white border border-[#DCE3E7] rounded-lg p-6 shadow-xs space-y-3">
+              <div className="w-9 h-9 rounded-lg bg-[#F4F6F7] border border-[#DCE3E7] flex items-center justify-center font-bold text-sm text-[#19354A]">
+                3
+              </div>
+              <h3 className="text-sm font-semibold text-[#19354A]">
+                Probabilistic Report &amp; Audit Trail
+              </h3>
+              <p className="text-xs text-[#667580] leading-relaxed">
+                Generates a complete class probability distribution, model confidence rating, research disclaimer, and encrypted historical audit record accessible only to the authenticated clinician.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Technology & Architecture Section */}
+      {/* Institutional Quality Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-slate-900 border border-slate-800 p-8 lg:p-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-white tracking-tight">
-                Architected for Research Reproducibility
-              </h2>
-              <p className="text-slate-300 leading-relaxed text-sm">
-                Unlike opaque black-box models, this application integrates verifiable data hygiene checks, zero-leakage stratified splits, class-imbalance weighting, and secure Supabase PostgreSQL Row Level Security (RLS).
+        <div className="bg-white border border-[#DCE3E7] rounded-lg p-8 shadow-xs">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-[#19354A]">
+                Quality Assurance &amp; Data Governance
+              </h3>
+              <p className="text-xs text-[#667580] leading-relaxed">
+                Designed according to clinical software principles with strict verification boundaries, stratified evaluation splits, and authenticated session management.
               </p>
 
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-sm text-slate-300">
-                  <CheckCircle className="w-5 h-5 text-teal-400 shrink-0" />
-                  <span>MobileNetV2 / EfficientNetB0 pretrained on ImageNet</span>
+              <div className="space-y-2.5 pt-1">
+                <div className="flex items-center space-x-2.5 text-xs text-[#263238]">
+                  <CheckCircle2 className="w-4 h-4 text-[#39704F] shrink-0" />
+                  <span>Transfer Learning backbone (MobileNetV2) trained on 5,856 radiographs</span>
                 </div>
-                <div className="flex items-center space-x-3 text-sm text-slate-300">
-                  <CheckCircle className="w-5 h-5 text-teal-400 shrink-0" />
-                  <span>Real Kaggle Chest Radiograph dataset (5,856 validated images)</span>
+                <div className="flex items-center space-x-2.5 text-xs text-[#263238]">
+                  <CheckCircle2 className="w-4 h-4 text-[#39704F] shrink-0" />
+                  <span>Zero-leakage independent test dataset validation</span>
                 </div>
-                <div className="flex items-center space-x-3 text-sm text-slate-300">
-                  <CheckCircle className="w-5 h-5 text-teal-400 shrink-0" />
-                  <span>Supabase Authentication with server-side JWT verification</span>
+                <div className="flex items-center space-x-2.5 text-xs text-[#263238]">
+                  <CheckCircle2 className="w-4 h-4 text-[#39704F] shrink-0" />
+                  <span>Secure user-isolated audit logs with deletion capability</span>
                 </div>
-                <div className="flex items-center space-x-3 text-sm text-slate-300">
-                  <CheckCircle className="w-5 h-5 text-teal-400 shrink-0" />
-                  <span>Strict patient confidentiality: no raw medical image persistence</span>
+                <div className="flex items-center space-x-2.5 text-xs text-[#263238]">
+                  <CheckCircle2 className="w-4 h-4 text-[#39704F] shrink-0" />
+                  <span>Integrated guardrail rejecting non-radiographic graphics or photos</span>
                 </div>
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              <div className="p-5 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-2">
-                <Lock className="w-6 h-6 text-teal-400" />
-                <h4 className="font-semibold text-white text-sm">RLS Enforced</h4>
-                <p className="text-xs text-slate-400">Users can only query or delete their own predictions.</p>
+            <div className="grid grid-cols-2 gap-3 text-xs">
+              <div className="p-4 rounded-lg bg-[#F8FAFB] border border-[#DCE3E7] space-y-1">
+                <Lock className="w-4 h-4 text-[#526A7A]" />
+                <p className="font-semibold text-[#19354A]">Private Audit Logs</p>
+                <p className="text-[11px] text-[#667580]">User-isolated session records</p>
               </div>
-              <div className="p-5 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-2">
-                <BarChart2 className="w-6 h-6 text-cyan-400" />
-                <h4 className="font-semibold text-white text-sm">Balanced Loss</h4>
-                <p className="text-xs text-slate-400">Handles 73% / 27% class skew with balanced class weights.</p>
+
+              <div className="p-4 rounded-lg bg-[#F8FAFB] border border-[#DCE3E7] space-y-1">
+                <Layers className="w-4 h-4 text-[#526A7A]" />
+                <p className="font-semibold text-[#19354A]">Balanced Weights</p>
+                <p className="text-[11px] text-[#667580]">Optimized for dataset class balance</p>
               </div>
-              <div className="p-5 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-2">
-                <Cpu className="w-6 h-6 text-blue-400" />
-                <h4 className="font-semibold text-white text-sm">CPU / GPU Agnostic</h4>
-                <p className="text-xs text-slate-400">Optimized inference runnable on standard workstations.</p>
+
+              <div className="p-4 rounded-lg bg-[#F8FAFB] border border-[#DCE3E7] space-y-1">
+                <Cpu className="w-4 h-4 text-[#526A7A]" />
+                <p className="font-semibold text-[#19354A]">Low-Latency Inference</p>
+                <p className="text-[11px] text-[#667580]">Dual-runtime ONNX &amp; Keras engine</p>
               </div>
-              <div className="p-5 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-2">
-                <FileText className="w-6 h-6 text-emerald-400" />
-                <h4 className="font-semibold text-white text-sm">Auditable History</h4>
-                <p className="text-xs text-slate-400">Full model versioning and probability records.</p>
+
+              <div className="p-4 rounded-lg bg-[#F8FAFB] border border-[#DCE3E7] space-y-1">
+                <FileCheck2 className="w-4 h-4 text-[#526A7A]" />
+                <p className="font-semibold text-[#19354A]">Research Compliant</p>
+                <p className="text-[11px] text-[#667580]">Clear educational disclaimer</p>
               </div>
             </div>
           </div>

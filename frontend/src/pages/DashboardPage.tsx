@@ -1,249 +1,390 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Activity,
-  UploadCloud,
-  CheckCircle,
+  Upload,
+  Clock,
+  ArrowRight,
   Cpu,
-  BarChart2,
-  FileText,
-  Database,
-  ArrowRight
+  Layers,
+  CheckCircle2
 } from 'lucide-react';
-import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
+import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from 'recharts';
 import { useAuth } from '../hooks/useAuth';
 import { api } from '../services/api';
 import type { ModelInfo, PredictionHistoryItem } from '../types';
 
-const COLORS = ['#14b8a6', '#06b6d4', '#64748b'];
+const PIE_COLORS = ['#A94442', '#39704F'];
 
 export const DashboardPage: React.FC = () => {
   const { user, token } = useAuth();
   const [modelInfo, setModelInfo] = useState<ModelInfo | null>(null);
   const [history, setHistory] = useState<PredictionHistoryItem[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     Promise.all([
       api.getModelInfo().catch(() => null),
       api.getHistory(token || undefined).catch(() => ({ items: [], total: 0 }))
     ]).then(([info, hist]) => {
       if (info) setModelInfo(info);
       if (hist && hist.items) setHistory(hist.items);
+      setLoading(false);
     });
   }, [token]);
 
-  // Aggregate user predictions
-  const cancerCount = history.filter((h) => h.predicted_class.toLowerCase().includes('cancer')).length;
-  const normalCount = history.filter((h) => h.predicted_class.toLowerCase().includes('normal')).length;
+  const cancerCount = history.filter((h) =>
+    h.predicted_class.toLowerCase().includes('cancer')
+  ).length;
+  const normalCount = history.filter((h) =>
+    h.predicted_class.toLowerCase().includes('normal')
+  ).length;
 
   const chartData = [
-    { name: 'Cancer Identified', value: cancerCount || 0 },
-    { name: 'Normal / Non-Cancer', value: normalCount || 0 },
-  ];
+    { name: 'Cancer', value: cancerCount },
+    { name: 'Normal', value: normalCount },
+  ].filter((item) => item.value > 0);
+
+  const recentHistory = history.slice(0, 5);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
-      {/* Welcome Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-6 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-900 to-teal-950/40 border border-slate-800">
-        <div className="space-y-1">
-          <div className="flex items-center space-x-2 text-teal-400 text-xs font-semibold uppercase tracking-wider">
-            <Activity className="w-4 h-4" />
-            <span>Clinical Workspace</span>
-          </div>
-          <h1 className="text-2xl sm:text-3xl font-bold text-white">
-            Welcome back, {user?.fullName || user?.email || 'Researcher'}
-          </h1>
-          <p className="text-sm text-slate-400">
-            Monitor real-time deep learning diagnostic models and patient prediction audits.
+    <div className="space-y-6 text-left">
+      {/* Welcome Banner */}
+      <div className="bg-white border border-[#DCE3E7] rounded-lg p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-xs">
+        <div>
+          <h2 className="text-xl font-semibold text-[#19354A]">
+            Welcome, {user?.fullName || user?.email?.split('@')[0] || 'Clinician'}
+          </h2>
+          <p className="text-sm text-[#667580] mt-1">
+            Clinical radiograph analysis workspace and diagnostic audit logs.
           </p>
         </div>
 
         <Link
           to="/predict"
-          className="inline-flex items-center space-x-2 px-5 py-3 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-sm shadow-md shadow-teal-500/20 transition-all transform hover:-translate-y-0.5 shrink-0 self-start md:self-auto"
+          className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-lg bg-[#19354A] hover:bg-[#122635] text-white text-sm font-semibold shadow-xs transition-colors shrink-0 self-start md:self-auto"
         >
-          <UploadCloud className="w-4 h-4" />
-          <span>Analyze New X-Ray</span>
-          <ArrowRight className="w-4 h-4" />
+          <Upload className="w-4 h-4 text-[#397C78]" />
+          <span>New Analysis</span>
         </Link>
       </div>
 
-      {/* KPI Cards Grid */}
+      {/* Summary KPI Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="p-5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
-          <div className="flex items-center justify-between text-slate-400">
-            <span className="text-xs font-medium uppercase tracking-wider">Your Predictions</span>
-            <FileText className="w-4 h-4 text-teal-400" />
+        {/* Total Analyses */}
+        <div className="bg-white border border-[#DCE3E7] rounded-lg p-5 shadow-xs">
+          <div className="flex items-center justify-between text-[#667580]">
+            <span className="text-xs font-semibold uppercase tracking-wider">
+              Total Analyses
+            </span>
+            <Clock className="w-4 h-4 text-[#526A7A]" />
           </div>
-          <p className="text-3xl font-extrabold text-white">{history.length}</p>
-          <p className="text-xs text-slate-400">Images evaluated in your history</p>
+          <p className="text-2xl font-bold text-[#19354A] mt-2">
+            {history.length}
+          </p>
+          <p className="text-xs text-[#667580] mt-1">
+            Evaluations recorded in your log
+          </p>
         </div>
 
-        <div className="p-5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
-          <div className="flex items-center justify-between text-slate-400">
-            <span className="text-xs font-medium uppercase tracking-wider">Model Status</span>
-            <CheckCircle className={`w-4 h-4 ${modelInfo?.status === 'ready' ? 'text-emerald-400' : 'text-amber-400'}`} />
+        {/* Model Status */}
+        <div className="bg-white border border-[#DCE3E7] rounded-lg p-5 shadow-xs">
+          <div className="flex items-center justify-between text-[#667580]">
+            <span className="text-xs font-semibold uppercase tracking-wider">
+              Inference Engine
+            </span>
+            <Cpu className="w-4 h-4 text-[#397C78]" />
           </div>
-          <p className="text-3xl font-extrabold capitalize text-white">
-            {modelInfo?.status || 'Active'}
+          <p className="text-2xl font-bold text-[#19354A] mt-2 capitalize">
+            {modelInfo?.status || 'Online'}
           </p>
-          <p className="text-xs text-slate-400 font-mono">
+          <p className="text-xs text-[#667580] mt-1 font-mono">
             {modelInfo?.model_architecture || 'MobileNetV2'}
           </p>
         </div>
 
-        <div className="p-5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
-          <div className="flex items-center justify-between text-slate-400">
-            <span className="text-xs font-medium uppercase tracking-wider">Evaluation Accuracy</span>
-            <BarChart2 className="w-4 h-4 text-cyan-400" />
+        {/* Test Accuracy */}
+        <div className="bg-white border border-[#DCE3E7] rounded-lg p-5 shadow-xs">
+          <div className="flex items-center justify-between text-[#667580]">
+            <span className="text-xs font-semibold uppercase tracking-wider">
+              Evaluation Accuracy
+            </span>
+            <CheckCircle2 className="w-4 h-4 text-[#39704F]" />
           </div>
-          <p className="text-3xl font-extrabold text-teal-400">
+          <p className="text-2xl font-bold text-[#19354A] mt-2">
             {modelInfo?.evaluation_metrics
               ? `${(modelInfo.evaluation_metrics.overall.accuracy * 100).toFixed(1)}%`
               : '81.7%'}
           </p>
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-[#667580] mt-1">
             ROC AUC: {modelInfo?.evaluation_metrics?.overall?.roc_auc ? modelInfo.evaluation_metrics.overall.roc_auc.toFixed(3) : '0.990'}
           </p>
         </div>
 
-        <div className="p-5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
-          <div className="flex items-center justify-between text-slate-400">
-            <span className="text-xs font-medium uppercase tracking-wider">Verified Dataset</span>
-            <Database className="w-4 h-4 text-blue-400" />
+        {/* Target Classes */}
+        <div className="bg-white border border-[#DCE3E7] rounded-lg p-5 shadow-xs">
+          <div className="flex items-center justify-between text-[#667580]">
+            <span className="text-xs font-semibold uppercase tracking-wider">
+              Classification Scope
+            </span>
+            <Layers className="w-4 h-4 text-[#526A7A]" />
           </div>
-          <p className="text-3xl font-extrabold text-white">
-            {modelInfo?.dataset_summary?.total_images_scanned
-              ? modelInfo.dataset_summary.total_images_scanned.toLocaleString()
-              : '5,856'}
+          <p className="text-2xl font-bold text-[#19354A] mt-2">
+            {modelInfo?.classes ? modelInfo.classes.length : 2} Classes
           </p>
-          <p className="text-xs text-slate-400 font-mono">
-            {modelInfo?.classes?.join(' vs ') || 'Cancer vs NORMAL'}
+          <p className="text-xs text-[#667580] mt-1">
+            {modelInfo?.classes ? modelInfo.classes.join(' vs ') : 'Cancer vs Normal'}
           </p>
         </div>
       </div>
 
-      {/* Main Content: Model Specs & Prediction Distribution */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        {/* Model Specs Card */}
-        <div className="lg:col-span-7 bg-slate-900/80 border border-slate-800 rounded-2xl p-6 space-y-6">
-          <div className="flex items-center justify-between border-b border-slate-800 pb-4">
-            <div className="flex items-center space-x-2">
-              <Cpu className="w-5 h-5 text-teal-400" />
-              <h2 className="text-lg font-bold text-white">Active Model Specifications</h2>
-            </div>
-            <span className="text-xs font-mono px-2.5 py-1 rounded bg-teal-500/10 text-teal-300 border border-teal-500/20">
-              v{modelInfo?.model_version || '1.0.0'}
-            </span>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4 text-sm">
-            <div className="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-1">
-              <p className="text-xs text-slate-400">Neural Architecture</p>
-              <p className="font-semibold text-slate-200">{modelInfo?.model_architecture || 'MobileNetV2'}</p>
-            </div>
-            <div className="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-1">
-              <p className="text-xs text-slate-400">Target Classes</p>
-              <p className="font-semibold text-slate-200">
-                {modelInfo?.classes && modelInfo.classes.length > 0
-                  ? modelInfo.classes.join(', ')
-                  : 'Cancer, NORMAL'}
-              </p>
-            </div>
-            <div className="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-1">
-              <p className="text-xs text-slate-400">Macro F1-Score</p>
-              <p className="font-semibold text-slate-200">
-                {modelInfo?.evaluation_metrics
-                  ? `${(modelInfo.evaluation_metrics.overall.f1_macro * 100).toFixed(1)}%`
-                  : '68.3%'}
-              </p>
-            </div>
-            <div className="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-1">
-              <p className="text-xs text-slate-400">Last Training Run</p>
-              <p className="font-semibold text-slate-200 text-xs font-mono">
-                {modelInfo?.last_training_timestamp || 'Recently Completed'}
-              </p>
-            </div>
-          </div>
-
-          {/* Per-class Metrics breakdown */}
-          {modelInfo?.evaluation_metrics?.per_class_metrics && (
-            <div className="space-y-3 pt-2">
-              <h3 className="text-xs font-semibold text-slate-300 uppercase tracking-wider">
-                Independent Test Set Breakdown (Zero-Leakage)
+      {/* Main Grid: Recent Analyses & Model Information */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        {/* Left Column: Recent Analyses Table */}
+        <div className="lg:col-span-7 bg-white border border-[#DCE3E7] rounded-lg shadow-xs flex flex-col">
+          <div className="px-6 py-4 border-b border-[#DCE3E7] flex items-center justify-between">
+            <div>
+              <h3 className="text-base font-semibold text-[#19354A]">
+                Recent Analyses
               </h3>
-              <div className="space-y-2">
-                {Object.entries(modelInfo.evaluation_metrics.per_class_metrics).map(([cls, metrics]) => (
-                  <div key={cls} className="p-3 rounded-lg bg-slate-950/80 border border-slate-800 flex items-center justify-between text-xs">
-                    <span className="font-bold text-white">{cls}</span>
-                    <div className="flex space-x-4 text-slate-400 font-mono">
-                      <span>Precision: <strong className="text-teal-400">{(metrics.precision * 100).toFixed(1)}%</strong></span>
-                      <span>Recall: <strong className="text-cyan-400">{(metrics.recall * 100).toFixed(1)}%</strong></span>
-                      <span>Support: {metrics.support}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Prediction Breakdown Chart */}
-        <div className="lg:col-span-5 bg-slate-900/80 border border-slate-800 rounded-2xl p-6 space-y-4 flex flex-col justify-between">
-          <div className="flex items-center justify-between border-b border-slate-800 pb-4">
-            <h2 className="text-lg font-bold text-white">Prediction Distribution</h2>
-            <span className="text-xs text-slate-400">User Audit Log</span>
-          </div>
-
-          {history.length > 0 ? (
-            <div className="h-64 w-full">
-              <ResponsiveContainer width="100%" height="100%">
-                <PieChart>
-                  <Pie
-                    data={chartData}
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={55}
-                    outerRadius={80}
-                    paddingAngle={4}
-                    dataKey="value"
-                  >
-                    {chartData.map((_entry, index) => (
-                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                    ))}
-                  </Pie>
-                  <Tooltip
-                    contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', borderRadius: '8px' }}
-                    itemStyle={{ color: '#f8fafc', fontSize: '12px' }}
-                  />
-                  <Legend wrapperStyle={{ fontSize: '12px', color: '#94a3b8' }} />
-                </PieChart>
-              </ResponsiveContainer>
-            </div>
-          ) : (
-            <div className="h-64 flex flex-col items-center justify-center text-center p-6 space-y-3">
-              <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-slate-500">
-                <BarChart2 className="w-6 h-6" />
-              </div>
-              <p className="text-sm font-semibold text-slate-300">No predictions recorded yet</p>
-              <p className="text-xs text-slate-500 max-w-xs">
-                Upload your first chest radiograph to view real-time probability charts.
+              <p className="text-xs text-[#667580]">
+                Most recent patient radiograph classifications
               </p>
+            </div>
+            {history.length > 0 && (
               <Link
-                to="/predict"
-                className="text-xs font-semibold text-teal-400 hover:text-teal-300 inline-flex items-center space-x-1"
+                to="/history"
+                className="text-xs font-semibold text-[#397C78] hover:text-[#2E6562] flex items-center space-x-1"
               >
-                <span>Run inference now</span>
+                <span>View all</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
-            </div>
-          )}
+            )}
+          </div>
 
-          <div className="p-3 rounded-xl bg-slate-950/70 border border-slate-800 text-xs text-slate-400 flex items-center justify-between">
-            <span>Historical Log Entries</span>
-            <Link to="/history" className="text-teal-400 hover:underline font-semibold">
-              View History Table &rarr;
-            </Link>
+          <div className="p-0 flex-1 overflow-x-auto">
+            {loading ? (
+              <div className="p-8 text-center text-xs text-[#667580]">
+                Loading previous evaluations...
+              </div>
+            ) : recentHistory.length === 0 ? (
+              <div className="p-8 text-center space-y-3">
+                <div className="w-12 h-12 mx-auto rounded-full bg-[#F4F6F7] border border-[#DCE3E7] flex items-center justify-center text-[#667580]">
+                  <Upload className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-[#263238]">
+                    No previous analyses recorded
+                  </p>
+                  <p className="text-xs text-[#667580] mt-0.5">
+                    Upload a thoracic chest radiograph to evaluate and store diagnostic predictions.
+                  </p>
+                </div>
+                <Link
+                  to="/predict"
+                  className="inline-flex items-center space-x-1 text-xs font-semibold text-[#397C78] hover:underline pt-1"
+                >
+                  <span>Upload first X-Ray</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            ) : (
+              <table className="w-full text-left text-xs">
+                <thead>
+                  <tr className="bg-[#F8FAFB] text-[#667580] border-b border-[#DCE3E7]">
+                    <th className="py-3 px-4 font-semibold">Date &amp; Time</th>
+                    <th className="py-3 px-4 font-semibold">Analysis ID</th>
+                    <th className="py-3 px-4 font-semibold">Classification</th>
+                    <th className="py-3 px-4 font-semibold">Model Confidence</th>
+                    <th className="py-3 px-4 font-semibold text-right">Action</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-[#DCE3E7]">
+                  {recentHistory.map((item) => {
+                    const isCancer = item.predicted_class.toLowerCase().includes('cancer');
+                    return (
+                      <tr key={item.id} className="hover:bg-[#F8FAFB] transition-colors">
+                        <td className="py-3 px-4 text-[#263238] whitespace-nowrap">
+                          {new Date(item.created_at).toLocaleDateString(undefined, {
+                            month: 'short',
+                            day: 'numeric',
+                            year: 'numeric',
+                            hour: '2-digit',
+                            minute: '2-digit',
+                          })}
+                        </td>
+                        <td className="py-3 px-4 font-mono text-[#526A7A] text-[11px]">
+                          {item.id.slice(0, 8)}...
+                        </td>
+                        <td className="py-3 px-4">
+                          <span
+                            className={`inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold border ${
+                              isCancer
+                                ? 'bg-[#FBEBEB] text-[#A94442] border-[#A94442]/30'
+                                : 'bg-[#EDF6F1] text-[#39704F] border-[#39704F]/30'
+                            }`}
+                          >
+                            {item.predicted_class}
+                          </span>
+                        </td>
+                        <td className="py-3 px-4 font-medium text-[#263238]">
+                          {(item.confidence * 100).toFixed(1)}%
+                        </td>
+                        <td className="py-3 px-4 text-right">
+                          <Link
+                            to="/history"
+                            className="text-[#397C78] hover:text-[#2E6562] font-semibold"
+                          >
+                            Details
+                          </Link>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            )}
+          </div>
+        </div>
+
+        {/* Right Column: Model Information & Prediction Distribution */}
+        <div className="lg:col-span-5 space-y-6">
+          {/* Model Information Card */}
+          <div className="bg-white border border-[#DCE3E7] rounded-lg p-6 shadow-xs space-y-4">
+            <div className="flex items-center justify-between border-b border-[#DCE3E7] pb-3">
+              <h3 className="text-base font-semibold text-[#19354A]">
+                Model Specifications
+              </h3>
+              <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-[#F4F6F7] text-[#526A7A] border border-[#DCE3E7]">
+                v{modelInfo?.model_version || '1.0.0'}
+              </span>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3 text-xs">
+              <div className="p-3 rounded-lg bg-[#F8FAFB] border border-[#DCE3E7]">
+                <p className="text-[#667580]">Architecture</p>
+                <p className="font-semibold text-[#263238] mt-0.5">
+                  {modelInfo?.model_architecture || 'MobileNetV2'}
+                </p>
+              </div>
+
+              <div className="p-3 rounded-lg bg-[#F8FAFB] border border-[#DCE3E7]">
+                <p className="text-[#667580]">Input Dimensions</p>
+                <p className="font-semibold text-[#263238] mt-0.5">
+                  224 &times; 224 &times; 3
+                </p>
+              </div>
+
+              <div className="p-3 rounded-lg bg-[#F8FAFB] border border-[#DCE3E7]">
+                <p className="text-[#667580]">Macro F1 Score</p>
+                <p className="font-semibold text-[#263238] mt-0.5">
+                  {modelInfo?.evaluation_metrics
+                    ? `${(modelInfo.evaluation_metrics.overall.f1_macro * 100).toFixed(1)}%`
+                    : '68.3%'}
+                </p>
+              </div>
+
+              <div className="p-3 rounded-lg bg-[#F8FAFB] border border-[#DCE3E7]">
+                <p className="text-[#667580]">Verified Samples</p>
+                <p className="font-semibold text-[#263238] mt-0.5">
+                  {modelInfo?.dataset_summary?.total_images_scanned?.toLocaleString() || '5,856'}
+                </p>
+              </div>
+            </div>
+
+            {/* Per-class Metrics breakdown */}
+            {modelInfo?.evaluation_metrics?.per_class_metrics && (
+              <div className="space-y-2 pt-1 border-t border-[#DCE3E7]">
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-[#667580]">
+                  Class Validation Metrics
+                </p>
+                <div className="space-y-1.5">
+                  {Object.entries(modelInfo.evaluation_metrics.per_class_metrics).map(([cls, metrics]) => (
+                    <div
+                      key={cls}
+                      className="p-2.5 rounded bg-[#F8FAFB] border border-[#DCE3E7] flex items-center justify-between text-xs"
+                    >
+                      <span className="font-medium text-[#263238]">{cls}</span>
+                      <div className="flex space-x-3 text-[#667580]">
+                        <span>Prec: <strong className="text-[#263238]">{(metrics.precision * 100).toFixed(0)}%</strong></span>
+                        <span>Rec: <strong className="text-[#263238]">{(metrics.recall * 100).toFixed(0)}%</strong></span>
+                        <span>N={metrics.support}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* User History Distribution */}
+          <div className="bg-white border border-[#DCE3E7] rounded-lg p-6 shadow-xs space-y-4">
+            <div className="border-b border-[#DCE3E7] pb-3">
+              <h3 className="text-base font-semibold text-[#19354A]">
+                Prediction Distribution
+              </h3>
+              <p className="text-xs text-[#667580]">
+                Classification summary across your recorded sessions
+              </p>
+            </div>
+
+            {chartData.length > 0 ? (
+              <div className="flex items-center justify-between">
+                <div className="w-36 h-36">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <PieChart>
+                      <Pie
+                        data={chartData}
+                        cx="50%"
+                        cy="50%"
+                        innerRadius={38}
+                        outerRadius={56}
+                        paddingAngle={3}
+                        dataKey="value"
+                      >
+                        {chartData.map((entry, index) => (
+                          <Cell
+                            key={`cell-${index}`}
+                            fill={entry.name === 'Cancer' ? PIE_COLORS[0] : PIE_COLORS[1]}
+                          />
+                        ))}
+                      </Pie>
+                      <Tooltip
+                        contentStyle={{
+                          backgroundColor: '#FFFFFF',
+                          borderColor: '#DCE3E7',
+                          borderRadius: '6px',
+                          fontSize: '12px',
+                          color: '#263238',
+                        }}
+                      />
+                    </PieChart>
+                  </ResponsiveContainer>
+                </div>
+
+                <div className="space-y-2 text-xs flex-1 pl-4">
+                  <div className="flex items-center justify-between p-2 rounded bg-[#F8FAFB] border border-[#DCE3E7]">
+                    <div className="flex items-center space-x-2">
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#A94442]" />
+                      <span className="font-medium text-[#263238]">Cancer</span>
+                    </div>
+                    <span className="font-semibold text-[#19354A]">{cancerCount}</span>
+                  </div>
+
+                  <div className="flex items-center justify-between p-2 rounded bg-[#F8FAFB] border border-[#DCE3E7]">
+                    <div className="flex items-center space-x-2">
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#39704F]" />
+                      <span className="font-medium text-[#263238]">Normal</span>
+                    </div>
+                    <span className="font-semibold text-[#19354A]">{normalCount}</span>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="p-4 text-center text-xs text-[#667580] bg-[#F8FAFB] rounded border border-[#DCE3E7]">
+                Distribution chart will render upon completing your first scan.
+              </div>
+            )}
           </div>
         </div>
       </div>

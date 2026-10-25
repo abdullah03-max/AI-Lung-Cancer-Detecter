@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  History,
+  Clock,
   Trash2,
   Calendar,
-  ShieldAlert,
-  CheckCircle,
-  UploadCloud,
-  FileText,
+  AlertTriangle,
+  CheckCircle2,
+  Upload,
   AlertCircle,
   Eye,
-  X
+  X,
+  Search
 } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
 import { api } from '../services/api';
@@ -23,6 +23,8 @@ export const HistoryPage: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [activeItem, setActiveItem] = useState<PredictionHistoryItem | null>(null);
   const [deletingId, setDeletingId] = useState<string | null>(null);
+  const [filterClass, setFilterClass] = useState<'ALL' | 'CANCER' | 'NORMAL'>('ALL');
+  const [searchQuery, setSearchQuery] = useState('');
 
   const fetchHistory = async () => {
     try {
@@ -41,7 +43,7 @@ export const HistoryPage: React.FC = () => {
   }, [token]);
 
   const handleDelete = async (id: string) => {
-    if (!window.confirm('Are you sure you want to delete this prediction record from your history?')) {
+    if (!window.confirm('Are you sure you want to permanently delete this analysis record from your audit trail?')) {
       return;
     }
 
@@ -57,138 +59,225 @@ export const HistoryPage: React.FC = () => {
     }
   };
 
+  const filteredHistory = useMemo(() => {
+    return history.filter((item) => {
+      const isCancer = item.predicted_class.toLowerCase().includes('cancer');
+      if (filterClass === 'CANCER' && !isCancer) return false;
+      if (filterClass === 'NORMAL' && isCancer) return false;
+
+      if (searchQuery.trim()) {
+        const query = searchQuery.toLowerCase();
+        const matchesId = item.id.toLowerCase().includes(query);
+        const matchesDate = new Date(item.created_at).toLocaleDateString().toLowerCase().includes(query);
+        const matchesClass = item.predicted_class.toLowerCase().includes(query);
+        if (!matchesId && !matchesDate && !matchesClass) return false;
+      }
+
+      return true;
+    });
+  }, [history, filterClass, searchQuery]);
+
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
-      {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-6 text-left">
-        <div className="space-y-1">
-          <div className="flex items-center space-x-2 text-teal-400 text-xs font-semibold uppercase tracking-wider">
-            <History className="w-4 h-4" />
-            <span>Audit Trail &amp; Patient Records</span>
-          </div>
-          <h1 className="text-3xl font-bold text-white">Prediction History</h1>
-          <p className="text-sm text-slate-400">
-            View, audit, or remove past chest X-ray deep learning classification records.
+    <div className="space-y-6 text-left">
+      {/* Top Header Card */}
+      <div className="bg-white border border-[#DCE3E7] rounded-lg p-6 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h2 className="text-xl font-semibold text-[#19354A]">
+            Analysis History
+          </h2>
+          <p className="text-sm text-[#667580] mt-1">
+            Searchable audit trail of previous thoracic radiograph evaluations.
           </p>
         </div>
 
         <Link
           to="/predict"
-          className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-xs shadow-md shadow-teal-500/20 transition-all shrink-0 self-start sm:self-auto"
+          className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-lg bg-[#19354A] hover:bg-[#122635] text-white text-xs font-semibold shadow-xs transition-colors shrink-0 self-start sm:self-auto"
         >
-          <UploadCloud className="w-4 h-4" />
+          <Upload className="w-3.5 h-3.5 text-[#397C78]" />
           <span>New Analysis</span>
         </Link>
       </div>
 
       {error && (
-        <div className="p-4 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-300 text-sm flex items-start space-x-3 text-left">
-          <AlertCircle className="w-5 h-5 shrink-0 mt-0.5 text-rose-400" />
+        <div className="p-4 rounded-lg bg-[#FBEBEB] border border-[#A94442]/30 text-[#A94442] text-xs flex items-start space-x-2.5">
+          <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
           <span>{error}</span>
         </div>
       )}
 
-      {loading ? (
-        <div className="p-12 text-center space-y-3">
-          <div className="w-8 h-8 mx-auto border-3 border-teal-500/20 border-t-teal-400 rounded-full animate-spin" />
-          <p className="text-xs text-slate-400 font-mono">Loading history records...</p>
-        </div>
-      ) : history.length === 0 ? (
-        /* Empty State */
-        <div className="p-12 rounded-2xl bg-slate-900/60 border border-slate-800 text-center space-y-4 max-w-lg mx-auto">
-          <div className="w-16 h-16 mx-auto rounded-2xl bg-slate-800 flex items-center justify-center text-slate-500">
-            <FileText className="w-8 h-8" />
+      {/* Main Table Container */}
+      <div className="bg-white border border-[#DCE3E7] rounded-lg shadow-xs overflow-hidden flex flex-col">
+        {/* Filter and Search Bar */}
+        <div className="p-4 border-b border-[#DCE3E7] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-[#F8FAFB]">
+          {/* Class Filters */}
+          <div className="flex items-center space-x-1.5">
+            <button
+              onClick={() => setFilterClass('ALL')}
+              className={`px-3 py-1.5 rounded text-xs font-medium transition-colors ${
+                filterClass === 'ALL'
+                  ? 'bg-[#19354A] text-white shadow-xs'
+                  : 'bg-white text-[#526A7A] hover:text-[#19354A] border border-[#DCE3E7]'
+              }`}
+            >
+              All Records ({history.length})
+            </button>
+            <button
+              onClick={() => setFilterClass('CANCER')}
+              className={`px-3 py-1.5 rounded text-xs font-medium transition-colors ${
+                filterClass === 'CANCER'
+                  ? 'bg-[#A94442] text-white shadow-xs'
+                  : 'bg-white text-[#526A7A] hover:text-[#A94442] border border-[#DCE3E7]'
+              }`}
+            >
+              Cancer
+            </button>
+            <button
+              onClick={() => setFilterClass('NORMAL')}
+              className={`px-3 py-1.5 rounded text-xs font-medium transition-colors ${
+                filterClass === 'NORMAL'
+                  ? 'bg-[#39704F] text-white shadow-xs'
+                  : 'bg-white text-[#526A7A] hover:text-[#39704F] border border-[#DCE3E7]'
+              }`}
+            >
+              Normal
+            </button>
           </div>
-          <div className="space-y-1">
-            <h3 className="text-lg font-bold text-white">No Predictions Recorded</h3>
-            <p className="text-xs text-slate-400 max-w-sm mx-auto">
-              You haven't run any chest X-ray analyses yet. Upload an image to generate your first classification record.
-            </p>
+
+          {/* Search Box */}
+          <div className="relative min-w-[220px]">
+            <Search className="w-3.5 h-3.5 text-[#667580] absolute left-3 top-1/2 -translate-y-1/2" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search by ID or date..."
+              className="w-full pl-8 pr-3 py-1.5 rounded bg-white border border-[#DCE3E7] text-xs text-[#263238] placeholder:text-[#667580] focus:outline-none focus:border-[#19354A]"
+            />
           </div>
-          <Link
-            to="/predict"
-            className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-xs shadow-md shadow-teal-500/20 transition-all"
-          >
-            <UploadCloud className="w-4 h-4" />
-            <span>Analyze First Radiograph</span>
-          </Link>
         </div>
-      ) : (
-        /* Table View */
-        <div className="rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden shadow-xl">
+
+        {/* Content Table or State */}
+        {loading ? (
+          <div className="p-12 text-center space-y-2">
+            <div className="w-6 h-6 mx-auto border-2 border-[#19354A]/20 border-t-[#19354A] rounded-full animate-spin" />
+            <p className="text-xs text-[#667580]">Loading audit records...</p>
+          </div>
+        ) : filteredHistory.length === 0 ? (
+          <div className="p-12 text-center space-y-3">
+            <div className="w-12 h-12 mx-auto rounded-full bg-[#F4F6F7] border border-[#DCE3E7] flex items-center justify-center text-[#667580]">
+              <Clock className="w-5 h-5" />
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-[#263238]">
+                {searchQuery || filterClass !== 'ALL'
+                  ? 'No matching records found'
+                  : 'No evaluations recorded'}
+              </p>
+              <p className="text-xs text-[#667580] mt-0.5">
+                {searchQuery || filterClass !== 'ALL'
+                  ? 'Try adjusting your search query or filter settings.'
+                  : 'Chest radiographs evaluated in your sessions will appear in this audit log.'}
+              </p>
+            </div>
+            {history.length === 0 && (
+              <Link
+                to="/predict"
+                className="inline-flex items-center space-x-1.5 text-xs font-semibold text-[#397C78] hover:underline pt-1"
+              >
+                <span>Upload a radiograph</span>
+              </Link>
+            )}
+          </div>
+        ) : (
           <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm text-slate-300">
-              <thead className="bg-slate-950/80 text-xs font-semibold text-slate-400 uppercase tracking-wider border-b border-slate-800">
-                <tr>
-                  <th scope="col" className="px-6 py-4">Timestamp</th>
-                  <th scope="col" className="px-6 py-4">Classification</th>
-                  <th scope="col" className="px-6 py-4">Model Confidence</th>
-                  <th scope="col" className="px-6 py-4">Architecture</th>
-                  <th scope="col" className="px-6 py-4 text-right">Actions</th>
+            <table className="w-full text-left text-xs text-[#263238]">
+              <thead>
+                <tr className="bg-[#F8FAFB] text-[#667580] border-b border-[#DCE3E7]">
+                  <th className="py-3 px-4 font-semibold">Date &amp; Time</th>
+                  <th className="py-3 px-4 font-semibold">Analysis Reference</th>
+                  <th className="py-3 px-4 font-semibold">Classification</th>
+                  <th className="py-3 px-4 font-semibold">Model Confidence</th>
+                  <th className="py-3 px-4 font-semibold">Model</th>
+                  <th className="py-3 px-4 font-semibold text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-800/80 font-normal">
-                {history.map((item) => {
+              <tbody className="divide-y divide-[#DCE3E7]">
+                {filteredHistory.map((item) => {
                   const isCancer = item.predicted_class.toLowerCase().includes('cancer');
-                  const formattedDate = new Date(item.created_at).toLocaleString();
+                  const formattedDate = new Date(item.created_at).toLocaleDateString(undefined, {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                  });
 
                   return (
-                    <tr key={item.id} className="hover:bg-slate-800/40 transition-colors">
-                      <td className="px-6 py-4 whitespace-nowrap text-xs font-mono text-slate-400 flex items-center space-x-2">
-                        <Calendar className="w-3.5 h-3.5 text-slate-500" />
-                        <span>{formattedDate}</span>
+                    <tr key={item.id} className="hover:bg-[#F8FAFB] transition-colors">
+                      <td className="py-3 px-4 whitespace-nowrap text-[#263238]">
+                        <div className="flex items-center space-x-1.5 text-[#526A7A]">
+                          <Calendar className="w-3.5 h-3.5 text-[#667580]" />
+                          <span>{formattedDate}</span>
+                        </div>
                       </td>
 
-                      <td className="px-6 py-4 whitespace-nowrap">
+                      <td className="py-3 px-4 font-mono text-[11px] text-[#526A7A]">
+                        {item.id}
+                      </td>
+
+                      <td className="py-3 px-4">
                         <span
-                          className={`inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-semibold border ${
+                          className={`inline-flex items-center space-x-1 px-2 py-0.5 rounded text-[11px] font-semibold border ${
                             isCancer
-                              ? 'bg-rose-500/10 text-rose-300 border-rose-500/20'
-                              : 'bg-emerald-500/10 text-emerald-300 border-emerald-500/20'
+                              ? 'bg-[#FBEBEB] text-[#A94442] border-[#A94442]/30'
+                              : 'bg-[#EDF6F1] text-[#39704F] border-[#39704F]/30'
                           }`}
                         >
                           {isCancer ? (
-                            <ShieldAlert className="w-3.5 h-3.5 text-rose-400" />
+                            <AlertTriangle className="w-3 h-3 text-[#A94442]" />
                           ) : (
-                            <CheckCircle className="w-3.5 h-3.5 text-emerald-400" />
+                            <CheckCircle2 className="w-3 h-3 text-[#39704F]" />
                           )}
                           <span>{item.predicted_class}</span>
                         </span>
                       </td>
 
-                      <td className="px-6 py-4 whitespace-nowrap">
+                      <td className="py-3 px-4">
                         <div className="flex items-center space-x-2">
-                          <div className="w-16 bg-slate-800 h-2 rounded-full overflow-hidden">
+                          <div className="w-16 bg-[#DCE3E7] h-1.5 rounded-full overflow-hidden">
                             <div
-                              className={`h-2 rounded-full ${isCancer ? 'bg-rose-500' : 'bg-teal-400'}`}
+                              className={`h-1.5 rounded-full ${
+                                isCancer ? 'bg-[#A94442]' : 'bg-[#39704F]'
+                              }`}
                               style={{ width: `${item.confidence * 100}%` }}
                             />
                           </div>
-                          <span className="font-mono text-xs font-bold text-white">
+                          <span className="font-mono text-xs font-semibold text-[#19354A]">
                             {(item.confidence * 100).toFixed(1)}%
                           </span>
                         </div>
                       </td>
 
-                      <td className="px-6 py-4 whitespace-nowrap text-xs font-mono text-slate-400">
+                      <td className="py-3 px-4 font-mono text-[11px] text-[#667580]">
                         {item.model_version || 'MobileNetV2'}
                       </td>
 
-                      <td className="px-6 py-4 whitespace-nowrap text-right space-x-2">
+                      <td className="py-3 px-4 text-right space-x-1">
                         <button
                           onClick={() => setActiveItem(item)}
-                          className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors"
+                          className="p-1.5 rounded hover:bg-[#F4F6F7] text-[#526A7A] hover:text-[#19354A] transition-colors"
                           title="View Probability Details"
                         >
-                          <Eye className="w-4 h-4" />
+                          <Eye className="w-3.5 h-3.5" />
                         </button>
                         <button
                           onClick={() => handleDelete(item.id)}
                           disabled={deletingId === item.id}
-                          className="p-1.5 rounded-lg bg-slate-800 hover:bg-rose-500/20 text-slate-400 hover:text-rose-400 transition-colors"
+                          className="p-1.5 rounded hover:bg-[#FBEBEB] text-[#667580] hover:text-[#A94442] transition-colors"
                           title="Delete Record"
                         >
-                          <Trash2 className="w-4 h-4" />
+                          <Trash2 className="w-3.5 h-3.5" />
                         </button>
                       </td>
                     </tr>
@@ -197,49 +286,61 @@ export const HistoryPage: React.FC = () => {
               </tbody>
             </table>
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
       {/* Probability Details Modal */}
       {activeItem && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
-          <div className="w-full max-w-md bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-6 shadow-2xl text-left">
-            <div className="flex items-center justify-between border-b border-slate-800 pb-4">
-              <h3 className="text-lg font-bold text-white">Prediction Details</h3>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-xs">
+          <div className="w-full max-w-md bg-white border border-[#DCE3E7] rounded-lg p-6 space-y-5 shadow-lg text-left animate-in fade-in zoom-in-95 duration-150">
+            <div className="flex items-center justify-between border-b border-[#DCE3E7] pb-3">
+              <h3 className="text-base font-semibold text-[#19354A]">
+                Analysis Record Details
+              </h3>
               <button
                 onClick={() => setActiveItem(null)}
-                className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800"
+                className="p-1 rounded text-[#667580] hover:text-[#19354A] hover:bg-[#F4F6F7]"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4" />
               </button>
             </div>
 
-            <div className="space-y-4 text-xs">
-              <div className="flex justify-between py-2 border-b border-slate-800/80">
-                <span className="text-slate-400">Record ID</span>
-                <span className="font-mono text-slate-200">{activeItem.id}</span>
+            <div className="space-y-3 text-xs">
+              <div className="flex justify-between py-1.5 border-b border-[#DCE3E7]">
+                <span className="text-[#667580]">Record ID</span>
+                <span className="font-mono text-[#263238] font-medium">{activeItem.id}</span>
               </div>
-              <div className="flex justify-between py-2 border-b border-slate-800/80">
-                <span className="text-slate-400">Date &amp; Time</span>
-                <span className="text-slate-200">{new Date(activeItem.created_at).toLocaleString()}</span>
+              <div className="flex justify-between py-1.5 border-b border-[#DCE3E7]">
+                <span className="text-[#667580]">Timestamp</span>
+                <span className="text-[#263238]">{new Date(activeItem.created_at).toLocaleString()}</span>
               </div>
-              <div className="flex justify-between py-2 border-b border-slate-800/80">
-                <span className="text-slate-400">Predicted Class</span>
-                <span className="font-bold text-teal-400">{activeItem.predicted_class}</span>
+              <div className="flex justify-between py-1.5 border-b border-[#DCE3E7]">
+                <span className="text-[#667580]">Predicted Class</span>
+                <span className={`font-bold ${
+                  activeItem.predicted_class.toLowerCase().includes('cancer') ? 'text-[#A94442]' : 'text-[#39704F]'
+                }`}>
+                  {activeItem.predicted_class}
+                </span>
               </div>
-              <div className="flex justify-between py-2 border-b border-slate-800/80">
-                <span className="text-slate-400">Overall Confidence</span>
-                <span className="font-mono text-white font-bold">{(activeItem.confidence * 100).toFixed(2)}%</span>
+              <div className="flex justify-between py-1.5 border-b border-[#DCE3E7]">
+                <span className="text-[#667580]">Model Confidence</span>
+                <span className="font-mono font-bold text-[#19354A]">
+                  {(activeItem.confidence * 100).toFixed(2)}%
+                </span>
               </div>
 
               {/* Class probabilities breakdown */}
-              <div className="space-y-2 pt-2">
-                <p className="font-semibold text-slate-300">Class Probability Breakdown:</p>
-                <div className="space-y-2 bg-slate-950 p-3 rounded-xl border border-slate-800">
+              <div className="space-y-2 pt-1">
+                <p className="font-semibold text-[#667580] uppercase tracking-wider text-[11px]">
+                  Softmax Probability Breakdown
+                </p>
+                <div className="space-y-1.5 bg-[#F8FAFB] p-3 rounded border border-[#DCE3E7]">
                   {Object.entries(activeItem.probabilities).map(([cname, prob]) => (
-                    <div key={cname} className="flex justify-between items-center font-mono">
-                      <span className="text-slate-300">{cname}</span>
-                      <span className="text-teal-400 font-bold">{(prob * 100).toFixed(2)}%</span>
+                    <div key={cname} className="flex justify-between items-center text-xs">
+                      <span className="text-[#263238] font-medium">{cname}</span>
+                      <span className="font-mono font-bold text-[#19354A]">
+                        {(prob * 100).toFixed(2)}%
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -248,9 +349,9 @@ export const HistoryPage: React.FC = () => {
 
             <button
               onClick={() => setActiveItem(null)}
-              className="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs transition-colors"
+              className="w-full py-2 rounded-lg bg-[#19354A] hover:bg-[#122635] text-white font-medium text-xs transition-colors"
             >
-              Close Details
+              Close
             </button>
           </div>
         </div>

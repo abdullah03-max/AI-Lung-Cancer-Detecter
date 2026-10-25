@@ -1,16 +1,15 @@
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import {
-  UploadCloud,
+  Upload,
   FileImage,
   X,
   AlertTriangle,
-  CheckCircle,
-  Activity,
+  CheckCircle2,
   AlertCircle,
   RefreshCw,
-  ShieldAlert,
-  ArrowRight,
-  Info
+  Clock,
+  ArrowRight
 } from 'lucide-react';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Cell } from 'recharts';
 import { useAuth } from '../hooks/useAuth';
@@ -29,7 +28,7 @@ export const PredictPage: React.FC = () => {
   const [isDragOver, setIsDragOver] = useState(false);
   const [preCheckWarning, setPreCheckWarning] = useState<string | null>(null);
 
-  // Quick client-side color check on image selection
+  // Client-side quick check for non-radiographic images
   const inspectImageChannels = (url: string) => {
     const img = new Image();
     img.src = url;
@@ -61,7 +60,6 @@ export const PredictPage: React.FC = () => {
             totalDiff += (Math.abs(r - g) + Math.abs(g - b) + Math.abs(r - b)) / 3;
             if (lum > 235) whitePixels++;
 
-            // Check outer 4-pixel perimeter border
             if (x < 4 || x >= w - 4 || y < 4 || y >= h - 4) {
               borderLuminance += lum;
               borderPixelCount++;
@@ -75,17 +73,17 @@ export const PredictPage: React.FC = () => {
 
         if (avgBorder > 170 || whiteRatio > 0.18) {
           setPreCheckWarning(
-            'White background or digital graphic detected. Diagnostic chest X-rays have dark background exposure. Non-medical logos, slides, or documents will be rejected.'
+            'White background exposure detected. Diagnostic chest radiographs have dark borders. Digital graphics, slides, or documents will be rejected.'
           );
         } else if (avgDiff > 9) {
           setPreCheckWarning(
-            'High color saturation detected. Medical chest X-rays are monochromatic radiographs. Unrelated photos or wallpapers will be rejected by the validation guardrail.'
+            'Color saturation detected. Diagnostic thoracic X-rays are monochromatic. Color photographs or wallpapers will be rejected by the validation guardrail.'
           );
         } else {
           setPreCheckWarning(null);
         }
       } catch {
-        // Ignore canvas CORS or inspection failures
+        // Ignore canvas CORS or inspection errors
       }
     };
   };
@@ -95,14 +93,12 @@ export const PredictPage: React.FC = () => {
     setResult(null);
     setPreCheckWarning(null);
 
-    // Validate type
     const validExtensions = ['image/jpeg', 'image/png', 'image/webp', 'image/bmp', 'image/jfif'];
     if (!validExtensions.includes(file.type) && !file.name.match(/\.(jpe?g|png|webp|bmp|jfif)$/i)) {
-      setError('Unsupported file type. Please upload a chest X-ray in JPEG, JFIF, PNG, or WEBP format.');
+      setError('Unsupported file type. Please upload a chest radiograph in JPEG, PNG, WebP, BMP, or JFIF format.');
       return;
     }
 
-    // Validate size (15 MB max)
     if (file.size > 15 * 1024 * 1024) {
       setError('File size exceeds the 15 MB limit.');
       return;
@@ -164,55 +160,66 @@ export const PredictPage: React.FC = () => {
     : [];
 
   const isCancerDetected = result?.predicted_class?.toLowerCase().includes('cancer');
-  const isGuardrailRejection = error?.toLowerCase().includes('non-x-ray') || error?.toLowerCase().includes('radiograph') || error?.toLowerCase().includes('manifold');
+  const isGuardrailRejection =
+    error?.toLowerCase().includes('non-x-ray') ||
+    error?.toLowerCase().includes('radiograph') ||
+    error?.toLowerCase().includes('manifold');
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
-      {/* Title */}
-      <div className="space-y-1 text-left">
-        <div className="flex items-center space-x-2 text-teal-400 text-xs font-semibold uppercase tracking-wider">
-          <Activity className="w-4 h-4" />
-          <span>Computer Vision Diagnostic Workspace</span>
+    <div className="max-w-5xl mx-auto space-y-6 text-left">
+      {/* Page Header */}
+      <div className="bg-white border border-[#DCE3E7] rounded-lg p-6 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h2 className="text-xl font-semibold text-[#19354A]">
+            Thoracic Radiograph Analysis
+          </h2>
+          <p className="text-sm text-[#667580] mt-1">
+            Upload an anterior-posterior (AP) or posterior-anterior (PA) chest X-ray for deep learning evaluation.
+          </p>
         </div>
-        <h1 className="text-3xl font-bold text-white">Chest Radiograph Analysis</h1>
-        <p className="text-sm text-slate-400">
-          Upload a high-resolution frontal chest X-ray to calculate AI-predicted pulmonary classifications.
-        </p>
+
+        <Link
+          to="/history"
+          className="inline-flex items-center space-x-1.5 text-xs font-semibold text-[#526A7A] hover:text-[#19354A] px-3 py-2 rounded-lg border border-[#DCE3E7] hover:bg-[#F4F6F7] transition-colors shrink-0 self-start sm:self-auto"
+        >
+          <Clock className="w-3.5 h-3.5 text-[#526A7A]" />
+          <span>Analysis History</span>
+        </Link>
       </div>
 
-      {/* Error or Guardrail Rejection Alert */}
+      {/* Error or Guardrail Rejection Card */}
       {error && (
-        <div className={`p-5 rounded-2xl border text-sm flex items-start space-x-3.5 text-left shadow-lg ${
-          isGuardrailRejection
-            ? 'bg-amber-500/10 border-amber-500/30 text-amber-200'
-            : 'bg-rose-500/10 border-rose-500/30 text-rose-200'
-        }`}>
+        <div
+          className={`p-5 rounded-lg border text-sm flex items-start space-x-3.5 shadow-xs ${
+            isGuardrailRejection
+              ? 'bg-[#FAF5EB] border-[#A87527]/40 text-[#263238]'
+              : 'bg-[#FBEBEB] border-[#A94442]/40 text-[#263238]'
+          }`}
+        >
           {isGuardrailRejection ? (
-            <ShieldAlert className="w-6 h-6 shrink-0 mt-0.5 text-amber-400" />
+            <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5 text-[#A87527]" />
           ) : (
-            <AlertCircle className="w-6 h-6 shrink-0 mt-0.5 text-rose-400" />
+            <AlertCircle className="w-5 h-5 shrink-0 mt-0.5 text-[#A94442]" />
           )}
           <div className="space-y-2 flex-1">
-            <div className="flex items-center justify-between">
-              <p className="font-bold text-base text-white">
-                {isGuardrailRejection ? 'Medical Guardrail: Image Rejected' : 'Analysis Request Error'}
+            <div>
+              <p className="font-semibold text-sm text-[#263238]">
+                {isGuardrailRejection ? 'Image Verification Notice' : 'Analysis Request Notice'}
               </p>
-              <span className="text-xs font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-700">
-                X-Ray Gate Active
-              </span>
+              <p className="text-xs text-[#526A7A] mt-1 leading-relaxed">
+                {error}
+              </p>
             </div>
-            <p className="text-xs text-slate-300 leading-relaxed">{error}</p>
-            
+
             {isGuardrailRejection && (
-              <div className="p-3 rounded-xl bg-slate-950/80 border border-slate-800 text-xs space-y-1.5 text-slate-400">
-                <p className="font-semibold text-slate-300 flex items-center space-x-1.5">
-                  <Info className="w-4 h-4 text-teal-400" />
-                  <span>Acceptable Medical Images:</span>
+              <div className="p-3 rounded bg-white border border-[#DCE3E7] text-xs space-y-1 text-[#667580]">
+                <p className="font-medium text-[#263238]">
+                  Radiographic Criteria Requirements:
                 </p>
-                <ul className="list-disc list-inside space-y-0.5 text-[11px] text-slate-400 pl-1">
-                  <li>Frontal anterior-posterior (AP) or posterior-anterior (PA) thoracic radiographs</li>
-                  <li>Monochromatic/grayscale DICOM-exported images</li>
-                  <li>Images clearly showing thoracic ribcage, spine, and bilateral lung fields</li>
+                <ul className="list-disc list-inside space-y-0.5 text-[11px] text-[#526A7A]">
+                  <li>Monochromatic frontal chest radiograph (AP or PA view)</li>
+                  <li>Clear visualization of bilateral lung fields, clavicles, and ribs</li>
+                  <li>Dark background exposure typical of radiographic cassette plates</li>
                 </ul>
               </div>
             )}
@@ -220,119 +227,147 @@ export const PredictPage: React.FC = () => {
         </div>
       )}
 
-      {/* Main Container: Upload & Preview */}
+      {/* Main Analysis Workflow */}
       {!result ? (
-        <div className="space-y-6">
+        <div className="bg-white border border-[#DCE3E7] rounded-lg p-6 shadow-xs space-y-6">
           {!previewUrl ? (
-            /* Drag and Drop Zone */
-            <div
-              onDrop={handleDrop}
-              onDragOver={handleDragOver}
-              onDragLeave={handleDragLeave}
-              onClick={() => fileInputRef.current?.click()}
-              className={`border-2 border-dashed rounded-3xl p-12 text-center cursor-pointer transition-all duration-200 ${
-                isDragOver
-                  ? 'border-teal-400 bg-teal-500/10'
-                  : 'border-slate-800 bg-slate-900/60 hover:border-slate-700 hover:bg-slate-900'
-              }`}
-            >
-              <input
-                ref={fileInputRef}
-                type="file"
-                accept="image/jpeg,image/png,image/webp,image/bmp,.jfif"
-                onChange={(e) => e.target.files?.[0] && handleFileSelect(e.target.files[0])}
-                className="hidden"
-              />
+            /* Upload Drop Area */
+            <div>
+              <div
+                onDrop={handleDrop}
+                onDragOver={handleDragOver}
+                onDragLeave={handleDragLeave}
+                onClick={() => fileInputRef.current?.click()}
+                className={`border-2 border-dashed rounded-lg p-10 text-center cursor-pointer transition-colors ${
+                  isDragOver
+                    ? 'border-[#397C78] bg-[#EEF6F5]'
+                    : 'border-[#DCE3E7] bg-[#F8FAFB] hover:border-[#526A7A] hover:bg-white'
+                }`}
+              >
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept="image/jpeg,image/png,image/webp,image/bmp,.jfif"
+                  onChange={(e) => e.target.files?.[0] && handleFileSelect(e.target.files[0])}
+                  className="hidden"
+                />
 
-              <div className="max-w-md mx-auto space-y-4">
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-400 shadow-lg shadow-teal-500/10">
-                  <UploadCloud className="w-8 h-8" />
-                </div>
+                <div className="max-w-sm mx-auto space-y-3">
+                  <div className="w-12 h-12 mx-auto rounded-lg bg-[#F4F6F7] border border-[#DCE3E7] flex items-center justify-center text-[#526A7A]">
+                    <Upload className="w-6 h-6 text-[#19354A]" />
+                  </div>
 
-                <div className="space-y-1">
-                  <p className="text-lg font-bold text-white">
-                    Drag &amp; drop chest X-ray radiograph
+                  <div className="space-y-1">
+                    <p className="text-sm font-semibold text-[#19354A]">
+                      Select or drop chest radiograph
+                    </p>
+                    <p className="text-xs text-[#667580]">
+                      Standard DICOM exports or image files (JPEG, PNG, WebP, BMP, JFIF)
+                    </p>
+                  </div>
+
+                  <button
+                    type="button"
+                    className="px-4 py-2 rounded-lg bg-[#19354A] hover:bg-[#122635] text-white font-medium text-xs shadow-xs transition-colors"
+                  >
+                    Select X-Ray Image
+                  </button>
+
+                  <p className="text-[11px] text-[#667580]">
+                    Maximum file size: 15 MB
                   </p>
-                  <p className="text-xs text-slate-400">
-                    Supports DICOM exports in JPEG, PNG, WEBP, or BMP format up to 15 MB
-                  </p>
                 </div>
-
-                <button
-                  type="button"
-                  className="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-teal-300 font-semibold text-xs border border-slate-700 transition-colors inline-block"
-                >
-                  Browse Computer Files
-                </button>
               </div>
             </div>
           ) : (
-            /* Preview State */
-            <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-6">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-4">
-                <div className="flex items-center space-x-3">
-                  <FileImage className="w-5 h-5 text-teal-400" />
+            /* Image Preview & Ready for Analysis */
+            <div className="space-y-6">
+              <div className="flex items-center justify-between pb-3 border-b border-[#DCE3E7]">
+                <div className="flex items-center space-x-2.5">
+                  <FileImage className="w-5 h-5 text-[#526A7A]" />
                   <div>
-                    <p className="text-sm font-semibold text-white truncate max-w-sm">
+                    <p className="text-sm font-semibold text-[#263238] truncate max-w-md">
                       {selectedFile?.name}
                     </p>
-                    <p className="text-xs text-slate-400 font-mono">
-                      {((selectedFile?.size || 0) / 1024 / 1024).toFixed(2)} MB
+                    <p className="text-xs text-[#667580] font-mono">
+                      {((selectedFile?.size || 0) / 1024 / 1024).toFixed(2)} MB &bull; Ready for evaluation
                     </p>
                   </div>
                 </div>
 
-                <button
-                  onClick={clearSelection}
-                  disabled={analyzing}
-                  className="p-2 rounded-lg bg-slate-800 hover:bg-rose-500/20 text-slate-400 hover:text-rose-400 transition-colors"
-                  title="Remove Image"
-                >
-                  <X className="w-4 h-4" />
-                </button>
+                <div className="flex items-center space-x-2">
+                  <button
+                    onClick={() => fileInputRef.current?.click()}
+                    disabled={analyzing}
+                    className="px-3 py-1.5 rounded-lg text-xs font-semibold text-[#526A7A] hover:text-[#19354A] hover:bg-[#F4F6F7] border border-[#DCE3E7] transition-colors"
+                  >
+                    Replace Image
+                  </button>
+                  <button
+                    onClick={clearSelection}
+                    disabled={analyzing}
+                    className="p-1.5 rounded-lg text-[#667580] hover:text-[#A94442] hover:bg-[#FBEBEB] border border-[#DCE3E7] transition-colors"
+                    title="Remove image"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
               </div>
 
-              {/* Client-side Pre-Check Warning */}
+              {/* Pre-check Warning if triggered */}
               {preCheckWarning && (
-                <div className="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs flex items-center space-x-2 text-left">
-                  <AlertTriangle className="w-4 h-4 shrink-0 text-amber-400" />
+                <div className="p-3.5 rounded-lg bg-[#FAF5EB] border border-[#A87527]/30 text-[#A87527] text-xs flex items-center space-x-2">
+                  <AlertTriangle className="w-4 h-4 shrink-0" />
                   <span>{preCheckWarning}</span>
                 </div>
               )}
 
-              {/* Image Preview Box */}
-              <div className="relative max-h-96 w-full rounded-xl bg-slate-950 border border-slate-800 overflow-hidden flex items-center justify-center p-4">
+              {/* PACS Radiograph Viewer Panel */}
+              <div className="relative max-h-96 w-full rounded-lg bg-[#122635] border border-[#DCE3E7] overflow-hidden flex items-center justify-center p-4">
                 <img
                   src={previewUrl}
-                  alt="Chest X-Ray Preview"
-                  className="max-h-80 w-auto object-contain rounded-lg shadow-xl"
+                  alt="Radiograph Preview"
+                  className="max-h-80 w-auto object-contain rounded"
                 />
+
+                {analyzing && (
+                  <div className="absolute inset-0 bg-[#19354A]/70 backdrop-blur-xs flex flex-col items-center justify-center text-white space-y-3">
+                    <RefreshCw className="w-7 h-7 text-[#397C78] animate-spin" />
+                    <p className="text-sm font-semibold">
+                      Executing neural inference...
+                    </p>
+                    <p className="text-xs text-[#DCE3E7]">
+                      Extracting features &amp; calculating class probabilities
+                    </p>
+                  </div>
+                )}
               </div>
 
               {/* Action Buttons */}
-              <div className="flex items-center justify-end space-x-4 pt-2">
+              <div className="flex items-center justify-between pt-2">
                 <button
+                  type="button"
                   onClick={clearSelection}
                   disabled={analyzing}
-                  className="px-4 py-2.5 rounded-xl text-slate-400 hover:text-white text-xs font-semibold"
+                  className="text-xs font-semibold text-[#667580] hover:text-[#263238]"
                 >
-                  Change Image
+                  Clear Selection
                 </button>
 
                 <button
+                  type="button"
                   onClick={handleAnalyze}
                   disabled={analyzing}
-                  className="inline-flex items-center space-x-2 px-6 py-3 rounded-xl bg-teal-500 hover:bg-teal-400 disabled:opacity-50 text-slate-950 font-bold text-sm shadow-md shadow-teal-500/20 transition-all"
+                  className="inline-flex items-center space-x-2 px-6 py-2.5 rounded-lg bg-[#19354A] hover:bg-[#122635] disabled:opacity-50 text-white font-semibold text-sm shadow-xs transition-colors"
                 >
                   {analyzing ? (
                     <>
                       <RefreshCw className="w-4 h-4 animate-spin" />
-                      <span>Validating X-Ray &amp; Extracting Features...</span>
+                      <span>Processing...</span>
                     </>
                   ) : (
                     <>
-                      <Activity className="w-4 h-4" />
-                      <span>Execute AI Analysis</span>
+                      <span>Analyze Image</span>
                       <ArrowRight className="w-4 h-4" />
                     </>
                   )}
@@ -342,128 +377,137 @@ export const PredictPage: React.FC = () => {
           )}
         </div>
       ) : (
-        /* Result Display Card */
-        <div className="space-y-6">
-          <div className="p-8 rounded-3xl bg-slate-900 border border-slate-800 space-y-8">
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-slate-800 pb-6">
-              <div className="space-y-1">
-                <div className="flex items-center space-x-2">
-                  <span className="text-xs font-mono text-teal-400 uppercase tracking-wider">
-                    Analysis Report &bull; {result.model_version}
-                  </span>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                    X-Ray Verified
-                  </span>
-                </div>
-                <h2 className="text-2xl font-bold text-white">Inference Classification Complete</h2>
+        /* Completed Analysis Results View */
+        <div className="bg-white border border-[#DCE3E7] rounded-lg p-6 shadow-xs space-y-6">
+          {/* Header Summary */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#DCE3E7] pb-4">
+            <div>
+              <div className="flex items-center space-x-2 text-xs text-[#667580]">
+                <span>Analysis Complete</span>
+                <span>&bull;</span>
+                <span className="font-mono">Model {result.model_version}</span>
               </div>
-
-              {/* Predicted Class Badge */}
-              <div
-                className={`px-4 py-2 rounded-xl border flex items-center space-x-2 ${
-                  isCancerDetected
-                    ? 'bg-rose-500/10 border-rose-500/30 text-rose-300'
-                    : 'bg-emerald-500/10 border-emerald-500/30 text-emerald-300'
-                }`}
-              >
-                {isCancerDetected ? (
-                  <ShieldAlert className="w-5 h-5 text-rose-400" />
-                ) : (
-                  <CheckCircle className="w-5 h-5 text-emerald-400" />
-                )}
-                <span className="text-base font-bold tracking-wide">
-                  Predicted Class: {result.predicted_class}
-                </span>
-              </div>
+              <h3 className="text-lg font-semibold text-[#19354A] mt-0.5">
+                Evaluation Findings
+              </h3>
             </div>
 
-            {/* Split layout: Image Preview & Probabilities Chart */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              {/* Preview */}
-              <div className="lg:col-span-5 bg-slate-950 rounded-2xl border border-slate-800 p-4 flex items-center justify-center">
-                {previewUrl && (
-                  <img
-                    src={previewUrl}
-                    alt="Analyzed Radiograph"
-                    className="max-h-72 w-auto object-contain rounded-lg"
-                  />
-                )}
-              </div>
-
-              {/* Chart & Metrics */}
-              <div className="lg:col-span-7 space-y-6 text-left">
-                {/* Confidence banner */}
-                <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
-                  <div className="flex justify-between items-center text-xs">
-                    <span className="text-slate-400 font-medium">Model Output Confidence</span>
-                    <span className="font-mono text-teal-400 text-sm font-bold">
-                      {(result.confidence * 100).toFixed(1)}%
-                    </span>
-                  </div>
-                  <div className="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
-                    <div
-                      className={`h-2.5 rounded-full transition-all duration-1000 ${
-                        isCancerDetected
-                          ? 'bg-gradient-to-r from-amber-500 to-rose-500'
-                          : 'bg-gradient-to-r from-teal-400 to-emerald-400'
-                      }`}
-                      style={{ width: `${result.confidence * 100}%` }}
-                    />
-                  </div>
-                  <p className="text-[11px] text-slate-500 pt-1">
-                    * Clearly labeled as mathematical model confidence, not clinical or medical certainty.
-                  </p>
-                </div>
-
-                {/* Softmax Probability Distribution Bar Chart */}
-                <div className="space-y-2">
-                  <p className="text-xs font-semibold text-slate-300 uppercase tracking-wider">
-                    Full Class Probability Distribution
-                  </p>
-                  <div className="h-44 w-full bg-slate-950/70 rounded-xl p-3 border border-slate-800/80">
-                    <ResponsiveContainer width="100%" height="100%">
-                      <BarChart layout="vertical" data={chartData} margin={{ top: 10, right: 30, left: 40, bottom: 5 }}>
-                        <XAxis type="number" domain={[0, 100]} unit="%" stroke="#64748b" fontSize={11} />
-                        <YAxis type="category" dataKey="class" stroke="#cbd5e1" fontSize={12} width={70} />
-                        <Tooltip
-                          contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', borderRadius: '8px' }}
-                          formatter={(value: any) => [`${value}%`, 'Probability']}
-                        />
-                        <Bar dataKey="probability" radius={[0, 6, 6, 0]}>
-                          {chartData.map((entry, index) => (
-                            <Cell
-                              key={`cell-${index}`}
-                              fill={entry.class.toLowerCase().includes('cancer') ? '#f43f5e' : '#14b8a6'}
-                            />
-                          ))}
-                        </Bar>
-                      </BarChart>
-                    </ResponsiveContainer>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Mandatory Academic Disclaimer Banner */}
-            <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-200/90 text-xs flex items-start space-x-3 text-left">
-              <AlertTriangle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
-              <p className="leading-relaxed">{result.disclaimer}</p>
-            </div>
-
-            {/* Bottom Actions */}
-            <div className="flex items-center justify-between pt-4 border-t border-slate-800">
-              <button
-                onClick={clearSelection}
-                className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs border border-slate-700 transition-colors"
-              >
-                <RefreshCw className="w-3.5 h-3.5" />
-                <span>Analyze Another Image</span>
-              </button>
-
-              <span className="text-xs text-slate-500 font-mono">
-                Encrypted &amp; logged to user profile
+            {/* Prediction Badge */}
+            <div
+              className={`px-4 py-2 rounded-lg border flex items-center space-x-2 ${
+                isCancerDetected
+                  ? 'bg-[#FBEBEB] border-[#A94442]/30 text-[#A94442]'
+                  : 'bg-[#EDF6F1] border-[#39704F]/30 text-[#39704F]'
+              }`}
+            >
+              {isCancerDetected ? (
+                <AlertTriangle className="w-4 h-4 shrink-0" />
+              ) : (
+                <CheckCircle2 className="w-4 h-4 shrink-0" />
+              )}
+              <span className="text-sm font-bold tracking-tight">
+                Classification: {result.predicted_class}
               </span>
             </div>
+          </div>
+
+          {/* Grid: Image and Results Table / Chart */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+            {/* Image Preview Box */}
+            <div className="md:col-span-5 bg-[#122635] rounded-lg border border-[#DCE3E7] p-3 flex items-center justify-center">
+              {previewUrl && (
+                <img
+                  src={previewUrl}
+                  alt="Evaluated Radiograph"
+                  className="max-h-72 w-auto object-contain rounded"
+                />
+              )}
+            </div>
+
+            {/* Metrics Breakdown */}
+            <div className="md:col-span-7 space-y-5">
+              {/* Model Confidence Metric */}
+              <div className="p-4 rounded-lg bg-[#F8FAFB] border border-[#DCE3E7] space-y-2">
+                <div className="flex justify-between items-center text-xs">
+                  <span className="font-semibold text-[#263238]">Model Confidence</span>
+                  <span className="font-mono font-bold text-[#19354A] text-sm">
+                    {(result.confidence * 100).toFixed(1)}%
+                  </span>
+                </div>
+                <div className="w-full bg-[#DCE3E7] h-2 rounded-full overflow-hidden">
+                  <div
+                    className={`h-2 rounded-full transition-all duration-700 ${
+                      isCancerDetected ? 'bg-[#A94442]' : 'bg-[#39704F]'
+                    }`}
+                    style={{ width: `${result.confidence * 100}%` }}
+                  />
+                </div>
+                <p className="text-[11px] text-[#667580]">
+                  Confidence represents statistical model probability, not diagnostic certainty.
+                </p>
+              </div>
+
+              {/* Class Probability Distribution */}
+              <div className="space-y-2">
+                <p className="text-xs font-semibold text-[#667580] uppercase tracking-wider">
+                  Class Probabilities
+                </p>
+                <div className="h-36 w-full bg-[#F8FAFB] rounded-lg p-2 border border-[#DCE3E7]">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <BarChart layout="vertical" data={chartData} margin={{ top: 8, right: 24, left: 24, bottom: 0 }}>
+                      <XAxis type="number" domain={[0, 100]} unit="%" stroke="#667580" fontSize={11} />
+                      <YAxis type="category" dataKey="class" stroke="#263238" fontSize={11} width={65} />
+                      <Tooltip
+                        contentStyle={{
+                          backgroundColor: '#FFFFFF',
+                          borderColor: '#DCE3E7',
+                          borderRadius: '6px',
+                          fontSize: '11px',
+                          color: '#263238',
+                        }}
+                        formatter={(value: any) => [`${value}%`, 'Probability']}
+                      />
+                      <Bar dataKey="probability" radius={[0, 4, 4, 0]}>
+                        {chartData.map((entry, index) => (
+                          <Cell
+                            key={`cell-${index}`}
+                            fill={entry.class.toLowerCase().includes('cancer') ? '#A94442' : '#39704F'}
+                          />
+                        ))}
+                      </Bar>
+                    </BarChart>
+                  </ResponsiveContainer>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Clinical Disclaimer */}
+          <div className="p-3.5 rounded-lg bg-[#FAF5EB] border border-[#A87527]/30 text-xs text-[#A87527] flex items-start space-x-2.5">
+            <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5" />
+            <p className="leading-relaxed">
+              <strong>Clinical Notice: </strong>
+              This tool is intended for research and educational use only. Results are not a medical diagnosis. All computer vision outputs require independent verification by a licensed radiologist.
+            </p>
+          </div>
+
+          {/* Action Footer */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-[#DCE3E7]">
+            <button
+              onClick={clearSelection}
+              className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-4 py-2 rounded-lg bg-white border border-[#DCE3E7] hover:bg-[#F4F6F7] text-xs font-semibold text-[#19354A] transition-colors"
+            >
+              <RefreshCw className="w-3.5 h-3.5" />
+              <span>Analyze Another Image</span>
+            </button>
+
+            <Link
+              to="/history"
+              className="w-full sm:w-auto inline-flex items-center justify-center space-x-1.5 px-4 py-2 rounded-lg bg-[#19354A] hover:bg-[#122635] text-xs font-semibold text-white shadow-xs transition-colors"
+            >
+              <span>View in Analysis History</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
           </div>
         </div>
       )}

@@ -1,35 +1,32 @@
 import React from 'react';
-import { AlertTriangle, Activity } from 'lucide-react';
+import { Activity, ShieldCheck } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="border-t border-slate-800 bg-slate-950 text-slate-400 mt-auto py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Medical Research Disclaimer Box */}
-        <div className="mb-8 p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-200/90 text-sm flex items-start space-x-3 text-left">
-          <AlertTriangle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+    <footer className="border-t border-[#DCE3E7] bg-white text-[#667580] py-8 mt-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        {/* Research Disclaimer */}
+        <div className="p-4 rounded-lg bg-[#F4F6F7] border border-[#DCE3E7] text-xs text-[#526A7A] flex items-start space-x-3 text-left">
+          <ShieldCheck className="w-4 h-4 text-[#397C78] shrink-0 mt-0.5" />
           <p className="leading-relaxed">
-            <strong className="text-amber-300 font-semibold">Academic Prototype Disclaimer: </strong>
-            This application is an academic AI research prototype. Its predictions are experimental and are not a medical diagnosis. Results must not be used to make treatment decisions. Consult a qualified medical professional for clinical evaluation.
+            <strong className="text-[#263238] font-semibold">Clinical Notice: </strong>
+            This tool is intended for research and educational use only. Results are not a medical diagnosis. All computer vision predictions must be independently evaluated by certified radiologists before clinical decision-making.
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+        {/* Institutional and Copyright Notice */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#667580]">
           <div className="flex items-center space-x-2">
-            <Activity className="w-4 h-4 text-teal-400" />
-            <span className="font-semibold text-slate-200">Lung Cancer X-Ray AI Detector</span>
+            <div className="w-5 h-5 rounded bg-[#19354A] flex items-center justify-center text-white">
+              <Activity className="w-3 h-3 text-[#397C78]" />
+            </div>
+            <span className="font-semibold text-[#19354A]">Lung Imaging</span>
             <span>&bull;</span>
-            <span>Transfer Learning via MobileNetV2 &amp; ImageNet</span>
+            <span>Thoracic Radiograph Diagnostic Platform</span>
           </div>
 
-          <div className="flex items-center space-x-6 text-slate-400">
-            <span>FastAPI</span>
-            <span>&bull;</span>
-            <span>TensorFlow 2</span>
-            <span>&bull;</span>
-            <span>Supabase Auth &amp; PostgreSQL</span>
-            <span>&bull;</span>
-            <span>React + Vite</span>
+          <div className="text-right">
+            <span>&copy; {new Date().getFullYear()} Clinical Imaging Research Initiative. All rights reserved.</span>
           </div>
         </div>
       </div>

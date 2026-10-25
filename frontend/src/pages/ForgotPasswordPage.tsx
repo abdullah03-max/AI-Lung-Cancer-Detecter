@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Activity, AlertCircle, CheckCircle, ArrowLeft } from 'lucide-react';
+import { Mail, Activity, AlertCircle, CheckCircle2, ArrowLeft } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
 
 export const ForgotPasswordPage: React.FC = () => {
@@ -31,51 +31,53 @@ export const ForgotPasswordPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-[80vh] flex items-center justify-center px-4 py-12">
-      <div className="w-full max-w-md space-y-8 bg-slate-900/90 border border-slate-800 p-8 rounded-2xl shadow-2xl backdrop-blur-sm">
+    <div className="min-h-[75vh] flex items-center justify-center px-4 py-12">
+      <div className="w-full max-w-md bg-white border border-[#DCE3E7] rounded-lg p-8 shadow-xs space-y-6 text-left">
         <div className="text-center space-y-2">
-          <div className="inline-flex w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/20 items-center justify-center text-teal-400 mb-2">
-            <Activity className="w-6 h-6" />
+          <div className="inline-flex w-10 h-10 rounded-lg bg-[#19354A] items-center justify-center text-white mb-1 shadow-xs">
+            <Activity className="w-5 h-5 text-[#397C78]" />
           </div>
-          <h2 className="text-2xl font-bold text-white tracking-tight">Reset Password</h2>
-          <p className="text-xs text-slate-400">
-            Enter your clinical account email to receive a password recovery link.
+          <h2 className="text-xl font-semibold text-[#19354A] tracking-tight">
+            Reset Password
+          </h2>
+          <p className="text-xs text-[#667580]">
+            Enter your registered clinical account email to receive a recovery link.
           </p>
         </div>
 
         {error && (
-          <div className="p-3.5 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-300 text-xs flex items-start space-x-2">
-            <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-rose-400" />
+          <div className="p-3 rounded-lg bg-[#FBEBEB] border border-[#A94442]/30 text-[#A94442] text-xs flex items-start space-x-2">
+            <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-[#A94442]" />
             <span>{error}</span>
           </div>
         )}
 
         {sent ? (
-          <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-sm space-y-2 text-center">
-            <CheckCircle className="w-8 h-8 mx-auto text-emerald-400" />
-            <p className="font-semibold text-white">Reset Link Dispatched</p>
-            <p className="text-xs text-emerald-300/80">
-              If an account matches <strong>{email}</strong>, a password reset link has been emailed to you.
+          <div className="p-4 rounded-lg bg-[#EDF6F1] border border-[#39704F]/30 text-[#39704F] text-xs space-y-3 text-center">
+            <CheckCircle2 className="w-6 h-6 mx-auto text-[#39704F]" />
+            <p className="font-semibold text-[#263238]">Reset Link Dispatched</p>
+            <p className="text-xs text-[#526A7A]">
+              If an account matches <strong>{email}</strong>, password reset instructions have been sent to that address.
             </p>
             <div className="pt-2">
-              <Link to="/login" className="text-xs font-semibold text-teal-400 hover:underline">
+              <Link to="/login" className="text-xs font-semibold text-[#397C78] hover:underline">
                 Return to Sign In
               </Link>
             </div>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="space-y-1.5 text-left">
-              <label className="text-xs font-medium text-slate-300">Registered Email</label>
+            <div className="space-y-1">
+              <label className="text-xs font-semibold text-[#263238]">Registered Email</label>
               <div className="relative">
-                <Mail className="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                <Mail className="w-4 h-4 text-[#667580] absolute left-3 top-1/2 -translate-y-1/2" />
                 <input
                   type="email"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="physician@hospital.org"
-                  className="w-full bg-slate-950 border border-slate-800 rounded-xl pl-10 pr-4 py-2.5 text-sm text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/50 transition-colors"
+                  className="w-full bg-white border border-[#DCE3E7] rounded-lg pl-9 pr-3.5 py-2 text-xs text-[#263238] placeholder:text-[#667580] focus:outline-none focus:border-[#19354A] focus:ring-1 focus:ring-[#19354A] transition-colors"
                 />
               </div>
             </div>
@@ -83,10 +85,10 @@ export const ForgotPasswordPage: React.FC = () => {
             <button
               type="submit"
               disabled={submitting}
-              className="w-full py-3 px-4 rounded-xl bg-teal-500 hover:bg-teal-400 disabled:opacity-50 text-slate-950 font-bold text-sm shadow-md shadow-teal-500/20 transition-all flex items-center justify-center space-x-2"
+              className="w-full py-2.5 px-4 rounded-lg bg-[#19354A] hover:bg-[#122635] disabled:opacity-50 text-white font-semibold text-xs shadow-xs transition-colors flex items-center justify-center space-x-2"
             >
               {submitting ? (
-                <span className="inline-block w-4 h-4 border-2 border-slate-950/20 border-t-slate-950 rounded-full animate-spin" />
+                <span className="inline-block w-4 h-4 border-2 border-white/20 border-t-white rounded-full animate-spin" />
               ) : (
                 <span>Send Password Reset Link</span>
               )}
@@ -94,8 +96,11 @@ export const ForgotPasswordPage: React.FC = () => {
           </form>
         )}
 
-        <div className="pt-4 border-t border-slate-800/80 text-center">
-          <Link to="/login" className="inline-flex items-center space-x-1.5 text-xs text-slate-400 hover:text-white transition-colors">
+        <div className="pt-4 border-t border-[#DCE3E7] text-center">
+          <Link
+            to="/login"
+            className="inline-flex items-center space-x-1.5 text-xs text-[#526A7A] hover:text-[#19354A] font-medium transition-colors"
+          >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Back to Sign In</span>
           </Link>
